@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap');
+
+
+:root {
+    --color: #282727;
+}
+
+body {
+    font-family: 'Red Hat Text', sans-serif;
+}
+h1 {
+
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 100px;
+    margin: 50px;
+}
+
+
+p {
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    max-width: 52ch;
+    line-height: 1.5;
+    padding: 1em;
+}
+
+
+a {
+    display: inline-block;
+    padding: 1em 3.5em;
+    background-color: var(--color);
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 0.3em;
+    font-weight: 700;
+    letter-spacing: .5px;
+    font-size: .875rem;
+}
+.story_shape {
+    width: 228px;
+    height: 228px;
+    margin: 20px;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    position: relative;
+}
+
+.story_img {
+    height: 120%;
+    backface-visibility: hidden;
+}
+
+.story_img:hover {
+    background-color: #fddfdb;
+    cursor: pointer;
+}
+
+
+.story_caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    background: none;
+    font-size: 40px;
+    text-align: center;
+    backface-visibility: hidden;
+}
+
+h3 {
+    text-align: center;
+    top: 200px;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+    width: 300px;
+    height: 50px;
+}
+
+.lower-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-box {
+    width: 600px;
+    height: 1000px;
+    display: flex;
+    margin: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h2 {
+    text-align: center;
+}
+
+.container {
+    background-image: url('/static/img/firdaus-ramadhan-1AMsQMsERy4-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1380px;
+    align-items: center;
+
+}
+.story_shape a{
+    padding: 90px;
+    font-size: 30px;
+    color: black;
+
+}

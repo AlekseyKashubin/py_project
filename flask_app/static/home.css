@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap');
+
+
+.btn-box {
+
+    height: 500px;
+    display: flex;
+    margin: 40px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h1 {
+    text-align: center;
+    font-size: 100px;
+    margin: 150px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.container {
+    align-items: center;
+
+}
+
+.top-col-left p {
+    font-size: 40px;
+}
+
+img {
+    height: 350px;
+    width: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.top-col-right p {
+    font-size: 40px;
+    align-items: center;
+    text-align: center;
+}
+
+p {
+    font-size: 25px;
+    text-align: left;
+    margin: 40px;
+}
+
+/* all body  */
+
+
+
+
+
+:root {
+    --color: #282727;
+}
+
+body {
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+.container1 {
+    text-align: center;
+    color: var(--color);
+    min-height: 1400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://www.coffeedesk.com/blog/wp-content/uploads/2019/03/AdobeStock_142267143-s.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+h1 {
+    color: white;
+    font-weight: 700;
+    font-size: 10rem;
+}
+
+p {
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    max-width: 52ch;
+    line-height: 1.5;
+    padding: 1em;
+}
+
+a {
+    display: inline-block;
+    padding: 1em 3.5em;
+    background-color: var(--color);
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 0.3em;
+    font-weight: 700;
+    letter-spacing: .5px;
+    font-size: .875rem;
+}
+
+.blank,
+.other {
+    width: 100%;
+    min-height: 500px;
+    background-color: var(--color);
+}
+
+.second {
+    background-image: url(https://cdn.shopify.com/s/files/1/0563/3294/3550/articles/coffee-plant-leaves-stem.jpg?v=1628191293);
+    background-attachment: fixed;
+    height: 1200px;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-top: 1em;
+}
+
+.card>a {
+    margin-bottom: 2em;
+}
+
+.item {
+    display: flex;
+    max-width: 320px;
+    background-color: white;
+    ;
+    flex-direction: column;
+    align-items: center;
+    border-radius: .5em;
+    -webkit-box-shadow: 0px 29px 38px -15px rgba(0, 0, 0, 0.43);
+    -moz-box-shadow: 0px 29px 38px -15px rgba(0, 0, 0, 0.43);
+    box-shadow: 0px 29px 38px -15px rgba(0, 0, 0, 0.43);
+}
+
+.img {
+    width: 90%;
+    height: 200px;
+    background-color: lightgrey;
+    background-size: cover;
+    background-position: center;
+    margin-top: 20px;
+    border-radius: .3em;
+    ;
+}
+
+.img-first {
+    background-image: url(https://minimalistbaker.com/wp-content/uploads/2019/01/Step-by-Step-instructions-for-How-to-Make-Pourover-Coffee-minimalistbaker-coffee-4.jpg);
+}
+
+.img-second {
+    background-image: url(https://minimalistbaker.com/wp-content/uploads/2019/01/Step-by-Step-instructions-for-How-to-Make-Pourover-Coffee-minimalistbaker-coffee.jpg);
+}
+
+.img-third {
+    background-image: url(https://blog.mistobox.com/wp-content/uploads/2020/09/brewmethods.jpg);
+}
+
+.second {
+    flex-direction: row;
+    gap: 1.6em;
+}
