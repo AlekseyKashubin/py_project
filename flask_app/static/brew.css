@@ -18,17 +18,18 @@ h1 {
 }
 
 
-p {
+.col-left a, .col-right a {
     color: white;
     background: rgba(0, 0, 0, 0.5);
     max-width: 52ch;
     line-height: 1.5;
     padding: 3em;
+    font-size: 35px;
 }
 
 a {
     display: inline-block;
-    padding: 1em 3.5em;
+    padding: 3em;
     background-color: var(--color);
     color: white;
     text-decoration: none;

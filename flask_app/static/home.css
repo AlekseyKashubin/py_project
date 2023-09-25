@@ -43,9 +43,18 @@ img {
 }
 
 p {
-    font-size: 25px;
-    text-align: left;
+    font-size: 15px;
+    text-align: center;
     margin: 40px;
+}
+
+h4 {
+    font-size: 25px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    max-width: 52ch;
+    line-height: 1.5;
+    padding: 1em;
 }
 
 /* all body  */

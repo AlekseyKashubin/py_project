@@ -12,9 +12,9 @@ def Home():
 def Brew():
     return render_template('brew.html')
 
-@app.route('/region')
-def region_page():
-    return render_template('region.html')
+@app.route('/kalita')
+def region_kalita():
+    return render_template('region_kalita.html')
 
 
 @app.route('/recipe')
@@ -37,3 +37,4 @@ def gear_page():
 @app.route('/find')
 def find_page():
     return render_template('find.html')
+

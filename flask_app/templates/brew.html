@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href=" {{ url_for('static', filename='brew.css') }} ">
-    <title>Coffee Belt</title>
+    <title>Proper Bloom</title>
 </head>
 
 <body class="bg-dark text-light">
@@ -41,23 +41,23 @@
                 <div class="col-left">
                     <figure class="story_shape">
                         <img src=" {{ url_for('static', filename='img/v60back.jpg') }} " class="story_img">
-                        <p class="story_caption">V60</p>
+                        <a class="story_caption" href="/v60" >V60</a>
                     </figure>
                 
 
                 <figure class="story_shape">
                     <img src=" {{ url_for('static', filename='img/chemexback.jpg') }} " class="story_img">
-                    <p class="story_caption">Chemex</p>
+                    <a class="story_caption" href="/chemex">Chemex</a>
                 </figure>
                 <figure class="story_shape">
                     <img src=" {{ url_for('static', filename='img/fpback.jpg') }} " class="story_img">
-                    <p class="story_caption">French Press</p>
+                    <a class="story_caption" href="/frenchpress">French Press</a>
                 </figure>
             
 
             <figure class="story_shape">
                 <img src=" {{ url_for('static', filename='img/mokapotback.jpg') }} " class="story_img">
-                <p class="story_caption">Moka Pot</p>
+                <a class="story_caption" href="/mokapot">Moka Pot</a>
             </figure>
 
                     
@@ -65,23 +65,23 @@
                 <div class="col-right">
                     <figure class="story_shape">
                         <img src=" {{ url_for('static', filename='img/kalitaback.jpg') }} " class="story_img">
-                        <p class="story_caption">Kalita</p>
+                        <a class="story_caption" href="/kalita">Kalita</a>
                     </figure>
                 
 
                 <figure class="story_shape">
                     <img src=" {{ url_for('static', filename='img/aeropressback.jpg') }} " class="story_img">
-                    <p class="story_caption">Aeropress</p>
+                    <a class="story_caption" href="/aeropress">Aeropress</a>
                 </figure>
                 <figure class="story_shape">
                     <img src=" {{ url_for('static', filename='img/espressoback.jpg') }} " class="story_img">
-                    <p class="story_caption">Espresso</p>
+                    <a class="story_caption" href="/espresso">Espresso</a>
                 </figure>
             
 
             <figure class="story_shape">
                 <img src=" {{ url_for('static', filename='img/dripback.jpg') }} " class="story_img">
-                <p class="story_caption">Auto Drip</p>
+                <a class="story_caption" href="/autodrip">Auto Drip</a>
             </figure>
 
                     </div>
