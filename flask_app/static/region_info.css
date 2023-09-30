@@ -13,7 +13,7 @@
 h1 {
     text-align: center;
     font-size: 100px;
-    margin: 150px;
+    margin: 100px;
 }
 
 h2 {
@@ -47,7 +47,6 @@ p {
     text-align: left;
     margin: 40px;
 }
-
 .navbar-brand{
     color: white;
 }
@@ -75,7 +74,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url(https://perfectdailygrind.com/wp-content/uploads/2019/02/coffee-bar.jpg);
+    background-image: url(https://images.unsplash.com/photo-1493925410384-84f842e616fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3412&q=80);
     background-size: cover;
     background-position: center;
 
@@ -115,16 +114,26 @@ a {
     background-color: var(--color);
 }
 
-.second {
-    background-image: url(https://cdn.shopify.com/s/files/1/0563/3294/3550/articles/coffee-plant-leaves-stem.jpg?v=1628191293);
+/* .second {
+    background-image: url(https://images.unsplash.com/photo-1513530176992-0cf39c4cbed4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3870&q=80);
     background-attachment: fixed;
-    height: 3000px;
-}
+    height: 1000px;
+} */
 
 .third {
-    background-image: url(https://cdn.shopify.com/s/files/1/0563/3294/3550/articles/Burr-and-Blade-Grinders.jpg?v=1628189228);
+    background-image: url(https://images.unsplash.com/photo-1513530176992-0cf39c4cbed4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3870&q=80);
     background-attachment: fixed;
-    height: 2000px;
+    height: 1000px;
+}
+.fourth {
+    background-image: url(https://images.unsplash.com/photo-1498709112912-9be3173d30be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=988&q=80);
+    background-attachment: fixed;
+    height: 1000px;
+}
+.fifth {
+    background-image: url(https://images.unsplash.com/photo-1541870730196-cd1efcbf5649?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1336&q=80);
+    background-attachment: fixed;
+    height: 1000px;
 }
 
 h3 {
@@ -167,4 +176,15 @@ h3 {
 .third {
     flex-direction: row;
     gap: 2em;
+    margin-bottom: 10px;
+}
+.fourth {
+    flex-direction: row;
+    gap: 2em;
+    margin-bottom: 10px;
+}
+.fifth {
+    flex-direction: row;
+    gap: 2em;
+    margin-bottom: 10px;
 }

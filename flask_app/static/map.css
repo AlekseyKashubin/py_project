@@ -1,0 +1,16 @@
+#storelocatorwidget {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+.storelocator-scrollFix IMG {
+    max-width: 250px;
+}
+
+@media screen and (max-width: 992px) {
+
+    td#storelocator-infowindow-td-left,
+    td#storelocator-infowindow-td-right {
+        display: table-row;
+    }
+}

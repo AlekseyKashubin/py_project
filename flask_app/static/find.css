@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap');
 
 
-:root {
+/* :root {
     --color: #282727;
-}
+} */
 
 body {
     font-family: 'Red Hat Text', sans-serif;
@@ -18,20 +18,12 @@ h1 {
 }
 
 
-p {
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-    max-width: 52ch;
-    line-height: 1.5;
-    padding: 1em;
-}
 
-
-a {
+p{
     display: inline-block;
     padding: 1em 3.5em;
     background-color: var(--color);
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 0.3em;
@@ -39,50 +31,24 @@ a {
     letter-spacing: .5px;
     font-size: .875rem;
 }
-.story_shape {
-    width: 228px;
-    height: 228px;
-    margin: 20px;
-    -webkit-shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
-    position: relative;
-}
-
-.story_img {
-    height: 120%;
-    backface-visibility: hidden;
-}
-
-.story_img:hover {
-    background-color: #fddfdb;
-    cursor: pointer;
+a{
+    display: inline-block;
+    padding: 1em 3.5em;
+    background-color: var(--color);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 0.3em;
+    font-weight: 700;
+    letter-spacing: .5px;
+    font-size: .875rem;
 }
 
 
-.story_caption {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: black;
-    background: none;
-    font-size: 40px;
-    text-align: center;
-    backface-visibility: hidden;
-}
 
-h3 {
-    text-align: center;
-    top: 200px;
-    left: 0;
-    width: 100%;
-    margin: 0 auto;
-    width: 300px;
-    height: 50px;
-}
 
 .lower-box {
+    margin-top: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -110,9 +76,30 @@ h2 {
     align-items: center;
 
 }
-.story_shape a{
-    padding: 90px;
-    font-size: 30px;
-    color: black;
 
+.navbar-brand{
+    color: white;
+    background-color: rgb(40, 33, 33);
 }
+
+
+
+#storelocatorwidget {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    width: 90%;
+    
+}
+
+.storelocator-scrollFix IMG {
+    max-width: 200px;
+}
+
+@media screen and (max-width: 992px) {
+
+    td#storelocator-infowindow-td-left,
+    td#storelocator-infowindow-td-right {
+        display: table-row;
+    }
+}
+

@@ -185,3 +185,7 @@ h3 {
     gap: 2em;
     margin-bottom: 10px;
 }
+
+.navbar-brand{
+    color: white;
+}

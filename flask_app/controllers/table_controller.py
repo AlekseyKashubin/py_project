@@ -38,3 +38,7 @@ def gear_page():
 def find_page():
     return render_template('find.html')
 
+@app.route('/region')
+def region_info_page():
+    return render_template('region_info.html')
+
