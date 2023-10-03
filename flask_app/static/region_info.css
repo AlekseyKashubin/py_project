@@ -30,7 +30,7 @@ h2 {
 }
 
 img {
-    height: 400px;
+    width: 800px;
     border-radius: 20px;
     margin-bottom: 20px;
 
@@ -69,7 +69,7 @@ body {
     text-align: center;
     color: var(--color);
     width: 100%;
-    min-height: 100vh;
+    min-height: 1700px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,6 +92,7 @@ p {
     text-align: center;
     color: white;
     background: rgba(0, 0, 0, 0.5);
+    font-size: 25px;
     
 }
 
@@ -114,26 +115,26 @@ a {
     background-color: var(--color);
 }
 
-/* .second {
-    background-image: url(https://images.unsplash.com/photo-1513530176992-0cf39c4cbed4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3870&q=80);
+.second {
+    background-image: url(https://images.unsplash.com/photo-1632757164138-ae9512e431eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3456&q=80);
     background-attachment: fixed;
-    height: 1000px;
-} */
+    height: 1100px;
+}
 
 .third {
-    background-image: url(https://images.unsplash.com/photo-1513530176992-0cf39c4cbed4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3870&q=80);
+    background-image: url(https://images.unsplash.com/photo-1507133750040-4a8f57021571?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80);
     background-attachment: fixed;
-    height: 1000px;
+    height: 1100px;
 }
 .fourth {
     background-image: url(https://images.unsplash.com/photo-1498709112912-9be3173d30be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=988&q=80);
     background-attachment: fixed;
-    height: 1000px;
+    height: 1100px;
 }
 .fifth {
     background-image: url(https://images.unsplash.com/photo-1541870730196-cd1efcbf5649?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1336&q=80);
     background-attachment: fixed;
-    height: 1000px;
+    height: 1100px;
 }
 
 h3 {
@@ -187,4 +188,16 @@ h3 {
     flex-direction: row;
     gap: 2em;
     margin-bottom: 10px;
+}
+ul{
+    font-size: 25px;
+}
+li{
+    margin-top: 15px;
+}
+
+.btn-home{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
