@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap');
 
+* {
+    box-sizing: border-box;
+}
 
 .btn-box {
 
@@ -10,11 +13,7 @@
     justify-content: space-around;
 }
 
-h1 {
-    text-align: center;
-    font-size: 100px;
-    margin: 150px;
-}
+
 
 h2 {
     text-align: center;
@@ -57,7 +56,7 @@ h4 {
     padding: 1em;
 }
 
-.navbar-brand{
+.navbar-brand {
     color: white;
 }
 
@@ -92,9 +91,11 @@ body {
 }
 
 h1 {
+    text-align: center;
     color: white;
     font-weight: 700;
-    font-size: 10rem;
+    font-size: 150px;
+    margin: 150px;
 }
 
 p {
@@ -106,8 +107,8 @@ p {
 }
 
 a {
-    display: inline-block;
-    padding: 1em 3.5em;
+    text-align: center; 
+    padding: 20px;
     background-color: var(--color);
     color: white;
     text-decoration: none;
@@ -138,14 +139,16 @@ h3 {
 }
 
 .card>a {
-    margin-bottom: 2em;
+    margin: 10px;
+    align-items: center;
+    text-align: center;
 }
 
 .item {
+    text-align: center;
     display: flex;
     max-width: 320px;
     background-color: white;
-    ;
     flex-direction: column;
     align-items: center;
     border-radius: .5em;
@@ -178,6 +181,7 @@ h3 {
 }
 
 .second {
+    display: flex;
     flex-direction: row;
     gap: 1.6em;
 }

@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href=" {{ url_for('static', filename='recipe.css') }} ">
-    <title>Coffee Belt</title>
+    <title>Proper Coffee</title>
 </head>
 
 <body class="bg-dark text-light">
@@ -16,7 +16,7 @@
         <!-- navbar section -->
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Coffee Bar</a>
+                <a class="navbar-brand" href="#">PROPER BLOOM</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -35,23 +35,24 @@
                 </div>
             </div>
         </nav>
-        <h1 class="title">COFFEE BELT</h1>
+        <h1 class="title">Proper Bloom</h1>
         <h2>Coffee Recipe</h2>
 
         <div class="lower-box">
             <div class="btn-box">
                 <div class="top-col-left">
                     <p>Water Temp : 205f</p>
-                    <p>Coffee Amount : 24g</p>
-                    <p>Water Amount : 390g</p>
-                    <p>Brew Time : 3 min 30 sec</p>
+                    <p>Coffee Amount : 20g</p>
+                    <p>Water Amount : 300g</p>
+                    <p>Brew Time : 3 min</p>
                 </div>
                 <div class="top-col-right">
                     <p>Grind Size</p>
-                    <img src=" {{ url_for('static', filename='img/pour-over2.jpg') }} ">
+                    <img src=" {{ url_for('static', filename='img/pour-over22.jpg') }} ">
+                    <img src=" {{ url_for('static', filename='img/Medium1.jpg') }} ">
                 </div>
             </div>
-            <h1>Recipe for African Coffee On Kalita:</h1>
+            <h3>Recipe for Central American Coffee On Kalita:</h3>
             <p>1: Put a filter in the Kalita Wave, and place on 
                 top of a server or mug.
                 <br>
@@ -59,7 +60,7 @@
                 until you feel heat on the outside of the cone and 
                 discard water. 
                 <br>
-                3: Weigh coffee to (24 grams) and grind.
+                3: Weigh coffee to (20 grams) and grind.
                 <br>
                 4: Place the Kalita Wave with server on a scale. 
                 Add coffee, shake to level the coffee bed, zero the 
@@ -73,11 +74,11 @@
                 <br>
                 7: Start each pour in the center. Work your way out. 
                 <br>
-                8: Coffee should finish draining around 3:30. 
+                8: Coffee should finish draining around the 3 minute mark. 
                 Remove the Kalita Wave. Serve.</p>
         </div>
         <div class="button">
-            <a class="btn btn-light" href="/" role="button">Try Another Recipe</a>
+            <a class="btn btn-light" href="/brew" role="button">Try Another Recipe</a>
         </div>
     </div>
 

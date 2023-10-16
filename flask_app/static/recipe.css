@@ -45,12 +45,9 @@ a {
     align-items: center;
     justify-content: space-around;
 }
-h1{
-    text-align: center;
-    font-size: 50px;
-    margin: 150px;
-}
+
 h2{
+    font-size: 50px;
     text-align: center;
 }
 .container{
@@ -62,16 +59,19 @@ h2{
     font-size: 40px;
 }
 img{
-    height: 400px;
-    width: 400px;
+    height: 350px;
+    width: 350px;
     border-radius: 20px;
     overflow: hidden;
 }
-.top-col-right{
+.top-col-right p{
+    font-size: 40px;
     align-items: center;
     text-align: center;
 }
-
+h2{
+    font-size: 40px;
+}
 .navbar-brand{
     color: white;
 }
