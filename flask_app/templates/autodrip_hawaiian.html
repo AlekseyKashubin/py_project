@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href=" {{ url_for('static', filename='recipe.css') }} ">
+    <title>Proper Coffee</title>
+</head>
+
+<body class="bg-dark text-light">
+    <!-- full container -->
+    <div class="container">
+        <!-- navbar section -->
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">PROPER BLOOM</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        <a class="nav-link" href="/brew">Brew Method</a>
+                        <a class="nav-link" href="/region">Region</a>
+                        <a class="nav-link" href="/grounds">Grind Size Guide </a>
+                        <a class="nav-link" href="/gear">Gear</a>
+                        <a class="nav-link" href="/find">Find a Coffee Shop</a>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <h1 class="title">Proper Bloom</h1>
+        <h2>Coffee Recipe</h2>
+
+        <div class="lower-box">
+            <div class="btn-box">
+                <div class="top-col-left">
+                    <p>Water Temp : 205f</p>
+                    <p>Coffee Amount : 20g</p>
+                    <p>Water Amount : 300g</p>
+                    <p>Brew Time : 3 min</p>
+                </div>
+                <div class="top-col-right">
+                    <p>Grind Size</p>
+                    <img src=" {{ url_for('static', filename='img/pour-over22.jpg') }} ">
+                    <img src=" {{ url_for('static', filename='img/Medium1.jpg') }} ">
+                </div>
+            </div>
+            <h3>Recipe for Hawaiian Coffee On Kalita:</h3>
+            <p>1: Put a filter in the Kalita Wave, and place on 
+                top of a server or mug.
+                <br>
+                2: Fill pouring kettle with hot water and rinse filter 
+                until you feel heat on the outside of the cone and 
+                discard water. 
+                <br>
+                3: Weigh coffee to (20 grams) and grind.
+                <br>
+                4: Place the Kalita Wave with server on a scale. 
+                Add coffee, shake to level the coffee bed, zero the 
+                scale, and fill the pouring kettle with hot water. 
+                <br>
+                5: Start timer and your pour at the same time. 
+                <br>
+                6: Pouring is split into six separate pours of 65g of 
+                water in 15 seconds*, and allowing to drain for 15 seconds 
+                in between each pour. 
+                <br>
+                7: Start each pour in the center. Work your way out. 
+                <br>
+                8: Coffee should finish draining around the 3 minute mark. 
+                Remove the Kalita Wave. Serve.</p>
+        </div>
+        <div class="button">
+            <a class="btn btn-light" href="/brew" role="button">Try Another Recipe</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -90,13 +90,13 @@ body {
     background-attachment: fixed;
 }
 
-h1 {
-    text-align: center;
+/* h1 {
     color: white;
     font-weight: 700;
     font-size: 150px;
-    margin: 150px;
-}
+    margin-bottom: 150px;
+    padding: 20px;
+} */
 
 p {
     color: white;
