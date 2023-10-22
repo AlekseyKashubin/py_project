@@ -47,7 +47,7 @@ a {
 }
 
 h2{
-    font-size: 50px;
+    font-size: 80px;
     text-align: center;
 }
 .container{
@@ -66,6 +66,7 @@ img{
 }
 .top-col-right p{
     font-size: 40px;
+    display: flex;
     align-items: center;
     text-align: center;
 }
@@ -74,4 +75,11 @@ h2{
 }
 .navbar-brand{
     color: white;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 160px;
 }
