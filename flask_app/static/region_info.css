@@ -16,6 +16,12 @@ h1 {
     margin: 100px;
 }
 
+@media (max-width:600px) {
+    h1.title {
+        font-size: 55px;
+    }
+}
+
 h2 {
     text-align: center;
 }
@@ -200,4 +206,12 @@ li{
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+}
+
+@media(max-width:600px) {
+    .navbar-brand {
+        text-align: center;
+        padding: 0;
+        width: 285px;
+    }
 }

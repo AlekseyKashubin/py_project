@@ -38,7 +38,7 @@
             </div>
         </nav>
         <div class="container1">
-            <h1>Gear</h1>
+            <h1 class="title">Gear</h1>
             <p>Here to help you understand brewing methods and gear.</p>
 
         </div>
@@ -160,12 +160,12 @@
         <div class="container1 fourth">
 
             <div class="row1">
-                <p>Chemex</p>
+                <p id="gear-title">Chemex</p>
                 <img src=" {{ url_for('static', filename='img/chemex1.jpg') }} ">
                 <img src=" {{ url_for('static', filename='img/chemex2.jpg') }} ">
             </div>
             <div class="row2">
-                <p>Chemex Filters</p>
+                <p id="gear-title2">Chemex Filters</p>
                 <img src=" {{ url_for('static', filename='img/chemfil2.jpg') }} ">
                 <img src=" {{ url_for('static', filename='img/chemfil1.jpg') }} ">
             </div>
@@ -234,30 +234,8 @@
                 <img src=" {{ url_for('static', filename='img/aerofil2.jpg') }} ">
                 <img src=" {{ url_for('static', filename='img/aerofil4.jpg') }} ">
             </div>
-
         </div>
-
-        <div class="blank">
-            <a href="/">Home</a>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <a class="btn-home" href="/">Home</a>
 
 
     </div>

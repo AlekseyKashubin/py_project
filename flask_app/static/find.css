@@ -103,3 +103,18 @@ h2 {
     }
 }
 
+@media(max-width:600px) {
+    .navbar-brand {
+        text-align: center;
+        padding: 0;
+        width: 285px;
+    }
+}
+
+.btn-home {
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

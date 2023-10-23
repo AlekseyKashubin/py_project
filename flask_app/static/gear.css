@@ -16,6 +16,12 @@ h1 {
     margin: 150px;
 }
 
+@media (max-width:600px) {
+    h1.title {
+        font-size: 55px;
+    }
+}
+
 h2 {
     text-align: center;
 }
@@ -24,29 +30,30 @@ h2 {
     align-items: center;
 
 }
-
-.top-col-left p {
-    font-size: 40px;
-}
-
-img {
-    height: 400px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-
-}
-
 .top-col-right p {
     font-size: 40px;
     align-items: center;
     text-align: center;
 }
 
-p {
-    font-size: 25px;
-    text-align: left;
-    margin: 40px;
+.top-col-left p {
+    font-size: 40px;
+    align-items: center;
+    text-align: center;
 }
+
+
+img {
+    width: 100%;
+    float: left;
+    float: right;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-bottom: 20px;
+
+}
+
+
 
 /* all body  */
 
@@ -74,7 +81,6 @@ body {
     background-image: url('/static/img/nathan-dumlao-Y3AqmbmtLQI-unsplash.jpg');
     background-size: cover;
     background-position: center;
-
     /*  this is where the magic happens:  */
     background-attachment: fixed;
 }
@@ -85,11 +91,22 @@ h1 {
     font-size: 10rem;
 }
 
-p {
+.row2 p {
     text-align: center;
     color: white;
     background: rgba(0, 0, 0, 0.5);
-    
+    border-radius: 20px;
+    font-size: 25px;
+    margin: 40px;
+}
+
+.row1 p {
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    font-size: 25px;
+    margin: 40px;
 }
 
 a {
@@ -114,23 +131,25 @@ a {
 .second {
     background-image: url(https://images.unsplash.com/photo-1521401292936-0a2129a30b1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1365&q=80);
     background-attachment: fixed;
-    height: 1000px;
+    height: 1500px;
 }
 
 .third {
     background-image: url(https://images.unsplash.com/photo-1543233604-3baca4d35513?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80);
     background-attachment: fixed;
-    height: 1000px;
+    height: 1500px;
 }
+
 .fourth {
     background-image: url(https://images.unsplash.com/photo-1498709112912-9be3173d30be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=988&q=80);
     background-attachment: fixed;
-    height: 1000px;
+    height: 1500px;
 }
+
 .fifth {
     background-image: url(https://images.unsplash.com/photo-1541870730196-cd1efcbf5649?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1336&q=80);
     background-attachment: fixed;
-    height: 1000px;
+    height: 1500px;
 }
 
 h3 {
@@ -157,7 +176,7 @@ h3 {
     box-shadow: 0px 29px 38px -15px rgba(0, 0, 0, 0.43);
 }
 
-.blank p{
+.blank p {
     text-align: center;
     background: none;
 
@@ -170,22 +189,98 @@ h3 {
     gap: 2em;
     margin-bottom: 10px;
 }
+
+@media (max-width:600px) {
+    .second {
+        height: 2000px;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+        margin-bottom: 10px;
+    }
+}
+
 .third {
     flex-direction: row;
     gap: 2em;
     margin-bottom: 10px;
 }
+
+@media (max-width:600px) {
+    .third {
+        height: 2000px;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+        margin-bottom: 10px;
+    }
+}
+
 .fourth {
     flex-direction: row;
     gap: 2em;
     margin-bottom: 10px;
 }
+
+@media (max-width:600px) {
+    .fourth {
+        height: 2000px;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+        margin-bottom: 10px;
+    }
+}
+
 .fifth {
     flex-direction: row;
     gap: 2em;
     margin-bottom: 10px;
 }
 
-.navbar-brand{
+@media (max-width:600px) {
+    .fifth {
+        height: 2000px;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+        margin-bottom: 10px;
+    }
+}
+
+.row1 {
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.row2 {
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.navbar-brand {
     color: white;
+}
+
+@media(max-width:600px) {
+    .navbar-brand {
+        text-align: center;
+        padding: 0;
+        width: 285px;
+    }
+}
+
+
+.btn-home {
+    margin: 200px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }

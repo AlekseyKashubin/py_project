@@ -8,6 +8,7 @@
 body {
     font-family: 'Red Hat Text', sans-serif;
 }
+
 h1 {
 
     text-align: center;
@@ -15,6 +16,12 @@ h1 {
     font-weight: 700;
     font-size: 100px;
     margin: 50px;
+}
+
+@media (max-width:600px) {
+    h1.title {
+        font-size: 55px;
+    }
 }
 
 
@@ -39,6 +46,7 @@ a {
     letter-spacing: .5px;
     font-size: .875rem;
 }
+
 .story_shape {
     width: 228px;
     height: 228px;
@@ -48,6 +56,15 @@ a {
     clip-path: circle(50% at 50% 50%);
     position: relative;
 }
+
+@media (max-width:600px) {
+    .story_shape {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+
 
 .story_img {
     height: 120%;
@@ -71,6 +88,8 @@ a {
     text-align: center;
     backface-visibility: hidden;
 }
+
+
 
 h3 {
     text-align: center;
@@ -102,6 +121,17 @@ h3 {
     align-items: center;
 }
 
+@media (max-width:600px) {
+    .btn-box {
+        display: inline;
+        justify-content: center;
+        margin: 180px;
+
+    }
+}
+
+
+
 
 h2 {
     text-align: center;
@@ -111,13 +141,29 @@ h2 {
     align-items: center;
 
 }
-.story_shape a{
+
+.story_shape a {
     padding: 90px;
     font-size: 30px;
     color: black;
 
 }
+@media (max-width:600px) {
+    .story_shape a {
+        padding: 90px;
+        font-size: 30px;
+        color: black;
 
-.navbar-brand{
+    }
+}
+
+.navbar-brand {
     color: white;
+}
+@media(max-width:600px) {
+    .navbar-brand {
+        text-align: center;
+        padding: 0;
+        width: 285px;
+    }
 }
