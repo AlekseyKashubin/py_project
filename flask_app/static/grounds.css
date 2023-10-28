@@ -34,12 +34,42 @@ h2 {
 .top-col-left p {
     font-size: 40px;
 }
-
-img {
+.tag-pic {
     height: 400px;
     border-radius: 20px;
     margin-bottom: 20px;
+}
+.tag-pic2 {
+    height: 400px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
 
+
+@media (max-width:600px) {
+    .tag-pic {
+        width: 380px;
+        height: 380px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width:600px) {
+    .tag-pic2 {
+        width: 380px;
+        height: 300px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width:600px) {
+    .row1 {
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .top-col-right p {
@@ -54,7 +84,15 @@ p {
     margin: 40px;
 }
 
-.navbar-brand{
+@media (max-width:600px) {
+    p {
+        font-size: 20px;
+        text-align: left;
+        margin: 40px;
+    }
+}
+
+.navbar-brand {
     color: white;
 }
 
@@ -99,7 +137,7 @@ p {
     text-align: center;
     color: white;
     background: rgba(0, 0, 0, 0.5);
-    
+
 }
 
 a {
@@ -127,10 +165,32 @@ a {
     height: 3000px;
 }
 
+@media (max-width:600px) {
+    .second {
+        height: 5500px;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+        margin-bottom: 10px;
+    }
+}
+
+
 .third {
     background-image: url(https://cdn.shopify.com/s/files/1/0563/3294/3550/articles/Burr-and-Blade-Grinders.jpg?v=1628189228);
     background-attachment: fixed;
     height: 2000px;
+}
+@media (max-width:600px) {
+    .third {
+        height: 1300px;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+        margin-bottom: 10px;
+    }
 }
 
 h3 {
@@ -157,12 +217,11 @@ h3 {
     box-shadow: 0px 29px 38px -15px rgba(0, 0, 0, 0.43);
 }
 
-.blank p{
+.blank p {
     text-align: center;
     background: none;
 
 }
-
 
 
 .second {
@@ -170,10 +229,13 @@ h3 {
     gap: 2em;
     margin-bottom: 10px;
 }
+
 .third {
     flex-direction: row;
+    margin-bottom: 10px;
     gap: 2em;
 }
+
 @media(max-width:600px) {
     .navbar-brand {
         text-align: center;
@@ -181,6 +243,7 @@ h3 {
         width: 285px;
     }
 }
+
 .btn-home {
     margin-top: 20px;
     display: flex;
