@@ -8,9 +8,17 @@ bcrypt = Bcrypt(app)
 def Home():
     return render_template('home.html')
 
+@app.route('/recipes')
+def Recipes():
+    return render_template('recipes.html')
+
 @app.route('/brew')
 def Brew():
     return render_template('brew.html')
+
+@app.route('/register')
+def Register():
+    return render_template('register.html')
 
 # Region routes
 @app.route('/kalita')

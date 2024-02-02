@@ -1,29 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap');
 
 
-
-
-h4 {
-    font-size: 25px;
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-    max-width: 52ch;
-    line-height: 1.5;
-    padding: 1em;
-}
-
-.navbar-brand {
-    color: white;
-}
-
-
-
-/* all body  */
-
-
-
-
-
 :root {
     --color: #282727;
 }
@@ -31,6 +8,14 @@ h4 {
 body {
     font-family: 'Red Hat Text', sans-serif;
 }
+
+
+
+
+.navbar-brand {
+    color: white;
+}
+
 
 .container1 {
     text-align: center;
@@ -69,8 +54,8 @@ p {
 }
 
 a {
-    text-align: center;
-    padding: 25px;
+    display: inline-block;
+    padding: 1em 3.5em;
     background-color: var(--color);
     color: white;
     text-decoration: none;
@@ -79,9 +64,8 @@ a {
     font-weight: 700;
     letter-spacing: .5px;
     font-size: .875rem;
-    
-    
 }
+
 
 .blank,
 .other {
@@ -160,4 +144,17 @@ h3 {
     display: flex;
     flex-direction: row;
     gap: 1.6em;
+}
+
+h4 {
+    font-size: 25px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    max-width: 52ch;
+    line-height: 1.5;
+    padding: 1em;
+}
+
+.footer {
+    text-align: center;
 }

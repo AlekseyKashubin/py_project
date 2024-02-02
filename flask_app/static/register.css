@@ -1,0 +1,149 @@
+
+
+
+
+:root {
+    --color: #282727;
+}
+body {
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+h1 {
+    color: white;
+    font-weight: 700;
+    font-size: 150px;
+    padding: 20px;
+}
+
+.container1 {
+    text-align: center;
+    color: var(--color);
+    min-height: 1350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://images.unsplash.com/photo-1498709112912-9be3173d30be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=988&q=80);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+@media (max-width:600px) {
+    h1.title {
+        font-size: 55px;
+    }
+}
+
+p {
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    max-width: 52ch;
+    line-height: 1.5;
+    padding: 1em;
+}
+
+a {
+    display: inline-block;
+    padding: 1em 3.5em;
+    background-color: var(--color);
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 0.3em;
+    font-weight: 700;
+    letter-spacing: .5px;
+    font-size: .875rem;
+}
+
+
+.col2{
+    margin: 0 auto;
+    width: 380px;
+    padding: 20px;
+    margin: 30px;
+}
+.col1{
+    
+    text-align: left;
+    margin: 0 auto;
+    width: 380px;
+    padding: 20px;
+    margin: 30px;
+}
+
+.rows {
+    margin: 0 auto;
+    width: 900px;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    border-radius: 6px;
+    padding: 20px;
+    margin: 30px;
+
+
+}
+
+h2 {
+color: white;
+    text-align: center;
+}
+
+
+.button{
+    margin: 10px;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+a{
+    margin: 0 auto;
+
+}
+p{
+    
+    margin: 40px;
+    font-size: 30px;
+}
+
+.border-box{
+    
+    margin: 0 auto;
+    border: solid 3px white;
+    border-radius: 10px;
+    margin-top: 30px;
+    
+}
+
+.left-col{
+    
+    padding: 20px;
+    text-align: left;
+}
+.top-btn{
+display: flex;
+justify-content: center;
+font-size: 20px;
+}
+
+/* .top-title{
+    margin: 40px;
+    font-size: 40px;
+} */
+.label{
+    text-align: left;
+    margin: 30px;
+}
+.text-box {
+    align-items: end;
+}
+
+.footer {
+    text-align: center;
+}

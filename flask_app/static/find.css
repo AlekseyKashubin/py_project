@@ -1,13 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap');
 
 
-/* :root {
-    --color: #282727;
-} */
+:root {
+    --color: rgb(33, 37, 41);
+}
 
 body {
     font-family: 'Red Hat Text', sans-serif;
 }
+
+.navbar-brand {
+    color: white;
+}
+
+.container {
+    background-image: url('/static/img/firdaus-ramadhan-1AMsQMsERy4-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1400px;
+    align-items: center;
+    padding: 0;
+
+}
+
 h1 {
 
     text-align: center;
@@ -18,24 +33,11 @@ h1 {
 }
 
 
-
-p{
+a {
     display: inline-block;
     padding: 1em 3.5em;
     background-color: var(--color);
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    text-transform: uppercase;
-    border-radius: 0.3em;
-    font-weight: 700;
-    letter-spacing: .5px;
-    font-size: .875rem;
-}
-a{
-    display: inline-block;
-    padding: 1em 3.5em;
-    background-color: var(--color);
-    color: rgb(0, 0, 0);
+    color: white;
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 0.3em;
@@ -46,62 +48,16 @@ a{
 
 
 
+/* store locator */
 
 .lower-box {
-    margin-top: 200px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.btn-box {
-    width: 600px;
-    height: 1000px;
-    display: flex;
-    margin: 40px;
-    justify-content: center;
-    align-items: center;
-}
 
-
-h2 {
-    text-align: center;
-}
-
-.container {
-    background-image: url('/static/img/firdaus-ramadhan-1AMsQMsERy4-unsplash.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 1380px;
-    align-items: center;
-
-}
-
-.navbar-brand{
-    color: white;
-    background-color: rgb(40, 33, 33);
-}
-
-
-
-#storelocatorwidget {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    width: 90%;
-    
-}
-
-.storelocator-scrollFix IMG {
-    max-width: 250px;
-}
-
-@media screen and (max-width: 992px) {
-
-    td#storelocator-infowindow-td-left,
-    td#storelocator-infowindow-td-right {
-        display: table-row;
-    }
-}
 
 @media(max-width:600px) {
     .navbar-brand {
@@ -111,10 +67,18 @@ h2 {
     }
 }
 
+/* home button */
 .btn-home {
-    background: rgba(0, 0, 0, 0.5);
+    margin-top: 60px;
+}
+
+.bottom-nav {
     display: flex;
     justify-content: center;
     align-items: center;
 
+}
+
+.footer {
+    text-align: center;
 }

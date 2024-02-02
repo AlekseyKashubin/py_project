@@ -19,7 +19,7 @@
         <!-- navbar section -->
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand">PROPER BLOOM</a>
+                <a class="navbar-brand" href="/">PROPER BLOOM</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -27,12 +27,14 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
-                        <a class="nav-link" href="/brew">Brew Method</a>
+                        <a class="nav-link" aria-current="page" href="/">Home</a>
                         <a class="nav-link" href="/region">Region</a>
                         <a class="nav-link" href="/grounds">Grind Size Guide </a>
                         <a class="nav-link" href="/gear">Gear</a>
+                        <a class="nav-link" href="/recipes">Recipes</a>
+                        <a class="nav-link" href="/brew">Brew Method</a>
                         <a class="nav-link" href="/find">Find a Coffee Shop</a>
+                        <a class="nav-link" href="/register">Login</a>
                     </div>
                 </div>
             </div>
@@ -44,12 +46,13 @@
         </div>
 
         <div class="blank">
-            <h3>Kalita Wave 185</h3>
+            <h3><a id="title-link" href="https://kalitausa.com/"
+                    class="btn btn-text-stretch btn-text-stretch--gray">Kalita Wave 185</a></h3>
+
             <p>This small and compact dripper holds more volume than the 155 version so you can brew for 1 or 2! Expect
                 strong and robust brews from this pour-over dripper. It has a unique flat-bottomed coffee bed, three
                 small extraction holes, and a patented wave filter so hot water does not accumulate. The result is a
                 rich and evenly extracted cup of coffee.
-
 
                 The Kalita Wave is a unique brewing process with tailor-made filters and brewers that provide foolproof
                 pour over coffee extractions. The inside of this brewer features a wave design with a contrasting
@@ -66,13 +69,16 @@
         <div class="container1 second">
 
             <div class="row1">
-                <p>Kalita Wave</p>
+                <a id="web-link" href="https://kalitausa.com/products/kalita-wave-185-stainless-steel-coffee-dripper">
+                    <button class="btn btn-rect-to-round btn-rect-to-round--black"> Kalita Wave </button>
+                </a>
                 <img src=" {{ url_for('static', filename='img/kalita2.jpg') }} ">
                 <img src=" {{ url_for('static', filename='img/kalita-wave.jpg') }} ">
-
             </div>
             <div class="row2">
-                <p>Kalita Filters</p>
+                <a id="web-link" href="https://kalitausa.com/collections/filter">
+                    <button class="btn btn-rect-to-round btn-rect-to-round--black"> Kalita Filters </button>
+                </a>
                 <img src=" {{ url_for('static', filename='img/kalitafil1.jpg') }} ">
                 <img src=" {{ url_for('static', filename='img/kalitafil2.jpg') }} ">
             </div>
@@ -80,7 +86,8 @@
         </div>
 
         <div class="blank">
-            <h3>Hario V60</h3>
+            <h3><a id="title-link" href="https://www.hario-usa.com/"
+                    class="btn btn-text-stretch btn-text-stretch--gray">Hario V60</a></h3>
             <p>The Hario V60 has a unique conical silhouette. It takes its name from the V-shaped sides of its conical
                 brewing chamber, which are pitched at a 60-degree angle.
 
@@ -112,12 +119,18 @@
         <div class="container1 third">
 
             <div class="row1">
-                <p>Hario V60</p>
+                <a id="web-link" href="https://www.hario-usa.com/products/v60-coffee-dripper-02-ceramic">
+                    <button class="btn btn-rect-to-round btn-rect-to-round--black"> Hario V60 </button>
+                </a>
                 <img src=" {{ url_for('static', filename='img/v60.jpg') }} ">
                 <img src=" {{ url_for('static', filename='img/v601.jpg') }} ">
             </div>
             <div class="row2">
-                <p>V60 Filters</p>
+                <a id="web-link" href="https://www.hario-usa.com/collections/filters">
+
+                    <button class="btn btn-rect-to-round btn-rect-to-round--black"> Hario V60 </button>
+                </a>
+
                 <img src=" {{ url_for('static', filename='img/v60fil2.png') }} ">
                 <img src=" {{ url_for('static', filename='img/v60fil.jpg') }} ">
             </div>
@@ -125,7 +138,8 @@
         </div>
 
         <div class="blank">
-            <h3>Chemex</h3>
+            <h3><a id="title-link" href="https://www.chemexcoffeemaker.com/"
+                    class="btn btn-text-stretch btn-text-stretch--gray">Chemex</a></h3>
             <p>The Chemex pour over coffee maker is one of the world’s most widely recognized pour over coffee makers,
                 and can be found in most coffee and kitchen stores. I got this coffee maker on Amazon and while I was
                 worried it will arrive broken and shattered, I am happy to report that it arrived without any damage.
@@ -160,12 +174,18 @@
         <div class="container1 fourth">
 
             <div class="row1">
-                <p id="gear-title">Chemex</p>
+                <a id="web-link" href="https://www.chemexcoffeemaker.com/eight-cup-classic-series-coffeemaker.html">
+                    <button class="btn btn-rect-to-round btn-rect-to-round--black"> Chemex</button>
+                </a>
+
                 <img src=" {{ url_for('static', filename='img/chemex1.jpg') }} ">
                 <img src=" {{ url_for('static', filename='img/chemex2.jpg') }} ">
             </div>
             <div class="row2">
-                <p id="gear-title2">Chemex Filters</p>
+                <a id="web-link" href="https://www.chemexcoffeemaker.com/filters.html">
+                    <button class="btn btn-rect-to-round btn-rect-to-round--black"> Chemex Filters</button>
+                </a>
+
                 <img src=" {{ url_for('static', filename='img/chemfil2.jpg') }} ">
                 <img src=" {{ url_for('static', filename='img/chemfil1.jpg') }} ">
             </div>
@@ -174,7 +194,8 @@
 
         <div class="blank">
 
-            <h3>Areopress</h3>
+            <h3><a id="title-link" href="https://aeropress.com/"
+                    class="btn btn-text-stretch btn-text-stretch--gray">Areopress</a></h3>
             <p>The Aeropress seems like a bit of a toy at first glance. And in fact, the company behind it — Aerobie —
                 is a frisbee producer.
                 However, the Aeropress is more than capable of brewing delicious coffee.
@@ -225,21 +246,29 @@
         <div class="container1 fifth">
 
             <div class="row1">
-                <p>Areopress</p>
+                <a id="web-link" href="https://aeropress.com/products/aeropress-coffee-maker">
+                    <button class="btn btn-rect-to-round btn-rect-to-round--black"> Areopress </button>
+                </a>
                 <img src=" {{ url_for('static', filename='img/areopress1.jpg') }} ">
                 <img src=" {{ url_for('static', filename='img/areo3.jpg') }} ">
             </div>
             <div class="row2">
-                <p>Areopress Filters</p>
+                <a id="web-link" href="https://aeropress.com/collections/paper-filters">
+                    <button class="btn btn-rect-to-round btn-rect-to-round--black"> Areopress Filters</button>
+                </a>
+
                 <img src=" {{ url_for('static', filename='img/aerofil2.jpg') }} ">
                 <img src=" {{ url_for('static', filename='img/aerofil4.jpg') }} ">
             </div>
         </div>
+        
         <a class="btn-home" href="/">Home</a>
 
 
     </div>
-
+    <div class="footer">
+        <footer>©2024 ProperBloom</footer>
+    </div>
 
 </body>
 

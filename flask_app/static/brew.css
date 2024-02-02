@@ -8,13 +8,25 @@
 body {
     font-family: 'Red Hat Text', sans-serif;
 }
+
+.container {
+    background-image: url('/static/img/firdaus-ramadhan-1AMsQMsERy4-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 1400px;
+    align-items: center;
+    padding: 0;
+
+}
+
 h1 {
 
     text-align: center;
     color: white;
     font-weight: 700;
     font-size: 100px;
-    margin: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 @media (max-width:600px) {
@@ -35,7 +47,7 @@ h1 {
 
 a {
     display: inline-block;
-    padding: 3em;
+    padding: 1em 3.5em;
     background-color: var(--color);
     color: white;
     text-decoration: none;
@@ -72,8 +84,6 @@ a {
     backface-visibility: hidden;
 }
 
-
-
 .story_caption {
     position: absolute;
     top: 50%;
@@ -84,6 +94,7 @@ a {
     text-align: center;
     backface-visibility: hidden;
 }
+
 h3 {
     text-align: center;
     top: 200px;
@@ -123,10 +134,6 @@ h2{
     text-align: center;
 }
 
-.container{
-    align-items: center;
-    
-}
 
 .navbar-brand{
     color: white;
@@ -137,4 +144,8 @@ h2{
         padding: 0;
         width: 285px;
     }
+}
+
+.footer {
+    text-align: center;
 }
