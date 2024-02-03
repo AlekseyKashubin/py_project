@@ -8,9 +8,9 @@ bcrypt = Bcrypt(app)
 def Home():
     return render_template('home.html')
 
-@app.route('/recipes')
-def Recipes():
-    return render_template('recipes.html')
+@app.route('/user-recipes')
+def UserRecipes():
+    return render_template('user-recipes.html')
 
 @app.route('/brew')
 def Brew():

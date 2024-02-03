@@ -12,10 +12,22 @@ h4 {
     padding: 1em;
 }
 
-.navbar-brand {
-    color: white;
-}
 
+
+
+.section-heading {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border: 4px solid rgb(250, 207, 207);
+    font-size: 25px;
+    padding: 10px;
+    color: rgb(250, 207, 207);
+    margin-bottom: 100px;
+    width: auto;
+
+}
 
 
 /* all body  */
@@ -96,6 +108,30 @@ a {
     letter-spacing: .5px;
     font-size: .875rem;
 }
+/* navbar style start */
+.nav-link {
+    display: inline-block;
+    color: rgb(240, 184, 184);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .5px;
+    font-size: .875rem;
+}
+
+.navbar-brand {
+    padding: 5px 70px;
+    color: white;
+    background-color: var(--color);
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 0.3em;
+    font-weight: 700;
+    letter-spacing: .5px;
+    font-size: 1.25rem;
+}
+
+/* navbar style end */
+
 
 
 .blank,
@@ -177,6 +213,35 @@ h3 {
     gap: 1.6em;
 }
 
+/* home button hover effect start */
+
+.home-flex {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a.btn-home {
+    padding: 12px;
+    color: #f7f7f7;
+    text-decoration: none;
+    border: 2px solid rgb(243, 208, 208);
+    width: 220px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .5px;
+    font-size: 15px;
+    margin: 25px;
+    border-radius: 2px;
+}
+
+.btn-home:hover {
+    background-color: rgb(243, 208, 208);
+    color: rgb(51, 51, 51);
+}
+
+/* home button hover effect end */
 
 .footer {
     text-align: center;
