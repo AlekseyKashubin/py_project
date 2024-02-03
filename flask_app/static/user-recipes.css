@@ -87,6 +87,13 @@ h1 {
         font-size: 55px;
     }
 }
+@media(max-width:600px) {
+    .navbar-brand {
+        text-align: center;
+        padding: 0;
+        width: 285px;
+    }
+}
 
 p {
     color: white;

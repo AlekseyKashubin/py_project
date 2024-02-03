@@ -24,6 +24,13 @@ h1 {
     }
 }
 
+@media(max-width:600px) {
+    .navbar-brand {
+        text-align: center;
+        padding: 0;
+        width: 200px;
+    }
+}
 
 p {
     font-size: 25px;
