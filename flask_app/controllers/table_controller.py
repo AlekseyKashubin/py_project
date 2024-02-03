@@ -20,6 +20,11 @@ def Brew():
 def Register():
     return render_template('register.html')
 
+@app.route('/shop')
+def Shop():
+    return render_template('shop.html')
+
+
 # Region routes
 @app.route('/kalita')
 def region_kalita():
