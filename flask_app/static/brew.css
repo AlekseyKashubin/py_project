@@ -7,43 +7,90 @@
 
 body {
     font-family: 'Red Hat Text', sans-serif;
+    margin: 0 auto;
 }
 
-.container {
-    background-image: url('/static/img/firdaus-ramadhan-1AMsQMsERy4-unsplash.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 1400px;
-    align-items: center;
-    padding: 0;
-
-}
-
-h1 {
-
+.container1 {
     text-align: center;
+    color: var(--color);
+    min-height: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://images.unsplash.com/photo-1549166114-bf535a63c671?q=80&w=3744&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-radius: 20px;
+}
+
+
+
+@media (max-width:600px) {
+    .container1 {
+        min-height: 2200px;
+        min-width: 410px;
+        
+    }
+}
+
+/* title style start  */
+h1 {
     color: white;
     font-weight: 700;
-    font-size: 100px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    font-size: 150px;
+    margin: 200px;
+    padding: 20px;
 }
 
 @media (max-width:600px) {
     h1.title {
-        font-size: 55px;
+        font-size: 90px;
     }
 }
 
+/* title style end  */
 
-.col-left a, .col-right a {
+
+.section-heading {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border: 4px solid rgb(250, 207, 207);
+    font-size: 25px;
+    padding: 10px;
+    margin: 10px;
+    color: rgb(250, 207, 207);
+    margin-bottom: 100px;
+    width: auto;
+}
+
+
+.blank {
+    width: 100%;
+    min-height: 200px;
+}
+
+.second {
+    background-image: url(https://images.unsplash.com/photo-1513211888420-0a4531c612b2?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-attachment: fixed;
+    height: 1400px;
+}
+
+
+
+.col-left a,
+.col-right a {
     color: white;
     background: rgba(0, 0, 0, 0.5);
-    max-width: 52ch;
     line-height: 1.5;
     padding: 3em;
     font-size: 35px;
 }
+
+
 
 a {
     display: inline-block;
@@ -81,6 +128,8 @@ a {
 }
 
 /* navbar style end */
+
+
 .story_shape {
     width: 228px;
     height: 228px;
@@ -90,6 +139,7 @@ a {
     clip-path: circle(50% at 50% 50%);
     position: relative;
 }
+
 @media (max-width:600px) {
     .story_shape {
         margin-bottom: 25px;
@@ -98,10 +148,7 @@ a {
 }
 
 
-.story_img:hover {
-    background-color: #fddfdb;
-    cursor: pointer;
-}
+
 .story_img {
     height: 120%;
     backface-visibility: hidden;
@@ -128,39 +175,34 @@ h3 {
     height: 50px;
 }
 
-.lower-box{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
-.btn-box{
-    width: 600px;
+
+.btn-box {
     height: 1000px;
     display: flex;
     margin: 40px;
-    justify-content: center;
-    align-items: center;
+
 }
+
 @media (max-width:600px) {
     .btn-box {
-        display: inline;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
-        margin: 180px;
         margin-bottom: 20px;
-
     }
 }
 
 
-h2{
+h2 {
     text-align: center;
 }
 
 
-.navbar-brand{
+.navbar-brand {
     color: white;
 }
+
 @media(max-width:600px) {
     .navbar-brand {
         text-align: center;

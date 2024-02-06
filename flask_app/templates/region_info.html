@@ -21,7 +21,7 @@
         <!-- navbar section -->
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">PROPER BLOOM</a>
+                <a class="navbar-brand" href="/">PROPER BLOOM</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -29,7 +29,6 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link" aria-current="page" href="/">Home</a>
                         <a class="nav-link active" href="/region">Region</a>
                         <a class="nav-link" href="/grounds">Grind Size Guide </a>
                         <a class="nav-link" href="/gear">Gear</a>
@@ -43,17 +42,13 @@
             </div>
         </nav>
 
-
-
-
         <div class="container1">
             <h1 class="title">Regions <br>&<br> Sub-Regions</h1>
             <p class="section-heading">Coffee Regions: A Quick Guide to Coffee Growing Locations & Regions.</p>
-
         </div>
 
         <div class="blank">
-            <h3>Which Countries Grow the Best Coffee?</h3>
+            <h2>Which Countries Grow the Best Coffee?</h2>
             <p>Have you ever asked yourself where your coffee comes from? Ever wondered which countries grow the best
                 Coffee?
                 If you love coffee as much as we do, then you will definitely want to know which countries grow the best
@@ -64,53 +59,71 @@
                 Each location has a different soil and various elevations that produces different flavours. It also
                 means that different
                 coffees from different regions will also have different characteristics.</p>
-
-        </div>
-
-        <div class="container1 second">
-
-            <div class="row1">
-                <p>South American Coffee Farms</p>
-                <img src=" {{ url_for('static', filename='img/coffee-farm-guatemala.jpg') }} ">
-                <img src=" {{ url_for('static', filename='img/Coffee-Cherry-Fruit-Guatemala.jpg') }} ">
-                <img src=" {{ url_for('static', filename='img/main-guat.jpg') }} ">
-            </div>
-
-
         </div>
 
         <div class="blank">
             <h3>LATIN AMERICA</h3>
             <p>Latin American coffees generally give you good body, acidity, and a hint of fruitiness. Enjoy flavour
-                notes that are chocolatey, nutty and with a slight citrus overtone. <br>
-
-                <br>- Within Latin America, several growing regions have come to the front.
-
-            <ul>
-                <li><strong>BRAZIL –</strong></li> As one of the world’s top coffee producers, Brazil is known for
+                notes that are chocolatey, nutty and with a slight citrus overtone.
+                - Within Latin America, several growing regions have come to the front.
+                <br><br>
+                <strong>BRAZIL – </strong>As one of the world’s top coffee producers, Brazil is known for
                 growing nutty and sweet coffees
-                with a full body that is perfect for espressos. Some beans from this region may also have flavour notes
-                of spice or even citrus.<br>
-
-                <li><strong>COLOMBIA –</strong></li> Famous for its medium body and well-balanced flavour, Colombian
+                with a full body that is perfect for espressos. Some beans from this region may also have flavour
+                notes of spice or even citrus.
+                <br><br>
+                <strong>COLOMBIA – </strong> Famous for its medium body and well-balanced flavour, Colombian
                 coffees are a popular choice.
-                Its flavour is characterised by caramel sweetness and a subtle nuttiness. It has moderate acidity that
-                balances well with its inherent sweetness.<br>
-
-                <li><strong>GUATEMALA –</strong></li> Like its Latin American neighbour, Colombia, Guatemalan coffee is
+                Its flavour is characterised by caramel sweetness and a subtle nuttiness. It has moderate acidity
+                that balances well with its inherent sweetness.
+                <br><br>
+                <strong>GUATEMALA – </strong>Like its Latin American neighbour, Colombia, Guatemalan coffee is
                 also rich and distinctly
                 flavourful, thanks to its equally rich volcanic soil. However, it has a slightly higher degree of
-                acidity and a hint of smokiness may be detected – a taste characteristic that coffee lovers find unique
-                to the region.</p>
+                acidity and a hint of smokiness may be detected – a taste characteristic that coffee lovers find
+                unique to the region.
+            </p>
+        </div>
 
-            </ul>
+        <div class="container1 second">
+            <div class="row1">
+                <p class="pic-title">South American Coffee Farms</p>
+                <img src=" {{ url_for('static', filename='img/coffee-farm-guatemala.jpg') }} ">
+                <img src=" {{ url_for('static', filename='img/Coffee-Cherry-Fruit-Guatemala.jpg') }} ">
+                <img src=" {{ url_for('static', filename='img/main-guat.jpg') }} ">
+            </div>
+        </div>
 
+        <div class="blank">
+            <h3>AFRICA</h3>
+            <p>Look out for higher acidity and bright flavour notes if you are buying African coffee! Generally, African
+                coffees can taste fruity, floral and sweet.
+                <br>
+                <br>
+                True coffee lovers enjoy the light and fruity flavours of African coffees and from here, the two
+                major
+                growing regions are Ethiopia and Kenya.
+                <br><br>
+                <strong>ETHIOPIA – </strong> Considered as the birthplace of coffee with thousands of coffee
+                varietals that are still
+                grown wild, Ethiopia offers a fruity, wine-like coffee. The coffee here is processed either wet or dry
+                with dry-processed coffee having a taste profile reminiscent of blueberry or strawberry, with a smooth,
+                heavy, syrupy mouthfeel. Meanwhile, wet-processed coffee tends to have delicate floral nuances that give
+                it a lighter body.
+                <br><br>
+                <strong>KENYA – </strong> Kenyan coffee is distinct for bold, vibrant, and juicy flavours,
+                making it one of the most
+                highly prized and priced coffees in the world. Kenyan AA is well known to be the largest coffee bean.
+                Kenyan coffees can taste savoury to sweet, with a tartness that is reminiscent of tomatoes or black
+                currants. Overall, coffees from the region are mellow and well-balanced, with distinctly pleasant
+                nuances that are popular among coffee aficionados.
+            </p>
         </div>
 
         <div class="container1 third">
 
             <div class="row1">
-                <p>Africa Farms</p>
+                <p class="pic-title">Africa Farms</p>
                 <img src=" {{ url_for('static', filename='img/af2.jpg') }} ">
                 <img src=" {{ url_for('static', filename='img/af3.webp') }} ">
                 <img src=" {{ url_for('static', filename='img/africa-farm.webp') }} ">
@@ -119,36 +132,31 @@
         </div>
 
         <div class="blank">
-            <h3>AFRICA</h3>
-            <p>Look out for higher acidity and bright flavour notes if you are buying African coffee! Generally, African
-                coffees can taste fruity, floral and sweet.,<br>
 
-                <br>-True coffee lovers enjoy the light and fruity flavours of African coffees and from here, the two
-                major
-                growing regions are Ethiopia and Kenya.
-            <ul>
-                <li><strong>ETHIOPIA –</strong></li> Considered as the birthplace of coffee with thousands of coffee
-                varietals that are still
-                grown wild, Ethiopia offers a fruity, wine-like coffee. The coffee here is processed either wet or dry
-                with dry-processed coffee having a taste profile reminiscent of blueberry or strawberry, with a smooth,
-                heavy, syrupy mouthfeel. Meanwhile, wet-processed coffee tends to have delicate floral nuances that give
-                it a lighter body.
-
-                <br>
-                <li><strong>KENYA –</strong></li> Kenyan coffee is distinct for bold, vibrant, and juicy flavours,
-                making it one of the most
-                highly prized and priced coffees in the world. Kenyan AA is well known to be the largest coffee bean.
-                Kenyan coffees can taste savoury to sweet, with a tartness that is reminiscent of tomatoes or black
-                currants. Overall, coffees from the region are mellow and well-balanced, with distinctly pleasant
-                nuances that are popular among coffee aficionados.
-            </ul>
+            <h3>ASIA</h3>
+            <p>Asian coffees are well-known for their bitter and earthy taste notes. Discover flavours of dark
+                chocolate, earth and herbs.
+                <br><br>
+                Asia is an up and coming growing region for coffee. While Vietnam and Indonesia export huge amounts of
+                coffee, the specialty coffee market is also on the rise with producers in Thailand, Malaysia and Java.
+                <br><br>
+                <strong>INDONESIA – </strong> For those who are looking for a big, bold, dark, and full-bodied
+                coffee experience, Sumatra
+                is a perfect choice. It is also well-loved for its distinctly smoky, musty and earthy quality that is
+                ideal for dark roasts. There are also coffees that have complex, dark-chocolate and herbal-tasting
+                qualities that are unique to the regions they are grown in.
+                <br><br>
+                <strong>MALAYSIA –</strong> Most coffee are made from Arabica and Robusta beans. (About 98% of
+                the world’s coffee).
+                However, 95% of Malaysia’s coffee beans come from the Liberica coffee plant, which typically produces
+                flavours that are fruity, nutty and a clean aftertaste. Malaysian coffee are also known to be very
+                strong tasting.
             </p>
-        </div>
 
         <div class="container1 fourth">
 
             <div class="row1">
-                <p>Asian Coffee Farms</p>
+                <p class="pic-title">Asian Coffee Farms</p>
                 <img src=" {{ url_for('static', filename='img/as1.jpeg') }} ">
                 <img src=" {{ url_for('static', filename='img/as2.webp') }} ">
                 <img src=" {{ url_for('static', filename='img/as3.jpg') }} ">
@@ -156,42 +164,20 @@
 
         </div>
 
-        <div class="blank">
 
-            <h3>ASIA</h3>
-            <p>Asian coffees are well-known for their bitter and earthy taste notes. Discover flavours of dark
-                chocolate, earth and herbs. <br>
-
-                <br>
-                -Asia is an up and coming growing region for coffee. While Vietnam and Indonesia export huge amounts of
-                coffee, the specialty coffee market is also on the rise with producers in Thailand, Malaysia and Java.
-            <ul>
-
-                <li><strong>INDONESIA –</strong></li> For those who are looking for a big, bold, dark, and full-bodied
-                coffee experience, Sumatra
-                is a perfect choice. It is also well-loved for its distinctly smoky, musty and earthy quality that is
-                ideal for dark roasts. There are also coffees that have complex, dark-chocolate and herbal-tasting
-                qualities that are unique to the regions they are grown in.
-
-                <li><strong>MALAYSIA –</strong></li> Most coffee are made from Arabica and Robusta beans. (About 98% of
-                the world’s coffee).
-                However, 95% of Malaysia’s coffee beans come from the Liberica coffee plant, which typically produces
-                flavours that are fruity, nutty and a clean aftertaste. Malaysian coffee are also known to be very
-                strong tasting.</p>
-            </ul>
 
 
             <!-- redirect buttons and footer start -->
-        <div class="home-flex">
-            <a class="btn-home" href="/">Home</a>
-            <!-- remeber to change link to current page -->
-            <a class="btn-home" href="/region">Back to Top</a>
+            <div class="home-flex">
+                <a class="btn-home" href="/">Home</a>
+                <!-- remeber to change link to current page -->
+                <a class="btn-home" href="/region">Back to Top</a>
+            </div>
         </div>
-    </div>
-    <div class="footer">
-        <footer>©2024 ProperBloom</footer>
-    </div>
-    <!-- redirect buttons and footer end -->
+        <div class="footer">
+            <footer>©2024 ProperBloom</footer>
+        </div>
+        <!-- redirect buttons and footer end -->
 
 </body>
 

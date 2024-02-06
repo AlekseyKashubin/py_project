@@ -16,11 +16,11 @@
 <body class="bg-dark text-light">
     <!-- full container -->
     <div class="container">
-        <!-- navbar section -->
+
         <!-- navbar section -->
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">PROPER BLOOM</a>
+                <a class="navbar-brand" href="/">PROPER BLOOM</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -28,7 +28,6 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link" aria-current="page" href="/">Home</a>
                         <a class="nav-link" href="/region">Region</a>
                         <a class="nav-link active" href="/grounds">Grind Size Guide </a>
                         <a class="nav-link" href="/gear">Gear</a>
@@ -41,6 +40,7 @@
                 </div>
             </div>
         </nav>
+
         <div class="container1">
             <h1 class="title">Grinders<br>&<br>Grounds</h1>
             <p class="section-heading">Here to help you understand grinders and grind sizes.</p>
@@ -48,62 +48,67 @@
         </div>
 
         <div class="blank">
-            <h3>Coffee Grind Size Chart: How Grind Size Affects Coffee Flavor</h3>
-            <p>Getting the right coffee grind size is essential for brewing the perfect cup of coffee.</p>
-
-            <h3>Why Does Coffee Grind Size Matter?</h3>
-            <p>No matter your brew method, coffee-making involves extracting flavor (and caffeine)
+            <h3>Coffee Grind Size Chart</h3>
+            <p>
+                <strong>Why Does Coffee Grind Size Matter? </strong>
+                <br><br>
+                <strong>How Grind Size Affects Coffee Flavor :</strong>
+                Getting the right coffee grind size is essential for brewing the perfect cup of coffee. No matter your
+                brew method, coffee-making involves extracting flavor (and caffeine)
                 from coffee grounds. The finer you grind your coffee beans, the more you increase
                 the exposed surface area of the grounds, resulting in faster extraction. That’s
                 why coffee for espresso machines is ground fine, since the water from an espresso
                 maker passes very quickly at high pressure through the grounds. Cold brew, on the
                 other hand, is made with coarse-ground coffee, since this cold-extraction method
                 allows the coffee to sit with the water for a much longer period of time
-                (several hours, compared to espresso’s 30 seconds).</p>
-
-            <h3>The Benefits of Freshly Ground Coffee</h3>
-            <p>Pre-ground coffee is readily available, so why grind your beans at home?
+                (several hours, compared to espresso’s 30 seconds).
+                <br><br>
+                <strong>The Benefits of Freshly Ground Coffee : </strong>
+                <br>
+                Pre-ground coffee is readily available, so why grind your beans at home?
                 The primary reason is that whole beans have a longer shelf life than
                 ground coffee. Roasted whole beans contain carbon dioxide, which prevents
                 oxidation and staling, and they can keep for about two weeks at room
                 temperature. Once ground, more of the beans’ surface area is exposed to
                 oxygen, causing the grounds to lose flavor. Ground coffee keeps only a
-                few days, so it’s best to buy it in very small amounts.</p>
-
-            <h3>Coffee Grind Size Chart</h3>
-            <p>If you have a coffee grinder at home, you can experiment with different
+                few days, so it’s best to buy it in very small amounts.
+                <br><br>
+                <strong>Coffee Grind Size Chart : </strong>
+                <br>
+                If you have a coffee grinder at home, you can experiment with different
                 grinds to find what works best for you. To start, match your brewing type
-                to the typical grind on these charts.</p>
-
-            <h3>Flavor Ajustments</h3>
-            <p>If your coffee tastes watery and acidic, you may be grinding your
+                to the typical grind on these charts.
+                <br><br>
+                <strong>Flavor Ajustments : </strong>
+                <br>
+                If your coffee tastes watery and acidic, you may be grinding your
                 beans too coarsely. Try a finer grind, and see if that fixes the issue.
                 If your coffee tastes overly bitter, you may be grinding too finely.
                 A coarser grind may improve your brew. (Brew time and temperature will
-                affect flavor as well.)</p>
+                affect flavor as well.)
+            </p>
         </div>
 
         <div class="container1 second">
-
             <div class="row1">
-                <p>Espresso grind size</p>
+                <p class="pic-title">Espresso grind size</p>
                 <img class="tag-pic" src=" {{ url_for('static', filename='img/espresso-grind-size-1.jpg') }} ">
                 <img class="tag-pic" src=" {{ url_for('static', filename='img/extra-fine1.jpg') }} ">
-                <p>Moka Pot grind size</p>
+                <p class="pic-title">Moka Pot grind size</p>
                 <img class="tag-pic" src=" {{ url_for('static', filename='img/mokapot2.jpg') }} ">
                 <img class="tag-pic" src=" {{ url_for('static', filename='img/Medium-fine1.jpg') }} ">
-                <p>Kalita and V60 grind size</p>
+                <p class="pic-title">Kalita and V60 grind size</p>
                 <img class="tag-pic" src=" {{ url_for('static', filename='img/pour-over22.jpg') }} ">
                 <img class="tag-pic" src=" {{ url_for('static', filename='img/fine1.jpg') }} ">
             </div>
             <div class="row2">
-                <p>Aeropress grind size</p>
+                <p class="pic-title">Aeropress grind size</p>
                 <img class="tag-pic" src=" {{ url_for('static', filename='img/aeropress2.jpg') }} ">
                 <img class="tag-pic" src=" {{ url_for('static', filename='img/Medium1.jpg') }} ">
-                <p>Chemex grind size</p>
+                <p class="pic-title">Chemex grind size</p>
                 <img class="tag-pic" src=" {{ url_for('static', filename='img/pour-over2.jpg') }} ">
                 <img class="tag-pic" src=" {{ url_for('static', filename='img/Medium-Coarse1.jpg') }} ">
-                <p>French Press grind size</p>
+                <p class="pic-title">French Press grind size</p>
                 <img class="tag-pic" src=" {{ url_for('static', filename='img/french-press2.jpg') }} ">
                 <img class="tag-pic" src=" {{ url_for('static', filename='img/Coarse1.jpg') }} ">
             </div>
@@ -111,29 +116,35 @@
         </div>
 
         <div class="blank">
-            <h3>Beginners Guide to Coffee Grinders</h3>
+            <h3>Guide to Coffee Grinders</h3>
+            <br>
             <p>The purpose of this section is to let you in on all the little things that you
                 don’t normally hear about coffee grinders. I may be a little long winded in
                 some of my explanations but I am trying, in the only way I know how, to cover
-                a lot of content in a way that it is thorough and accurate.</p>
-            <h3>How Grinders Affect the Coffee:</h3>
-            <p>Grinding coffee is a violent thing. The coffee is taken from its nice friendly
+                a lot of content in a way that it is thorough and accurate.
+            </p>
+            <p><strong>How Grinders Affect the Coffee:</strong>
+                <br>
+                Grinding coffee is a violent thing. The coffee is taken from its nice friendly
                 home in its bag or can and put into a bean hopper, which by itself is not a
                 bad place. But then the grinder is turned on and you immediately hear the sound
                 of the motor and the burrs spinning wildly as the coffee starts to be ground
                 into small particles. This is where the action takes place and is the start of
-                your coffee experience.</p>
-
+                your coffee experience.
+            </p>
             <p><strong>Heat :</strong>
+                <br>
+
                 The final result of your espresso/coffee will depend upon how evenly your
                 coffee is ground and it’s final temperature after grinding. Yes that’s right,
                 as the coffee is ground it will pick up heat and the more heat your coffee picks
                 up the more adversely it will affect your final product. If you are only
                 grinding enough for a double shot the coffee will not pick up much heat from
                 any grinder. The more coffee you grind the hotter the coffee gets due to the
-                grinding burrs and surrounding parts getting hotter.</p>
-
-            <p><strong>Static :</strong>
+                grinding burrs and surrounding parts getting hotter.
+            </p>
+            <p><strong> Static :</strong>
+                <br>
                 Another possible byproduct of grinding coffee may be the dreaded static
                 charge that can cause the ground coffee to literally jump out of the ground
                 coffee container. You would have to see it to believe it. Have you ever noticed
@@ -145,26 +156,28 @@
                 control most of these factors but it is easy to control which grinder you purchase.
                 As a rule, the grinders that produce the most static charge and add the most heat to your
                 fresh ground coffee are the high-speed grinders. Read our blog to learn more about
-                the difference of high-speed vs low-speed grinders.</p>
+                the difference of high-speed vs low-speed grinders.
+            </p>
+
 
             <h3>Burr Vs. Blade Grinders</h3>
-            <p><strong>What is a Blade Grinder?</strong><br>
+            <p><strong>What is a Blade Grinder?</strong>
+                <br>
                 Blade grinders don’t grind consistently for making quality coffee drinks. They have a blade similar to
                 that of a
                 propeller that chops the coffee beans. The fineness of the grind is determined by how long you let the
-                grinder operate via a built in timer. The longer it grinds the finer the coffee becomes.</p>
-
-            <p><strong>What is a Burr Grinder?</strong><br>
+                grinder operate via a built in timer. The longer it grinds the finer the coffee becomes.
+            </p>
+            <p><strong>What is a Burr Grinder?</strong>
+                <br>
                 The burrs are the part of the grinder that crushes the coffee beans into a uniform size which is
                 essential for creating an awesome espresso/coffee. There are two different burr grinders, conical or
                 flat plate.
-
                 Conical Burr Grinders have two cone shaped burrs with ridges that grind/crush the coffee. Flat Plate
                 Burr Grinders have two identical and parallel rings that are serrated on the side that faces the other.
                 Both burr grinders have one stationary burr while the motor turns the other. The beans are drawn in
                 between the two burrs and crushed into a uniform size. Both types of grinders are known for their
                 flexibility and quality. You really can’t go wrong with either one.
-
                 Both style of burrs are used in home and commercial grinders. They produce a consistent grind worthy of
                 any high end or home espresso machine. The conical burrs are usually used on the very low-speed gear
                 reduction grinders. The flat plate burrs are used on all qualities of grinders, from the low priced
@@ -176,11 +189,11 @@
         <div class="container1 third">
 
             <div class="row1">
-                <p>Flat Burr</p>
+                <p class="pic-title">Flat Burr</p>
                 <img class="tag-pic2" src=" {{ url_for('static', filename='img/flat-burr.jpg') }} ">
-                <p>Conical Burr</p>
+                <p class="pic-title">Conical Burr</p>
                 <img class="tag-pic2" src=" {{ url_for('static', filename='img/conical.jpg') }} ">
-                <p>Blade</p>
+                <p class="pic-title">Blade</p>
                 <img class="tag-pic2" src=" {{ url_for('static', filename='img/blade.jpg') }} ">
             </div>
 
@@ -190,7 +203,7 @@
         <div class="home-flex">
             <a class="btn-home" href="/">Home</a>
             <!-- remeber to change link to current page -->
-            <a class="btn-home" href="/shop">Back to Top</a>
+            <a class="btn-home" href="/grounds">Back to Top</a>
         </div>
     </div>
     <div class="footer">

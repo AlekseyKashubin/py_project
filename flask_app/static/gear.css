@@ -1,93 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap');
 
-
-.btn-box {
-
-    height: 500px;
-    display: flex;
-    margin: 40px;
-    align-items: center;
-    justify-content: space-around;
-}
-
-h2 {
-
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-    max-width: 52ch;
-    line-height: 1.5;
-    padding: 1em;
-
-}
-
-h1 {
-    text-align: center;
-    font-size: 100px;
-    margin: 150px;
-}
-
-@media (max-width:600px) {
-    h1.title {
-        font-size: 100px;
-    }
-}
-
-@media (max-width:600px) {
-    #title-link {
-        font-size: 55px;
-    }
-}
-
-.section-heading {
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    border: 4px solid rgb(250, 207, 207);
-    font-size: 25px;
-    padding: 10px;
-    color: rgb(250, 207, 207);
-    margin-bottom: 100px;
-    width: auto;
-
-}
-
-.container {
-    align-items: center;
-
-}
-
-.top-col-right p {
-    font-size: 40px;
-    align-items: center;
-    text-align: center;
-}
-
-.top-col-left p {
-    font-size: 40px;
-    align-items: center;
-    text-align: center;
-}
-
-
-img {
-    width: 100%;
-    float: left;
-    float: right;
-    overflow: hidden;
-    border-radius: 20px;
-    margin-bottom: 20px;
-
-}
-
-
-
-/* all body  */
-
-
-
-
-
 :root {
     --color: rgb(33, 37, 41);
 }
@@ -108,12 +20,74 @@ body {
     background-image: url('/static/img/nathan-dumlao-Y3AqmbmtLQI-unsplash.jpg');
     background-size: cover;
     background-position: center;
-    /*  this is where the magic happens:  */
     background-attachment: fixed;
+    border-radius: 20px;
+}
+
+.btn-box {
+
+    height: 500px;
+    display: flex;
+    margin: 40px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* title style start  */
+h1 {
+    text-align: center;
+    margin: 150px;
+    color: white;
+    font-weight: 700;
+    font-size: 10rem;
+}
+
+@media (max-width:600px) {
+    h1.title {
+        font-size: 100px;
+    }
+}
+/* title style end  */
+
+
+@media (max-width:600px) {
+    #title-link {
+        font-size: 55px;
+    }
+}
+
+
+.section-heading {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border: 4px solid rgb(250, 207, 207);
+    font-size: 25px;
+    padding: 10px;
+    margin: 10px;
+    color: rgb(250, 207, 207);
+    margin-bottom: 100px;
+    width: auto;
 }
 
 
 
+.container {
+    align-items: center;
+}
+
+
+
+img {
+    width: 100%;
+    float: left;
+    float: right;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-bottom: 20px;
+
+}
 
 
 
@@ -267,11 +241,7 @@ a#web-link {
     padding: 0;
 }
 
-h1 {
-    color: white;
-    font-weight: 700;
-    font-size: 10rem;
-}
+
 
 
 .row2 p {
@@ -294,10 +264,19 @@ h1 {
 
 
 .blank {
+    display: inline;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     min-height: 600px;
     background-color: var(--color);
 }
+.blank p {
+    text-align: center;
+    background: none;
+
+}
+
 
 .second {
     background-image: url(https://images.unsplash.com/photo-1521401292936-0a2129a30b1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1365&q=80);
@@ -347,11 +326,6 @@ h3 {
     box-shadow: 0px 29px 38px -15px rgba(0, 0, 0, 0.43);
 }
 
-.blank p {
-    text-align: center;
-    background: none;
-
-}
 
 
 

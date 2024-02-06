@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap');
 
 
 
@@ -16,6 +16,11 @@ h1 {
     padding: 20px;
 }
 
+.container {
+
+
+}
+
 .container1 {
     text-align: center;
     color: var(--color);
@@ -30,9 +35,6 @@ h1 {
     background-attachment: fixed;
 }
 
-.navbar-brand {
-    color: white;
-}
 
 @media (max-width:600px) {
     h1.title {
@@ -48,18 +50,8 @@ p {
     padding: 1em;
 }
 
-a {
-    display: inline-block;
-    padding: 1em 3.5em;
-    background-color: var(--color);
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    border-radius: 0.3em;
-    font-weight: 700;
-    letter-spacing: .5px;
-    font-size: .875rem;
-}
+
+
 /* navbar style start */
 .nav-link {
     display: inline-block;
@@ -83,6 +75,8 @@ a {
 }
 
 /* navbar style end */
+
+
 
 
 .col2{
