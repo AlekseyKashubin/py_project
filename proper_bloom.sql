@@ -7,6 +7,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema properbloom_schema
 -- -----------------------------------------------------
+DROP SCHEMA IF EXISTS `properbloom_schema` ;
 
 -- -----------------------------------------------------
 -- Schema properbloom_schema
@@ -35,6 +36,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `properbloom_schema`.`recipes` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `user_id` INT NOT NULL,
+  `recipe_name` VARCHAR(45) NULL,
   `method` VARCHAR(45) NULL,
   `coffee_amount` INT NULL,
   `water_temp` INT NULL,

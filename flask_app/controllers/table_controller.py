@@ -8,9 +8,9 @@ bcrypt = Bcrypt(app)
 def Home():
     return render_template('home.html')
 
-@app.route('/user-recipes')
+@app.route('/user_recipes')
 def UserRecipes():
-    return render_template('user-recipes.html')
+    return render_template('user_recipes.html')
 
 @app.route('/brew')
 def Brew():
@@ -23,6 +23,23 @@ def Register():
 @app.route('/shop')
 def Shop():
     return render_template('shop.html')
+
+@app.route('/grounds')
+def grounds_page():
+    return render_template('grounds.html')
+
+@app.route('/gear')
+def gear_page():
+    return render_template('gear.html')
+
+@app.route('/find')
+def find_page():
+    return render_template('find.html')
+
+@app.route('/region')
+def region_info_page():
+    return render_template('region_info.html')
+
 
 
 # Region routes
@@ -273,22 +290,4 @@ def autodrip_central_america_page():
 def autodrip_hawaiian_page():
     return render_template('autodrip_hawaiian.html')
 
-
-
-
-@app.route('/grounds')
-def grounds_page():
-    return render_template('grounds.html')
-
-@app.route('/gear')
-def gear_page():
-    return render_template('gear.html')
-
-@app.route('/find')
-def find_page():
-    return render_template('find.html')
-
-@app.route('/region')
-def region_info_page():
-    return render_template('region_info.html')
 

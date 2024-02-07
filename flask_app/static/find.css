@@ -13,15 +13,42 @@ body {
     color: white;
 }
 
-.container {
-    background-image: url('/static/img/firdaus-ramadhan-1AMsQMsERy4-unsplash.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 1400px;
-    align-items: center;
-    padding: 12;
 
+.container1 {
+    text-align: center;
+    color: var(--color);
+    width: 100%;
+    min-height: 1400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://images.unsplash.com/photo-1485808191679-5f86510681a2?q=80&w=3696&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-radius: 20px;
 }
+
+@media (max-width:600px) {
+    .container1 {
+        height: 900px;
+        min-height: 900px !important;
+    }
+}
+#cart-btn {
+    font-size: 25px;
+    color: var(--color);
+    position: absolute;
+    right: 20px;
+    margin-bottom: 25px;
+    background-color: transparent;
+    border: solid 2px transparent;
+    border-radius: 3px;
+    width: 44px;
+    height: 38px;
+}
+
 
 h1 {
 
@@ -30,6 +57,12 @@ h1 {
     font-weight: 700;
     font-size: 100px;
     margin: 50px;
+}
+
+@media (max-width:600px) {
+    h1.title {
+        font-size: 80px;
+    }
 }
 
 
@@ -45,6 +78,7 @@ a {
     letter-spacing: .5px;
     font-size: .875rem;
 }
+
 /* navbar style start */
 .nav-link {
     display: inline-block;
@@ -123,4 +157,12 @@ a.btn-home {
 
 .footer {
     text-align: center;
+}
+
+@media(max-width:600px) {
+    iframe {
+        width: 400px;
+        height: 450px;
+    }
+
 }
