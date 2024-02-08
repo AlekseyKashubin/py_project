@@ -47,42 +47,47 @@
                 </div>
             </div>
         </nav>
+
         <div class="container1">
+
+            <!-- <video preload="true" autoplay="autoplay" loop="loop" volume="0" >
+
+                <source src="./video.mp4" type="video/mp4">
+            </video> -->
+
             <h1 class="title">RECIPES</h1>
         </div>
 
-        <div class="blank"></div>
+        <div class="blank">
+
+
+        </div>
 
         <div class="container1 second">
-            
-            <a href="/new_recipe"><i class="fa-solid fa-circle-plus"></i></a>
-            <div class="ag-format-container">
-                <div class="ag-courses_box">
-                    
+            <h4 class="section-heading">Try Our Members Recipes or Add a Recipe</h4>
+            <a class="add-btn" href="/new_recipe">Add a New Recipe<i class="fa-solid fa-circle-plus"></i></a>
+
+            <div class="recipe-box">
+                {% for recipe in list_of_recipes %}
+                <div class="ag-format-container">
                     <div class="ag-courses_item">
-                        {% for recipe in list_of_recipes %}
                         <a href="/recipe/show/{{recipe.id}}" class="ag-courses-item_link">
                             <div class="ag-courses-item_bg"></div>
-
                             <div class="ag-courses-item_title">
                                 {{recipe.recipe_name}}
+                                <br>
+                                <p class="method-title">{{recipe.method}}</p>
                             </div>
-                            <div class="ag-courses-item_title">
-                                {{recipe.method}}
-                            </div>
-
                             <div class="ag-courses-item_date-box">
                                 Date Created:
                                 <span class="ag-courses-item_date">
-                                    {{recipe.created_at}}
-                                    {% endfor %}
+                                    {{recipe.created_at.strftime('%m-%d-%Y')}}
                                 </span>
                             </div>
                         </a>
                     </div>
-                    
-                    
                 </div>
+                {% endfor %}
             </div>
         </div>
 
@@ -97,6 +102,7 @@
         <footer>©2024 ProperBloom</footer>
     </div>
     <!-- redirect buttons and footer end -->
+
 
 </body>
 

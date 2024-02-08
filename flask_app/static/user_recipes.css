@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap');
 
 
+video{
+    width: 1000px;
+    height: 1000px;
+    border: solid white 5px;
+
+}
+
 
 
 h4 {
@@ -24,7 +31,7 @@ h4 {
     font-size: 25px;
     padding: 10px;
     color: rgb(250, 207, 207);
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     width: auto;
 
 }
@@ -47,17 +54,20 @@ body {
 .container1 {
     text-align: center;
     color: var(--color);
-    min-height: 1400px;
+    min-height: 1200px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-image: url(https://images.unsplash.com/photo-1507133750040-4a8f57021571?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80);
+
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     border-radius: 20px;
 }
+
+
 
 #cart-btn {
     font-size: 25px;
@@ -80,21 +90,6 @@ h1 {
     padding: 20px;
 }
 
-.carousel-inner {
-
-    align-items: center;
-    justify-content: center;
-
-}
-
-.lower-title {
-
-    color: white;
-    font-weight: 700;
-    font-size: 80px;
-    margin-bottom: 150px;
-    padding: 20px;
-}
 
 @media (max-width:600px) {
     h1.title {
@@ -110,26 +105,6 @@ h1 {
     }
 }
 
-p {
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-    max-width: 52ch;
-    line-height: 1.5;
-    padding: 1em;
-}
-
-a {
-    display: inline-block;
-    padding: 1em 3.5em;
-    background-color: var(--color);
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    border-radius: 0.3em;
-    font-weight: 700;
-    letter-spacing: .5px;
-    font-size: .875rem;
-}
 
 /* navbar style start */
 .nav-link {
@@ -160,112 +135,67 @@ a {
 .blank,
 .other {
     width: 100%;
-    min-height: 500px;
+    min-height: 100px;
     background-color: transparent;
 }
 
 .second {
-    background-image: url(https://cdn.shopify.com/s/files/1/0563/3294/3550/articles/coffee-plant-leaves-stem.jpg?v=1628191293);
+    padding: 20px;
+    background: url(https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=2565&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-attachment: fixed;
-    height: 1200px;
-}
-
-h3 {
-    font-weight: 700;
-    font-size: 1.6rem;
-    margin-top: 1em;
-}
-
-.card>a {
-    margin: 10px;
-    align-items: center;
-    text-align: center;
-}
-
-.item {
-    width: 900px;
-    text-align: center;
     display: flex;
-    background-color: white;
-    flex-direction: column;
-    align-items: center;
-    border-radius: .5em;
-    -webkit-box-shadow: 0px 29px 38px -15px rgba(0, 0, 0, 0.43);
-    -moz-box-shadow: 0px 29px 38px -15px rgba(0, 0, 0, 0.43);
-    box-shadow: 0px 29px 38px -15px rgba(0, 0, 0, 0.43);
-    padding: 20px;
+    justify-content: flex-start;
 }
-
-@media (max-width:600px) {
-    .item {
-        width: 300px;
-    }
-}
-
-.item>a {
-    margin: 20px;
-}
-
-.img {
-    width: 100%;
-    height: 700px;
-    background-color: lightgrey;
-    background-size: cover;
-    background-position: center;
-    margin: 20px;
-    border-radius: .3em;
-    padding: 20px;
-
-}
-
-.img-first {
-    background-image: url(https://minimalistbaker.com/wp-content/uploads/2019/01/Step-by-Step-instructions-for-How-to-Make-Pourover-Coffee-minimalistbaker-coffee-4.jpg);
-}
-
-.img-second {
-    background-image: url(https://minimalistbaker.com/wp-content/uploads/2019/01/Step-by-Step-instructions-for-How-to-Make-Pourover-Coffee-minimalistbaker-coffee.jpg);
-}
-
-.img-third {
-    background-image: url(https://blog.mistobox.com/wp-content/uploads/2020/09/brewmethods.jpg);
-}
-
-.second {
+.recipe-box {
+    max-width: 1200px;
     display: flex;
     flex-direction: row;
-    gap: 1.6em;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+a {
+
+    background-color: var(--color);
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 0.3em;
+    font-weight: 700;
+    letter-spacing: .5px;
+    font-size: .875rem;
+}
+
+
+
+
+
+a .fa-circle-plus {
+    font-size: 35px;
+    background-color: transparent;
+    margin-left: 5px;
+}
+.add-btn{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    letter-spacing: .5px;
 }
 
 /* Hover Recipe Cards stylesheet start  */
 
-.ag-format-container {
-    width: 1142px;
-    margin: 0 auto;
-}
 
 
 body {
     background-color: #000;
 }
 
-.ag-courses_box {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-
-    padding: 50px 0;
-}
-
 .ag-courses_item {
     -ms-flex-preferred-size: calc(33.33333% - 30px);
     flex-basis: calc(33.33333% - 30px);
 
-    margin: 0 15px 30px;
+    margin: 15px;
 
     overflow: hidden;
 
@@ -273,12 +203,14 @@ body {
 }
 
 .ag-courses-item_link {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 30px 20px;
     background-color: #121212;
-
+    width: 250px;
+    height: 300px;
     overflow: hidden;
-
     position: relative;
 }
 
@@ -297,27 +229,35 @@ body {
 .ag-courses-item_title {
     min-height: 87px;
     margin: 0 0 25px;
-
     overflow: hidden;
-
-    font-weight: bold;
+    font-weight: 200;
     font-size: 30px;
     color: #FFF;
+    z-index: 2;
+    position: relative;
+}
 
+.method-title {
+    text-decoration: overline rgb(240, 184, 184);
+    margin-top: 5px;
+    overflow: hidden;
+    font-weight: 100;
+    font-size: 20px;
+    color: #FFF;
     z-index: 2;
     position: relative;
 }
 
 .ag-courses-item_date-box {
-    font-size: 18px;
+    font-size: 22px;
     color: #FFF;
-
+font-weight: 200;
     z-index: 2;
     position: relative;
 }
 
 .ag-courses-item_date {
-    font-weight: bold;
+    font-weight: 100;
     color: rgb(240, 184, 184);
 
     -webkit-transition: color .5s ease;

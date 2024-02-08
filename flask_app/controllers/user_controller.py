@@ -37,7 +37,7 @@ def loginuser():
 
     session['user_id'] = user_in_db.id
 
-    return redirect('/')
+    return redirect('/user_recipes')
 
 
 @app.route('/logout')
