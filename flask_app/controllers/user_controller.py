@@ -8,9 +8,17 @@ from flask_bcrypt import Bcrypt
 bcrypt = Bcrypt(app)
 
 
+
+
+
 @app.route('/')
 def Home():
     return render_template('home.html')
+
+
+
+
+
 
 
 @app.route('/login_user', methods=["POST"])
@@ -32,6 +40,14 @@ def loginuser():
     return redirect('/')
 
 
+@app.route('/logout')
+def logout():
+    session.clear()
+    return redirect('/')
+
+
+
+
 @app.route('/user_recipes')
 def user_recipes():
 
@@ -42,6 +58,10 @@ def user_recipes():
     new_user = User.GetUserById({'user_id': session['user_id']})
 
     return render_template('user_recipes.html', list_of_recipes=list_of_recipes, new_user=new_user)
+
+
+
+
 
 
 @app.route('/register_user', methods=["POST"])
@@ -63,10 +83,15 @@ def successful_register():
     return redirect('/')
 
 
-@app.route('/logout')
-def logout():
-    session.clear()
-    return redirect('/')
+
+
+
+
+
+
+
+
+
 
 
 @app.route('/user_recipes/<int:user_id>')
@@ -78,12 +103,20 @@ def show_success(user_id):
     return render_template('user_recipes.html', newUser=newUser)
 
 
+
+
+
+
 @app.route('/user_recipes/<int:id>')
 def show_data(id):
 
     user = User.get_user_with_recipe({'id': id})
     print(user.user_recipes)
     return render_template('user_recipes.html', user=user)
+
+
+
+
 
 
 @app.route('/register')
@@ -94,6 +127,13 @@ def Register():
 # @app.route('/login')
 # def login_page():
 #     return redirect('/')
+
+
+
+@app.route('/new_recipe')
+def NewRecipe():
+    return render_template('new_recipe.html')
+
 
 
 @app.route('/user_recipes')

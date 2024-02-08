@@ -22,17 +22,20 @@ def add_new_recipe():
         return redirect('/recipe/new')
 
     newRecipe_data = {
-        'name' : request.form['name'],
-        'discription' : request.form['discription'],
-        'instructions' : request.form['instructions'],
-        'date_cooked' : request.form['date_cooked'],
-        'under' : request.form['under'],
+        'recipe_name' : request.form['recipe_name'],
+        'method' : request.form['method'],
+        'coffee_amount' : request.form['coffee_amount'],
+        'water_temp' : request.form['water_temp'],
+        'water_amount' : request.form['water_amount'],
+        'brew_time' : request.form['brew_time'],
+        'grind_size' : request.form['grind_size'],
+        'description' : request.form['description'],
         'user_id' : session['user_id']
         
     }
 
     Recipe.CreateRecipe(newRecipe_data)
-    return redirect('/recipe')
+    return redirect('/user_recipes')
 
 
 # EDIT RECIPE ROUTE

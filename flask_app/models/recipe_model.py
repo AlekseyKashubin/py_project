@@ -6,7 +6,6 @@ from flask import flash
 class Recipe:  # replace Class name
     # replace schema and all the table names including after self.
     DB = 'properbloom_schema'
-
     def __init__(self, data):
         self.id = data['id']
         self.recipe_name = data['recipe_name']
@@ -17,6 +16,7 @@ class Recipe:  # replace Class name
         self.brew_time = data['brew_time']
         self.grind_size = data['grind_size']
         self.description = data['description']
+        self.created_at = data['created_at']
         self.updated_at = data['updated_at']
         self.user_id = data['user_id']
         self.creator = None
@@ -39,22 +39,23 @@ class Recipe:  # replace Class name
         if len(new_recipe['water_amount']) < 1:
             flash('Water Amount field required!')
             is_valid = False
-        if len(new_recipe['gring_size']) < 1:
+        if len(new_recipe['grind_size']) < 1:
             flash('Grind Size field required!')
             is_valid = False
         if len(new_recipe['description']) < 1:
             flash('Instruction field required!')
             is_valid = False
-        # if 'under' not in new_recipe:
-        #         flash('Under 30 field required!')
-        #         is_valid = False
         return is_valid
+
+
+
+
 
     @classmethod
     def CreateRecipe(cls, data):
         query = """
         INSERT INTO recipes (recipe_name, method, coffee_amount, water_temp, water_amount, brew_time, grind_size, description, user_id)
-        VALUES ( %(recipe_name)s, %(method)s, %(coffee_amount)s, %(water_temp)s, %(water_amount)s, %(brew_time)s, %(grind_size)s, %(description)s,, %(user_id)s );
+        VALUES ( %(recipe_name)s, %(method)s, %(coffee_amount)s, %(water_temp)s, %(water_amount)s, %(brew_time)s, %(grind_size)s, %(description)s, %(user_id)s );
         """
         results = connectToMySQL(cls.DB).query_db(query, data)
         return results
