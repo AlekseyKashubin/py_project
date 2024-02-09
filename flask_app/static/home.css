@@ -2,6 +2,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap");
 
+
+
 :root {
     --color: #282727;
 }
@@ -17,11 +19,25 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(https://www.coffeedesk.com/blog/wp-content/uploads/2019/03/AdobeStock_142267143-s.jpeg);
+    /* background-image: url(https://www.coffeedesk.com/blog/wp-content/uploads/2019/03/AdobeStock_142267143-s.jpeg); */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     border-radius: 20px;
+
+}
+
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+
+
+
 
 }
 
@@ -39,6 +55,17 @@ body {
 
 }
 
+
+h1 {
+    color: white;
+    font-weight: 700;
+    font-size: 150px;
+    margin: 200px 0px;
+    padding: 20px;
+    z-index: 1000;
+    letter-spacing: -12px;
+
+}
 
 
 @media (max-width:600px) {
@@ -63,24 +90,17 @@ body {
     }
 }
 
-@media(max-width:600px) {
-    .navbar-brand {
-        text-align: center;
-        padding: 0;
-        width: 285px;
-    }
-}
 
 
 .card-flex {
     display: flex;
     gap: 20px;
-
+    
 }
 
 #cart-btn {
     font-size: 25px;
-    color: var(--color);
+    color: white;
     position: absolute;
     right: 20px;
     margin-bottom: 25px;
@@ -104,19 +124,18 @@ body {
     color: rgb(250, 207, 207);
     margin-bottom: 100px;
     width: auto;
-
+    z-index: 1000;
+    
+}
+.navbar {
+    background-color: rgba(255, 255, 255, 0.2)!important;
+    border-radius: 5px;
+    z-index: 1000;
 }
 
 
 
 
-h1 {
-    color: white;
-    font-weight: 700;
-    font-size: 150px;
-    margin: 200px;
-    padding: 20px;
-}
 
 
 
@@ -124,7 +143,6 @@ h1 {
 a {
     display: inline-block;
     padding: 1em 3.5em;
-    background-color: var(--color);
     color: white;
     text-decoration: none;
     text-transform: uppercase;
@@ -135,6 +153,11 @@ a {
 }
 
 /* navbar style start */
+
+.navbar-toggler {
+    z-index: 1000;
+}
+
 .nav-link {
     display: inline-block;
     color: rgb(240, 184, 184);
@@ -142,6 +165,7 @@ a {
     font-weight: 700;
     letter-spacing: .5px;
     font-size: .875rem;
+    z-index: 1000;
 }
 
 .navbar-brand {
@@ -154,8 +178,16 @@ a {
     font-weight: 700;
     letter-spacing: .5px;
     font-size: 1.25rem;
+    z-index: 1000;
 }
 
+@media(max-width:600px) {
+    .navbar-brand {
+        text-align: center;
+        padding: 0;
+        width: 285px;
+    }
+}
 /* navbar style end */
 
 
@@ -168,7 +200,7 @@ a {
     background-image: url(https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?q=80&w=3556&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-attachment: fixed;
     min-height: 800px;
-
+    
 }
 
 /* home button hover effect start */
@@ -192,6 +224,7 @@ a.btn-home {
     font-size: 15px;
     margin: 25px;
     border-radius: 2px;
+    z-index: 1000;
 }
 
 .btn-home:hover {

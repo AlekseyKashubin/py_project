@@ -37,10 +37,9 @@
     #sec3,
     #sec4,
     #sec5,
-    #sec6
-    {
-    font-size: 50px;
-}
+    #sec6 {
+        font-size: 50px;
+    }
 }
 
 
@@ -95,7 +94,8 @@ body {
     background-color: #f7f7f7;
 }
 
-.row1, .row2 {
+.row1,
+.row2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -187,6 +187,11 @@ body {
 }
 
 /* hover pic effect end */
+
+
+
+
+
 
 
 /* navbar style start */
@@ -312,7 +317,6 @@ h4 {
 .fourth,
 .fifth,
 .sixth {
-    flex-direction: row;
     gap: 2em;
     margin-bottom: 10px;
 }
@@ -326,6 +330,49 @@ h4 {
         width: 285px;
     }
 }
+
+.shopping-card {
+    margin: 10px;
+    width: 290px;
+    height: 354px;
+    border-radius: 30px;
+    background: lightgrey;
+    box-shadow: rgba(44, 44, 227, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.15) 0px 18px 26px -18px inset;
+}
+
+.shop-row-top,
+.shop-row-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.shop-img {
+    margin: 15px;
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* home button hover effect start */
 

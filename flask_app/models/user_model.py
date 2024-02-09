@@ -15,8 +15,7 @@ class User:  #replace Class name
     DB = 'properbloom_schema' # replace schema and all the table names including after self.
     def __init__(self, data):
         self.id = data['id']
-        self.first_name = data['first_name']
-        self.last_name = data['last_name']
+        self.user_name = data['user_name']
         self.email = data['email']
         self.password = data['password']
         self.created_at = data['created_at']
@@ -27,11 +26,8 @@ class User:  #replace Class name
     @staticmethod
     def validate_user(register):
         is_valid = True
-        if len(register['first_name']) < 2:
-            flash("First Name must be at least 2 character.")
-            is_valid = False
-        if len(register['last_name']) < 2:
-            flash("Last Name must be at least 2 character.")
+        if len(register['user_name']) < 5:
+            flash("user Name must be at least 5 character.")
             is_valid = False
         if not EMAIL_REGEX.match(register['email']):
             flash('Please enter valid Email')
@@ -48,8 +44,8 @@ class User:  #replace Class name
     @classmethod
     def CreateUser(cls, data):
         query = """
-        INSERT INTO users (first_name, last_name, email, password)
-        VALUES ( %(first_name)s, %(last_name)s, %(email)s, %(password)s );
+        INSERT INTO users (user_name, email, password)
+        VALUES ( %(user_name)s, %(email)s, %(password)s );
         """
         results = connectToMySQL(cls.DB).query_db(query, data)
         return results

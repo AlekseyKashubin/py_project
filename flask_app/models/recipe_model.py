@@ -13,7 +13,8 @@ class Recipe:  # replace Class name
         self.coffee_amount = data['coffee_amount']
         self.water_temp = data['water_temp']
         self.water_amount = data['water_amount']
-        self.brew_time = data['brew_time']
+        self.brew_minutes = data['brew_minutes']
+        self.brew_seconds = data['brew_seconds']
         self.grind_size = data['grind_size']
         self.description = data['description']
         self.created_at = data['created_at']
@@ -54,8 +55,8 @@ class Recipe:  # replace Class name
     @classmethod
     def CreateRecipe(cls, data):
         query = """
-        INSERT INTO recipes (recipe_name, method, coffee_amount, water_temp, water_amount, brew_time, grind_size, description, user_id)
-        VALUES ( %(recipe_name)s, %(method)s, %(coffee_amount)s, %(water_temp)s, %(water_amount)s, %(brew_time)s, %(grind_size)s, %(description)s, %(user_id)s );
+        INSERT INTO recipes (recipe_name, method, coffee_amount, water_temp, water_amount, brew_minutes, brew_seconds, grind_size, description, user_id)
+        VALUES ( %(recipe_name)s, %(method)s, %(coffee_amount)s, %(water_temp)s, %(water_amount)s, %(brew_minutes)s, %(brew_seconds)s, %(grind_size)s, %(description)s, %(user_id)s );
         """
         results = connectToMySQL(cls.DB).query_db(query, data)
         return results
@@ -90,7 +91,8 @@ class Recipe:  # replace Class name
         coffee_amount = %(coffee_amount)s, 
         water_temp = %(water_temp)s , 
         water_amount = %(water_amount)s , 
-        brew_time = %(brew_time)s
+        brew_minutes = %(brew_minutes)s
+        brew_seconds = %(brew_seconds)s
         grind_size = %(grind_size)s
         description = %(description)s
         WHERE id = %(recipe_id)s ;

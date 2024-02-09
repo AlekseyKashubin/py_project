@@ -27,7 +27,8 @@ def add_new_recipe():
         'coffee_amount' : request.form['coffee_amount'],
         'water_temp' : request.form['water_temp'],
         'water_amount' : request.form['water_amount'],
-        'brew_time' : request.form['brew_time'],
+        'brew_minutes' : request.form['brew_minutes'],
+        'brew_seconds' : request.form['brew_seconds'],
         'grind_size' : request.form['grind_size'],
         'description' : request.form['description'],
         'user_id' : session['user_id']

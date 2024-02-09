@@ -52,9 +52,12 @@
 
 
         <div class="container1">
-            <h1 class="title">ProperBloom</h1>
-            <h4 class="section-heading">Here to help you make the best of every morning.</h4>
-            <a class="btn-home" href="/brew">Start Now</a>
+            <video autoplay loop muted>
+                <source src={{ url_for('static', filename="coffee.bg1.mp4") }} type="video/mp4">
+            </video>
+                <h1 class="title">Proper Bloom</h1>
+                <h4 class="section-heading">Here to help you make the best of every morning.</h4>
+                <a class="btn-home" href="/brew">Start Now</a>
         </div>
 
         <div class="blank"></div>
@@ -73,7 +76,7 @@
                                 The goal is to reach the summit of great coffee.
                             </p>
                         </div>
-                        <button class="card__button">Read more</button>
+                        <a href="/brew"><button class="card__button">Read more</button></a>
                     </div>
                 </article>
                 <!-- second card  -->
@@ -88,7 +91,7 @@
                                 Exploring coffee grinders and understanding grind size.
                             </p>
                         </div>
-                        <button class="card__button">Read more</button>
+                        <a href="/grounds"><button class="card__button">Read more</button></a>
                     </div>
                 </article>
                 <!-- third card  -->
@@ -103,7 +106,7 @@
                                 Find the right gear for the perfect morning coffee.
                             </p>
                         </div>
-                        <button class="card__button">Read more</button>
+                        <a href="/gear"><button class="card__button">Read more</button></a>
                     </div>
                 </article>
             </div>
