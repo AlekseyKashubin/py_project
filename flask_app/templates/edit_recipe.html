@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4da5932fc2.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href=" {{ url_for('static', filename='style.css') }} ">
+    <title>Proper Coffee</title>
+</head>
+
+<body class="bg-dark text-light">
+    <!-- full container -->
+    <div class="container">
+        <!-- navbar section -->
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">PROPER BLOOM</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="/region">Region</a>
+                        <a class="nav-link" href="/grounds">Grind Size Guide </a>
+                        <a class="nav-link" href="/gear">Gear</a>
+                        <a class="nav-link active" href="/user_recipes">Recipes</a>
+                        <a class="nav-link" href="/brew">Brew Method</a>
+                        <a class="nav-link" href="/find">Find a Coffee Shop</a>
+                        <a class="nav-link" href="/shop">Shop</a>
+                        {% if user_id == session['user_id'] %} 
+                        <a class="nav-link" href="/register">Login</a>
+                        {% else %}
+                        <a class="nav-link" href="/logout">logout</a>
+                        {% endif %}
+                        <button id="cart-btn" onclick="location.href='/gear'">
+                            <i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="container1">
+            <div class="container2">
+
+                <form id="form" action="/recipe/edit/{{one_recipe.id}}" method="POST" class="topBefore">
+                    <h2 class="section-heading">Create a recipe</h2>
+                    <div>
+                        {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                        {% for message in messages %}
+                        <p>{{message}}</p>
+                        {% endfor %}
+                        {% endif %}
+                        {% endwith %}
+                    </div>
+                    <input id="recipe_name" name="recipe_name" type="text" value="{{one_recipe.recipe_name}}" placeholder="Recipe Name">
+                    <input id="method" name="method" type="text" value="{{one_recipe.method}}" placeholder="Pour Over Method">
+                    <input id="coffee_amount" name="coffee_amount" type="text" value="{{one_recipe.coffee_amount}}" placeholder="Coffee Amount in Grams">
+                    <input id="water_temp" name="water_temp" type="text" maxlength="3" value="{{one_recipe.water_temp}}" placeholder="Water Temp &deg;F">
+                    <input id="water_amount" name="water_amount" type="text" value="{{one_recipe.water_amount}}" placeholder="Water Amount in Grams">
+                    <div class="time-flex">
+                        <input maxlength="2" id="brew_minutes" name="brew_minutes" type="text" value="{{one_recipe.brew_minutes}}" placeholder="Brew Time Minutes">
+                        <input maxlength="2" id="brew_seconds" name="brew_seconds" type="text" value="{{one_recipe.brew_seconds}}" placeholder="Seconds">
+                    </div>
+                    <input  id="grind_size" name="grind_size" type="text" value="{{one_recipe.description}}"  placeholder="Grinder and Setting">
+                    <textarea id="message" rows="10" name="description" type="text" value="{{one_recipe.}}" placeholder="Instructions"></textarea>
+                    <input id="submit" type="submit" value="Add Recipe">
+
+                </form>
+                <!-- redirect buttons and footer start -->
+            </div>
+            <!-- remeber to change link to current page -->
+        </div>
+        <div class="home-flex">
+            <a class="btn-home" href="/">Home</a>
+            <a class="btn-home" href="/user_recipes">Back to Recipes</a>
+        </div>
+        <!-- redirect buttons and footer end -->
+        <div class="footer">
+            <footer>©2024 ProperBloom</footer>
+        </div>
+</body>
+
+</html>

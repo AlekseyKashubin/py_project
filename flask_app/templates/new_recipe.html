@@ -32,11 +32,15 @@
                         <a class="nav-link" href="/region">Region</a>
                         <a class="nav-link" href="/grounds">Grind Size Guide </a>
                         <a class="nav-link" href="/gear">Gear</a>
-                        <a class="nav-link" href="/user_recipes">Recipes</a>
+                        <a class="nav-link active" href="/user_recipes">Recipes</a>
                         <a class="nav-link" href="/brew">Brew Method</a>
-                        <a class="nav-link active" href="/find">Find a Coffee Shop</a>
+                        <a class="nav-link" href="/find">Find a Coffee Shop</a>
                         <a class="nav-link" href="/shop">Shop</a>
+                        {% if user_id == session['user_id'] %} 
                         <a class="nav-link" href="/register">Login</a>
+                        {% else %}
+                        <a class="nav-link" href="/logout">logout</a>
+                        {% endif %}
                         <button id="cart-btn" onclick="location.href='/gear'">
                             <i class="fa-solid fa-cart-shopping"></i></button>
                     </div>
@@ -50,6 +54,15 @@
 
                 <form id="form" action="/add_recipe" method="POST" class="topBefore">
                     <h2 class="section-heading">Create a recipe</h2>
+                    <div>
+                        {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                        {% for message in messages %}
+                        <p>{{message}}</p>
+                        {% endfor %}
+                        {% endif %}
+                        {% endwith %}
+                    </div>
                     <input id="recipe_name" name="recipe_name" type="text" placeholder="Recipe Name">
                     <input id="method" name="method" type="text" placeholder="Pour Over Method">
                     <input id="coffee_amount" name="coffee_amount" type="text" placeholder="Coffee Amount in Grams">
@@ -70,7 +83,7 @@
         </div>
         <div class="home-flex">
             <a class="btn-home" href="/">Home</a>
-            <a class="btn-home" href="/find">Back to Top</a>
+            <a class="btn-home" href="/user_recipes">Back to Recipes</a>
         </div>
         <!-- redirect buttons and footer end -->
         <div class="footer">
