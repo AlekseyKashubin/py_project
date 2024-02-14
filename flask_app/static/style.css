@@ -37,6 +37,8 @@ body {
     }
 }
 
+
+
 #cart-btn {
     font-size: 25px;
     color: var(--color);
@@ -121,16 +123,6 @@ a {
 
 
 
-/* store locator */
-
-.lower-box {
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
 
 @media(max-width:600px) {
     .navbar-brand {
@@ -174,13 +166,6 @@ a.btn-home {
     text-align: center;
 }
 
-@media(max-width:600px) {
-    iframe {
-        width: 400px;
-        height: 450px;
-    }
-
-}
 
 
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
@@ -292,9 +277,15 @@ body {
     width: 500px;
     background-color: rgba(255, 255, 255, .7);
     border-radius: 20px;
-
-
 }
+
+@media (max-width:600px) {
+    #form {
+        height: 800px;
+        width: 405px !important;
+    }
+}
+
 
 input {
     font-family: 'Lato', sans-serif;
@@ -305,9 +296,9 @@ input {
 
     background: transparent;
     outline: none;
-    color: #d4730c;
+    color: #000000;
 
-    border: solid 1px #434240;
+    border: solid 1px #000000;
     border-bottom: none;
 
     transition: all 0.3s ease-in-out;
@@ -315,11 +306,28 @@ input {
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
 }
+@media (max-width:600px) {
+    input,
+    #message {
+        width: 400px;
+
+    }
+}
+
 
 #brew_minutes,
 #brew_seconds {
     width: 235px;
 }
+
+@media (max-width:600px) {
+    #brew_minutes,
+    #brew_seconds {
+        width: 200px;
+
+    }
+}
+
 
 input:hover {
     background: #000000;

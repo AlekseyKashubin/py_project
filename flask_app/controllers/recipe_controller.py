@@ -58,7 +58,7 @@ def edit_recipe(recipe_id):
         'recipe_id' : recipe_id
     })
 
-    return redirect('/recipe')
+    return redirect('/user_recipes')
 
 
 
@@ -68,7 +68,7 @@ def edit_recipe(recipe_id):
 @app.route('/delete/<int:recipe_id>')
 def delete_recipe(recipe_id):
     Recipe.delete({ 'id' : recipe_id})
-    return redirect('/recipe')
+    return redirect('/user_recipes')
 
 
 # SHOW ONE RECIPE ROUTE

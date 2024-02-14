@@ -36,7 +36,7 @@
                         <a class="nav-link" href="/brew">Brew Method</a>
                         <a class="nav-link" href="/find">Find a Coffee Shop</a>
                         <a class="nav-link" href="/shop">Shop</a>
-                        {% if user_id == session['user_id'] %} 
+                        {% if user_id == session['user_id'] %}
                         <a class="nav-link" href="/register">Login</a>
                         {% else %}
                         <a class="nav-link" href="/logout">logout</a>
@@ -52,7 +52,7 @@
         <div class="container1">
             <div class="container2">
 
-                <form id="form" action="/recipe/edit/{{one_recipe.id}}" method="POST" class="topBefore">
+                <form id="form" action="/recipe/edit/{{one_recipe.id}}" method="POST">
                     <h2 class="section-heading">Create a recipe</h2>
                     <div>
                         {% with messages = get_flashed_messages() %}
@@ -63,18 +63,36 @@
                         {% endif %}
                         {% endwith %}
                     </div>
-                    <input id="recipe_name" name="recipe_name" type="text" value="{{one_recipe.recipe_name}}" placeholder="Recipe Name">
-                    <input id="method" name="method" type="text" value="{{one_recipe.method}}" placeholder="Pour Over Method">
-                    <input id="coffee_amount" name="coffee_amount" type="text" value="{{one_recipe.coffee_amount}}" placeholder="Coffee Amount in Grams">
-                    <input id="water_temp" name="water_temp" type="text" maxlength="3" value="{{one_recipe.water_temp}}" placeholder="Water Temp &deg;F">
-                    <input id="water_amount" name="water_amount" type="text" value="{{one_recipe.water_amount}}" placeholder="Water Amount in Grams">
+                    <input id="recipe_name" name="recipe_name" type="text" value="{{one_recipe.recipe_name}}"
+                        placeholder="Recipe Name">
+
+                    <input id="method" name="method" type="text" value="{{one_recipe.method}}"
+                        placeholder="Pour Over Method">
+
+                    <input id="coffee_amount" name="coffee_amount" type="text" value="{{one_recipe.coffee_amount}}"
+                        placeholder="Coffee Amount in Grams">
+
+                    <input id="water_temp" name="water_temp" type="text" maxlength="3" value="{{one_recipe.water_temp}}"
+                        placeholder="Water Temp &deg;F">
+
+                    <input id="water_amount" name="water_amount" type="text" value="{{one_recipe.water_amount}}"
+                        placeholder="Water Amount in Grams">
+
                     <div class="time-flex">
-                        <input maxlength="2" id="brew_minutes" name="brew_minutes" type="text" value="{{one_recipe.brew_minutes}}" placeholder="Brew Time Minutes">
-                        <input maxlength="2" id="brew_seconds" name="brew_seconds" type="text" value="{{one_recipe.brew_seconds}}" placeholder="Seconds">
+                        <input maxlength="2" id="brew_minutes" name="brew_minutes" type="text"
+                            value="{{one_recipe.brew_minutes}}" placeholder="Brew Time Minutes">
+                            
+                        <input maxlength="2" id="brew_seconds" name="brew_seconds" type="text"
+                            value="{{one_recipe.brew_seconds}}" placeholder="Seconds">
                     </div>
-                    <input  id="grind_size" name="grind_size" type="text" value="{{one_recipe.description}}"  placeholder="Grinder and Setting">
-                    <textarea id="message" rows="10" name="description" type="text" value="{{one_recipe.}}" placeholder="Instructions"></textarea>
-                    <input id="submit" type="submit" value="Add Recipe">
+
+                    <input id="grind_size" name="grind_size" type="text" value="{{one_recipe.grind_size}}"
+                        placeholder="Grinder and Setting">
+
+                    <textarea id="message" rows="10" name="description" type="text"
+                        placeholder="Instructions">{{one_recipe.description}}</textarea>
+
+                    <input id="submit" type="submit" value="Save">
 
                 </form>
                 <!-- redirect buttons and footer start -->

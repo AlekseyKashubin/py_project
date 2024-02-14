@@ -11,7 +11,7 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href=" {{ url_for('static', filename='style.css') }} ">
+    <link rel="stylesheet" href=" {{ url_for('static', filename='show_recipe.css') }} ">
     <title>Proper Coffee</title>
 </head>
 
@@ -36,7 +36,7 @@
                         <a class="nav-link" href="/brew">Brew Method</a>
                         <a class="nav-link" href="/find">Find a Coffee Shop</a>
                         <a class="nav-link" href="/shop">Shop</a>
-                        {% if user_id == session['user_id'] %} 
+                        {% if user_id == session['user_id'] %}
                         <a class="nav-link" href="/register">Login</a>
                         {% else %}
                         <a class="nav-link" href="/logout">logout</a>
@@ -51,20 +51,32 @@
 
         <div class="container1">
             <div class="container2">
-                <h2 class="top-title">{{one_recipe.recipe_name}}</h2>
-        <div class="border-box">
-            <div class="left-col">
-                <p>Posted By : {{one_recipe.creator.user_name}}</p>
-                <p>Pour Over Method : {{one_recipe.method}}</p>
-                <p>Coffee Amount : {{one_recipe.coffee_amount}}</p>
-                <p>Water Amount : {{one_recipe.water_amount}}</p>
-                <p>Water Temp : {{one_recipe.water_temp}}</p>
-                <p>Brew Time Minuites : {{one_recipe.brew_minutes}}</p>
-                <p>Seconds : {{one_recipe.brew_seconds}}</p>
-                <p>Grinder and Setting : {{one_recipe.grind_size}}</p>
-                <p>Instructions : {{one_recipe.discription}}</p>
-            </div>
-        </div>
+                <div class="border-box">
+                    
+                    <h2 class="top-title">{{one_recipe.recipe_name}}</h2>
+                    <div class="col">
+                        <p>Posted By : {{one_recipe.creator.user_name}}</p>
+                        <p>Pour Over Method : {{one_recipe.method}}</p>
+                        <p>Coffee Amount : {{one_recipe.coffee_amount}}g</p>
+                        <p>Water Amount : {{one_recipe.water_amount}}g</p>
+                        <p>Water Temp : {{one_recipe.water_temp}}&deg;F</p>
+                        <div class="brew-time">
+                            <p>Brew Time : {{one_recipe.brew_minutes}}</p>
+                            {% if one_recipe.brew_seconds > 0 %}
+                            <p> :{{one_recipe.brew_seconds}}</p>
+                            {% else %}
+                            <p>:00</p>
+                            {% endif %}
+                        </div>
+                        <p>Grinder and Setting : {{one_recipe.grind_size}}</p>
+                        <p>Instructions : <br> {{one_recipe.description}}</p>
+                    </div>
+                    {% if one_recipe.user_id == session['user_id'] %}
+                    | <a href="/recipe/edit/{{one_recipe.id}}">Edit</a> |
+                    <a href="/delete/{{one_recipe.id}}">Delete</a></td>
+                    {% endif %}
+                    
+                </div>
 
 
             </div>

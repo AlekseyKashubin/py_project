@@ -91,11 +91,11 @@ class Recipe:  # replace Class name
         coffee_amount = %(coffee_amount)s, 
         water_temp = %(water_temp)s , 
         water_amount = %(water_amount)s , 
-        brew_minutes = %(brew_minutes)s
-        brew_seconds = %(brew_seconds)s
-        grind_size = %(grind_size)s
+        brew_minutes = %(brew_minutes)s,
+        brew_seconds = %(brew_seconds)s,
+        grind_size = %(grind_size)s,
         description = %(description)s
-        WHERE id = %(recipe_id)s ;
+        WHERE id = %(recipe_id)s;
         """
         results = connectToMySQL(cls.DB).query_db(query, data)
         return results

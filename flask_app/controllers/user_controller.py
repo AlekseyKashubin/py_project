@@ -84,7 +84,7 @@ def successful_register():
 
 
 
-@app.route('/user_recipes/<int:user_id>')
+@app.route('/recipe/<int:user_id>')
 def show_success(user_id):
 
     if 'user_id' not in session:
@@ -97,7 +97,7 @@ def show_success(user_id):
 
 
 
-@app.route('/user_recipes/<int:id>')
+@app.route('/recipe/<int:id>')
 def show_data(id):
 
     user = User.get_user_with_recipe({'id': id})
