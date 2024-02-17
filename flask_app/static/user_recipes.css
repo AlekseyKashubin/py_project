@@ -31,9 +31,16 @@ h4 {
     font-size: 25px;
     padding: 10px;
     color: rgb(250, 207, 207);
-    margin-bottom: 50px;
     width: auto;
+}
 
+.heading-add-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 
@@ -180,7 +187,9 @@ a .fa-circle-plus {
     display: flex;
     align-items: center;
     padding: 10px;
+    margin: 10px;
     letter-spacing: .5px;
+
 }
 
 /* Hover Recipe Cards stylesheet start  */
@@ -212,6 +221,13 @@ body {
     height: 300px;
     overflow: hidden;
     position: relative;
+}
+
+@media(max-width:600px) {
+    .ag-courses-item_link {
+        width: 330px;
+        height: 175px;
+    }
 }
 
 .ag-courses-item_link:hover,
@@ -248,6 +264,15 @@ body {
     position: relative;
 }
 
+@media(max-width:600px) {
+    .method-title {
+        margin-top: 30px;
+        text-decoration:underline rgb(240, 184, 184) 2px !important;
+    }
+}
+
+
+
 .ag-courses-item_date-box {
     font-size: 22px;
     color: #FFF;
@@ -259,7 +284,6 @@ font-weight: 200;
 .ag-courses-item_date {
     font-weight: 100;
     color: rgb(240, 184, 184);
-
     -webkit-transition: color .5s ease;
     -o-transition: color .5s ease;
     transition: color .5s ease

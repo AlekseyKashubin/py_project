@@ -39,10 +39,8 @@
                         {% if user_id == session['user_id'] %}
                         <a class="nav-link" href="/register">Login</a>
                         {% else %}
-                        <a class="nav-link" href="/logout">logout</a>
+                        <a class="nav-link" href="/logout">Logout</a>
                         {% endif %}
-                        <button id="cart-btn" onclick="location.href='/gear'"><i
-                                class="fa-solid fa-cart-shopping"></i></button>
                     </div>
                 </div>
             </div>
@@ -60,8 +58,10 @@
         </div>
 
         <div class="container1 second">
-            <h4 class="section-heading">Try Our Members Recipes or Add a Recipe</h4>
-            <a class="add-btn" href="/new_recipe">Add a New Recipe<i class="fa-solid fa-circle-plus"></i></a>
+            <div class="heading-add-row">
+                <h4 class="section-heading">Try Our Members Recipes or Add a Recipe</h4>
+                <a class="add-btn" href="/new_recipe">Add a New Recipe<i class="fa-solid fa-circle-plus"></i></a>
+            </div>
 
             <div class="recipe-box">
                 {% for recipe in list_of_recipes %}

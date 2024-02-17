@@ -18,12 +18,12 @@ body {
 
     color: var(--color);
     width: 100%;
-    min-height: 1000px;
+    min-height: 1100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url(https://images.unsplash.com/photo-1541469406036-71229832e06e?q=80&w=3774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url(https://images.unsplash.com/photo-1494314671902-399b18174975?q=80&w=3648&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -32,7 +32,6 @@ body {
 
 @media (max-width:600px) {
     .container1 {
-        height: 900px;
         min-height: 900px !important;
     }
 }
@@ -169,16 +168,35 @@ a.btn-home {
 
 
 p, h2 {
-    color: white;
+    color: rgb(23, 20, 20);
+
+}
+
+.username{
+    text-transform: uppercase;
 }
 
 .border-box{
-    width: 600px;
-    
-    border: solid 2px white;
+    width: 900px;
+    border: solid 2px rgb(0, 0, 0);
     border-radius: 10px;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 120px 10px;
+}
+
+@media(max-width:600px) {
+    .border-box {
+        width: 405px;
+    }
+}
+
+.user-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
 }
 
 .brew-time {

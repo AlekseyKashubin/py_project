@@ -31,22 +31,202 @@
                         <a class="nav-link" href="/grounds">Grind Size Guide </a>
                         <a class="nav-link" href="/gear">Gear</a>
                         <a class="nav-link" href="/user_recipes">Recipes</a>
-                        <a class="nav-link" href="/brew">Brew Method</a>
+                        <a class="nav-link active" href="/brew">Brew Method</a>
                         <a class="nav-link" href="/find">Find a Coffee Shop</a>
                         <a class="nav-link" href="/shop">Shop</a>
+                        {% if user_id == session['user_id'] %}
                         <a class="nav-link" href="/register">Login</a>
-                        <button id="cart-btn" onclick="location.href='/gear'"><i class="fa-solid fa-cart-shopping"></i></button>
+                        {% else %}
+                        <a class="nav-link" href="/Logout">Logout</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
         </nav>
-        
+
         <h1 class="title">Region</h1>
 
         <div class="lower-box">
             <div class="btn-box">
-                <div class="col-left">
-                                <!-- get consistent pictures of locations -->
+                <section class="articles">
+
+                    <article>
+                        <div class="article-wrapper">
+                            <figure>
+                                <img src="https://images.unsplash.com/photo-1614531341773-3bff8b7cb3fc?q=80&w=3864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                            </figure>
+                            <div class="article-body">
+                                <h2>African</h2>
+                                <p>
+                                    Coffee from <br> Kenya, Ethiopia, Burundi, Uganda, Rawanda etc.
+                                </p>
+                                <a href="#" class="read-more">
+                                    Read more <span class="sr-only">about this is some title</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article>
+                        <div class="article-wrapper">
+                            <figure>
+                                <img src="https://images.unsplash.com/photo-1580619305218-8423a7ef79b4?q=80&w=3874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                            </figure>
+                            <div class="article-body">
+                                <h2>South American</h2>
+                                <p>
+                                    Coffee from <br> Brazil, Colombia, Peru, Ecuador, Venezuela etc.
+                                </p>
+                                <a href="#" class="read-more">
+                                    Read more <span class="sr-only">about this is some title</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article>
+                        <div class="article-wrapper">
+                            <figure>
+                                <img src="https://images.unsplash.com/photo-1592593210599-492c25d93ef9?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                            </figure>
+                            <div class="article-body">
+                                <h2>Central American</h2>
+                                <p>
+                                    Coffee from <br> Costa Rica, Guatemala, El Salvador, Nicaragua, Honduras, Mexico, Panama etc.
+                                </p>
+                                <a href="#" class="read-more">
+                                    Read more <span class="sr-only">about this is some title</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article>
+                        <div class="article-wrapper">
+                            <figure>
+                                <img src="https://images.unsplash.com/photo-1700737503382-0877e9b441f2?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                            </figure>
+                            <div class="article-body">
+                                <h2>Asian</h2>
+                                <p>
+                                    Coffee from <br> Vietnam, Papua New Guuinea,Thailand, Sumatra,Indonesia, Laos, Malaysia etc.
+                                </p>
+                                <a href="#" class="read-more">
+                                    Read more <span class="sr-only">about this is some title</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article>
+                        <div class="article-wrapper">
+                            <figure>
+                                <img src="https://images.unsplash.com/photo-1698098997649-fea03f24272d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                            </figure>
+                            <div class="article-body">
+                                <h2>Hawaiian</h2>
+                                <p>
+                                    Coffee from <br> Maui, Kona, Kauai, Oahu, Puna, Molokai, Hamakua, Hawai'i etc.
+                                </p>
+                                <a href="#" class="read-more">
+                                    Read more <span class="sr-only">about this is some title</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article>
+                        <div class="article-wrapper">
+                            <figure>
+                                <img src="https://images.unsplash.com/photo-1580835864686-c6c0446abbbb?q=80&w=3812&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                            </figure>
+                            <div class="article-body">
+                                <h2>Caribbean</h2>
+                                <p>
+                                    Coffee from <br> Dominican Republic, St.Lucia, Haiti, Puerto Rico, Jamaica, Cuba etc.
+                                </p>
+                                <a href="#" class="read-more">
+                                    Read more <span class="sr-only">about this is some title</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- <div class="col-left">
                     <figure class="story_shape">
                         <img src=" {{ url_for('static', filename='img/1.png') }} " class="story_img">
                         <a class="story_caption" href="/aero_africa">African</a>
@@ -77,9 +257,17 @@
                         <img src=" {{ url_for('static', filename='img/6.jpg') }} " class="story_img">
                         <a class="story_caption" href="/aero_hawaiian">Hawaiian</a>
                     </figure>
-                </div>
+                </div> -->
             </div>
         </div>
+    </div>
+    <div class="home-flex">
+        <a class="btn-home" href="/">Home</a>
+        <a class="btn-home" href="/brew">Back to Recipes</a>
+    </div>
+    <!-- redirect buttons and footer end -->
+    <div class="footer">
+        <footer>©2024 ProperBloom</footer>
     </div>
 
 </body>

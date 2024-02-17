@@ -39,10 +39,9 @@
                         {% if user_id == session['user_id'] %}
                         <a class="nav-link" href="/register">Login</a>
                         {% else %}
-                        <a class="nav-link" href="/logout">logout</a>
+                        <a class="nav-link" href="/logout">Logout</a>
                         {% endif %}
-                        <button id="cart-btn" onclick="location.href='/gear'">
-                            <i class="fa-solid fa-cart-shopping"></i></button>
+\\
                     </div>
                 </div>
             </div>
@@ -52,10 +51,10 @@
         <div class="container1">
             <div class="container2">
                 <div class="border-box">
-                    
+
                     <h2 class="top-title">{{one_recipe.recipe_name}}</h2>
                     <div class="col">
-                        <p>Posted By : {{one_recipe.creator.user_name}}</p>
+                        <p class="username">Posted By : {{one_recipe.creator.user_name}}</p>
                         <p>Pour Over Method : {{one_recipe.method}}</p>
                         <p>Coffee Amount : {{one_recipe.coffee_amount}}g</p>
                         <p>Water Amount : {{one_recipe.water_amount}}g</p>
@@ -71,14 +70,13 @@
                         <p>Grinder and Setting : {{one_recipe.grind_size}}</p>
                         <p>Instructions : <br> {{one_recipe.description}}</p>
                     </div>
-                    {% if one_recipe.user_id == session['user_id'] %}
-                    | <a href="/recipe/edit/{{one_recipe.id}}">Edit</a> |
-                    <a href="/delete/{{one_recipe.id}}">Delete</a></td>
-                    {% endif %}
-                    
+                    <div class="user-controls">
+                        {% if one_recipe.user_id == session['user_id'] %}
+                        <a href="/recipe/edit/{{one_recipe.id}}">Edit</a>
+                        <a href="/delete/{{one_recipe.id}}">Delete</a></td>
+                        {% endif %}
+                    </div>
                 </div>
-
-
             </div>
         </div>
         <!-- redirect buttons and footer start -->
