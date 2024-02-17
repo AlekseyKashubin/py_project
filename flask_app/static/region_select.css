@@ -26,8 +26,8 @@ h1 {
 
 
 p {
-    color: rgb(0, 0, 0);
-    background: rgba(234, 234, 234, 0.5);
+    color: rgb(255, 255, 255);
+    /* background: rgba(255, 255, 255, 0.7); */
     border-radius: 10px;
     max-width: 52ch;
     line-height: 1.5;
@@ -51,19 +51,20 @@ p {
 
 
 a {
-    display: inline-block;
-    padding: 1em 3.5em;
-    background-color: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
     text-decoration: none;
     text-transform: uppercase;
-    border-radius: 0.3em;
-    font-weight: 700;
-    letter-spacing: .5px;
-    font-size: .875rem;
 }
 
 /* navbar style start */
+
+.navbar {
+    border-radius: 5px;
+}
+
 .nav-link {
     display: inline-block;
     color: rgb(240, 184, 184);
@@ -72,6 +73,7 @@ a {
     letter-spacing: .5px;
     font-size: .875rem;
 }
+
 
 .navbar-brand {
     padding: 5px 70px;
@@ -143,13 +145,36 @@ h3 {
 
 .lower-box {
     display: flex;
-    align-items: center;
     justify-content: center;
-    background-image: url(https://images.unsplash.com/photo-1493606278519-11aa9f86e40a?q=80&w=2442&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    background-repeat: no-repeat;
+    background-image: url(https://images.unsplash.com/photo-1522675397120-8cb88c83ac16?q=80&w=3024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-size: cover;
     background-position: center;
     height: 1100px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.section-heading {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border: 4px solid rgb(250, 207, 207);
+    font-size: 25px;
+    padding: 10px;
+    margin: 10px;
+    color: rgb(250, 207, 207);
+    margin-bottom: 100px;
+    width: 400px;
+}
+
+
+
+@media (max-width:600px) {
+    .lower-box {
+        height: 3200px;
+    }
+
 }
 
 .btn-box {
@@ -178,7 +203,10 @@ h2 {
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    
 
 }
 
@@ -250,28 +278,36 @@ a.btn-home {
 /* CARDS */
 article {
     --img-scale: 1.001;
-    --title-color: rgb(55, 54, 54);
+    --title-color: rgb(0, 0, 0);
     --link-icon-translate: -20px;
     --link-icon-opacity: 0;
     position: relative;
     border-radius: 16px;
     box-shadow: none;
-    background: transparent;
-    border: solid 2px rgb(240, 184, 184);
+    background: rgba(0, 0, 0, 0.6);
+    /* border: solid 2px rgb(92, 92, 92); */
     /* background: linear-gradient(0deg, rgb(198, 198, 198) 0%, rgba(255, 255, 255, 1) 100%); */
     transform-origin: center;
     transition: all 0.4s ease-in-out;
     overflow: hidden;
-    
+
 }
 
-article a::after {
+@media (max-width:600px) {
+    article {
+        width: 320px;
+        margin-bottom: 20px;
+    }
+
+}
+
+/* article a::after {
     position: absolute;
     inset-block: 0;
     inset-inline: 0;
     cursor: pointer;
     content: "";
-}
+} */
 
 /* basic article elements styling */
 article h2 {
@@ -284,6 +320,7 @@ article h2 {
     font-weight: 700;
     color: var(--title-color);
     transition: color 0.3s ease-out;
+    padding: 0px 10px;
 }
 
 figure {
@@ -303,7 +340,24 @@ article img {
 .article-body {
     padding: 15px;
     height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
+.arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+}
+
+
+
+
 
 article a {
     display: inline-flex;
@@ -348,51 +402,24 @@ article:has(:hover, :focus) {
     margin-inline: auto;
     padding-inline: 24px;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 24px;
+    gap: 45px;
 
 }
 
-@media screen and (max-width: 960px) {
-    article {
-        container: card/inline-size;
+@media (max-width:600px) {
+    .articles {
+        display: block;
     }
 
-    .article-body p {
-        display: none;
-
-    }
 }
 
-@container card (min-width: 380px) {
-    .article-wrapper {
-        display: grid;
-        grid-template-columns: 100px 1fr;
-        gap: 16px;
-    }
-
-    .article-body {
-        padding-left: 0;
-    }
-
-    figure {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
-
-    figure img {
-        height: 100%;
-        aspect-ratio: 1;
-        object-fit: cover;
-    }
+.read-more{
+    font-size: 40px;
 }
 
-.sr-only:not(:focus):not(:active) {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
+.read-more:hover {
+    font-size: 60px;
+    transition: all 0.3s;
+    
 }
+
