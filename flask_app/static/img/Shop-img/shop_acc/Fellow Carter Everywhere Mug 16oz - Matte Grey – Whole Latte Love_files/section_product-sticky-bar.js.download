@@ -1,0 +1,58 @@
+/** Shopify CDN: Minification failed
+
+Line 12:0 Transforming class syntax to the configured target environment ("es5") is not supported yet
+Line 13:13 Transforming object literal extensions to the configured target environment ("es5") is not supported yet
+Line 26:20 Transforming object literal extensions to the configured target environment ("es5") is not supported yet
+Line 27:4 Transforming let to the configured target environment ("es5") is not supported yet
+Line 28:4 Transforming const to the configured target environment ("es5") is not supported yet
+Line 33:12 Transforming const to the configured target environment ("es5") is not supported yet
+Line 33:18 Transforming destructuring to the configured target environment ("es5") is not supported yet
+
+**/
+class ProductStickyBar extends HTMLElement {
+  constructor() {
+    super();
+
+    this.handleIntersection = this.handleIntersection.bind(this);
+
+    this.elements = {
+      builder: document.querySelector('product-builder'),
+      builder_sticky_bar: document.querySelector('.product-sticky-bar'),
+    };
+
+    this.handleIntersection(this.elements.builder, this.elements.builder_sticky_bar);
+  }
+
+  handleIntersection(builder, stickyBar) {
+    let previousY = 0;
+    const sectionActive = [builder];
+    if (sectionActive && sectionActive[0]) {
+      sectionActive.forEach((section) => {
+        var observer = new IntersectionObserver(
+          function (entries) {
+            const { isIntersecting, target, boundingClientRect, intersectionRect, intersectionRatio } = entries[0];
+            if (isIntersecting && intersectionRect.top > 0) {
+              stickyBar.classList.add('bottom');
+              stickyBar.classList.add('animate-bar');
+            }
+            if (isIntersecting && intersectionRect.top <= 0) {
+              stickyBar.classList.add('bottom');
+            }
+
+            if (!isIntersecting) {
+              stickyBar.classList.remove('bottom');
+              stickyBar.classList.remove('animate-bar');
+            }
+          },
+          {
+            threshold: [0.15],
+          }
+        );
+
+        observer.observe(section);
+      });
+    }
+  }
+}
+
+customElements.define('product-sticky-bar', ProductStickyBar);

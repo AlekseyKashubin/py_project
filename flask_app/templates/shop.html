@@ -40,7 +40,7 @@
                         <a class="nav-link" href="/brew">Brew Method</a>
                         <a class="nav-link" href="/find">Find a Coffee Shop</a>
                         <a class="nav-link active" href="/shop">Shop</a>
-                        {% if user_id == session['user_id'] %} 
+                        {% if user_id == session['user_id'] %}
                         <a class="nav-link" href="/register">Login</a>
                         {% else %}
                         <a class="nav-link" href="/logout">Logout</a>
@@ -56,7 +56,7 @@
             <!-- hover pic effect start -->
 
             <section class="team">
-                <h2 class="section-heading">Everything you need to make coffee you love</h2>
+                <h2 class="section-heading">Reccomended Gear to make the Coffee you love</h2>
                 <div class="shop-list">
                     <div class="row1">
                         <div class="profile">
@@ -111,29 +111,66 @@
 
         <div class="container1 first">
             <div class="shop-row-top">
-                <div class="shopping-card">
-                    <img class="shop-img" src="{{ url_for('static', filename='img/Shop-img/shop_beans/onyx2.webp') }}" alt="">
-                    <p>Onyx Coffee Labs</p>
-                    <p>19.95</p>
-                </div>
-                <div class="shopping-card">
-                </div>
-                <div class="shopping-card">
-                </div>
-                <div class="shopping-card">
-                </div>
+                <a href="https://onyxcoffeelab.com/collections/coffee" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_beans/onyx2.webp') }}" alt="">
+                        <p>Onyx Coffee Labs</p>
+                    </div>
+                </a>
+                <a href="https://www.olympiacoffee.com/collections/coffee" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_beans/olympia.webp') }}" alt="">
+                        <p>Olympia Roasters</p>
+                    </div>
+                </a>
+                <a href="https://mirrorcoffeeroasters.com/collections/whole-bean-coffee" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_beans/mirror.webp') }}" alt="">
+                        <p>Mirror Coffee</p>
+                    </div>
+                </a>
+                <a href="https://www.madcapcoffee.com/coffee" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img" src="{{ url_for('static', filename='img/Shop-img/shop_beans/mad.png') }}"
+                            alt="">
+                        <p>Madcap Coffee</p>
+                    </div>
+                </a>
             </div>
 
             <div class="shop-row-bottom">
-                <div class="shopping-card">
-
-                </div>
-                <div class="shopping-card">
-                </div>
-                <div class="shopping-card">
-                </div>
-                <div class="shopping-card">
-                </div>
+                <a href="https://bluebottlecoffee.com/us/eng/shop/cof" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_beans/blue-bottle-coffee.webp') }}"
+                            alt="">
+                        <p>Blue Bottle Coffee</p>
+                    </div>
+                </a>
+                <a href="https://getprodigal.com/collections/roasted-coffee" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img" src="{{ url_for('static', filename='img/Shop-img/shop_beans/prod.jpg') }}"
+                            alt="">
+                        <p>Prodigal Coffee</p>
+                    </div>
+                </a>
+                <a href="https://proudmarycoffee.com/collections/all-coffee" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_beans/proud.webp') }}" alt="">
+                        <p>Proud Mary Coffee</p>
+                    </div>
+                </a>
+                <a href="https://www.cirquecoffee.com/coffee" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_beans/cirque.png') }}" alt="">
+                        <p>Cirque Coffee</p>
+                    </div>
+                </a>
             </div>
 
         </div>
@@ -145,27 +182,66 @@
 
         <div class="container1 second">
             <div class="shop-row-top">
-                <div class="shopping-card">
-
-                </div>
-                <div class="shopping-card">
-                </div>
-                <div class="shopping-card">
-                </div>
-                <div class="shopping-card">
-                </div>
+                <a href="https://us.moccamaster.com/products/kbgv-select?variant=40274274648227" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_coffee_makers/1.jpg') }}" alt="">
+                        <p>Moccamaster KBGV</p>
+                    </div>
+                </a>
+                <a href="https://ratiocoffee.com/products/ratio-six" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_coffee_makers/2.webp') }}" alt="">
+                        <p>Ratio Six</p>
+                    </div>
+                </a>
+                <a href="https://www.breville.com/us/en/products/coffee/bdc400.html?sku=BDC400BSS1BUS1" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_coffee_makers/3.jpg') }}" alt="">
+                        <p>Breville Precision</p>
+                    </div>
+                </a>
+                <a href="https://us.moccamaster.com/products/cdt" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_coffee_makers/4.webp') }}" alt="">
+                        <p>Moccamaster CDT</p>
+                    </div>
+                </a>
             </div>
 
             <div class="shop-row-bottom">
-                <div class="shopping-card">
-
-                </div>
-                <div class="shopping-card">
-                </div>
-                <div class="shopping-card">
-                </div>
-                <div class="shopping-card">
-                </div>
+                <a href="https://www.oxo.com/barista-brain-9-cup-coffee-maker.html" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_coffee_makers/5.jpg') }}" alt="">
+                        <p>OXO 9-Cup</p>
+                    </div>
+                </a>
+                <a href="https://ratiocoffee.com/products/ratio-eight" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_coffee_makers/6.webp') }}" alt="">
+                        <p>Ratio Eight</p>
+                    </div>
+                </a>
+                <a href="https://bonavita.co/collections/enthusiast-8-cup-coffee-brewer/products/enthusiast-8-cup-drip-coffee-brewer-with-glass-carafe"
+                    target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_coffee_makers/7.jpeg') }}" alt="">
+                        <p>Bonavita Enthusiast</p>
+                    </div>
+                </a>
+                <a href="https://www.chemexcoffeemaker.com/ottomatic-2-0-coffeemaker.html" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_coffee_makers/8.png') }}" alt="">
+                        <p>OTTOMATIC 2.0</p>
+                    </div>
+                </a>
             </div>
         </div>
 
@@ -176,27 +252,66 @@
 
         <div class="container1 third">
             <div class="shop-row-top">
-                <div class="shopping-card">
-
-                </div>
-                <div class="shopping-card">
-                </div>
-                <div class="shopping-card">
-                </div>
-                <div class="shopping-card">
-                </div>
+                <a href="https://clivecoffee.com/products/lucca-atom-75-espresso-grinder?ref=grinders" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_grinders/Lucca.webp') }}" alt="">
+                        <p>LUCCA Atom 75</p>
+                    </div>
+                </a>
+                <a href="https://www.mahlkoenig.us/products/e65s-gbw" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_grinders/mal65.webp') }}" alt="">
+                        <p>Mahlkönig E65 GBW</p>
+                    </div>
+                </a>
+                <a href="https://www.seattlecoffeegear.com/eureka-helios-80-commercial-espresso-grinder"
+                    target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_grinders/helios.webp') }}" alt="">
+                        <p>Eureka Helios 80</p>
+                    </div>
+                </a>
+                <a href="https://www.simonelliusa.com/Mythos-II" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_grinders/Mythos.jpg') }}" alt="">
+                        <p>Mythos II</p>
+                    </div>
+                </a>
             </div>
 
             <div class="shop-row-bottom">
-                <div class="shopping-card">
-
-                </div>
-                <div class="shopping-card">
-                </div>
-                <div class="shopping-card">
-                </div>
-                <div class="shopping-card">
-                </div>
+                <a href="https://fellowproducts.com/products/ode-brew-grinder" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_grinders/fellow.jpg') }}" alt="">
+                        <p>Fellow Ode</p>
+                    </div>
+                </a>
+                <a href="https://www.mahlkoenig.us/products/ek43" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_grinders/mal43.webp') }}" alt="">
+                        <p>Mahlkönig EK43</p>
+                    </div>
+                </a>
+                <a href="https://www.baratza.com/product/fortetm-bg-zcg1086" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_grinders/forte.webp') }}" alt="">
+                        <p>Baratza Forté-BG</p>
+                    </div>
+                </a>
+                <a href="https://www.mahlkoenig.us/products/x54-allround-home-grinder" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_grinders/mal54.webp') }}" alt="">
+                        <p>Mahlkonig X54</p>
+                    </div>
+                </a>
             </div>
         </div>
 
@@ -207,27 +322,65 @@
 
         <div class="container1 fourth">
             <div class="shop-row-top">
-                <div class="shopping-card">
-
-                </div>
-                <div class="shopping-card">
-                </div>
-                <div class="shopping-card">
-                </div>
-                <div class="shopping-card">
-                </div>
+                <a href="https://mrespresso.com/product/rocket-cinquantotto-r58/" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img" src="{{ url_for('static', filename='img/Shop-img/shop_machines/1.jpg') }}"
+                            alt="">
+                        <p>ROCKET CINQUANTOTTO R58</p>
+                    </div>
+                </a>
+                <a href="https://www.sanremomachines.com/en/products/you/" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_machines/2.webp') }}" alt="">
+                        <p>Sanremo You</p>
+                    </div>
+                </a>
+                <a href="https://slayerespresso.com/product/single-group/" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_machines/3.webp') }}" alt="">
+                        <p>Slayer</p>
+                    </div>
+                </a>
+                <a href="https://lamarzoccousa.com/home-products/espresso-machines/linea-mini/" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img" src="{{ url_for('static', filename='img/Shop-img/shop_machines/4.jpg') }}"
+                            alt="">
+                        <p>La Marzocco Linea Mini</p>
+                    </div>
+                </a>
             </div>
 
             <div class="shop-row-bottom">
-                <div class="shopping-card">
-
-                </div>
-                <div class="shopping-card">
-                </div>
-                <div class="shopping-card">
-                </div>
-                <div class="shopping-card">
-                </div>
+                <a href="https://victoriaarduino.com/eagleoneprima/" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_machines/e1.webp') }}" alt="">
+                        <p>Victoria Arduino Prima One</p>
+                    </div>
+                </a>
+                <a href="https://www.lamarzoccousa.com/home-products/espresso-machines/gs3/" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_machines/gs3.webp') }}" alt="">
+                        <p>La Marzocco GS3</p>
+                    </div>
+                </a>
+                <a href="https://rocket-espresso.com/products/domestic-models/bicocca" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_machines/7.webp') }}" alt="">
+                        <p>Rocket Bicocca</p>
+                    </div>
+                </a>
+                <a href="https://synesso.com/product/synesso-es1-espresso-machine-synesso/" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_machines/es1.jpg') }}" alt="">
+                        <p>Synesso ES1</p>
+                    </div>
+                </a>
             </div>
         </div>
         <div class="blank">
@@ -237,27 +390,67 @@
 
         <div class="container1 fifth">
             <div class="shop-row-top">
-                <div class="shopping-card">
-
-                </div>
-                <div class="shopping-card">
-                </div>
-                <div class="shopping-card">
-                </div>
-                <div class="shopping-card">
-                </div>
+                <a href="https://www.hario-usa.com/collections/drippers" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img" src="{{ url_for('static', filename='img/Shop-img/shop_po/1.webp') }}"
+                            alt="">
+                        <p>Hario V60</p>
+                    </div>
+                </a>
+                <a href="https://www.chemexcoffeemaker.com/eight-cup-classic-series-coffeemaker.html" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img" src="{{ url_for('static', filename='img/Shop-img/shop_po/2.jpg') }}"
+                            alt="">
+                        <p>Chemex</p>
+                    </div>
+                </a>
+                <a href="https://kalitausa.com/collections/waves-series" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img" src="{{ url_for('static', filename='img/Shop-img/shop_po/3.jpg') }}"
+                            alt="">
+                        <p>Kalita Wave</p>
+                    </div>
+                </a>
+                <a href="https://stanthonyind.com/products/f70-ceramics-brewer" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img" src="{{ url_for('static', filename='img/Shop-img/shop_po/4.jpg') }}"
+                            alt="">
+                        <p>Saint Anthony F70</p>
+                    </div>
+                </a>
             </div>
 
             <div class="shop-row-bottom">
-                <div class="shopping-card">
-
-                </div>
-                <div class="shopping-card">
-                </div>
-                <div class="shopping-card">
-                </div>
-                <div class="shopping-card">
-                </div>
+                <a href="https://www.slowpoursupply.co/collections/best-sellers-1/products/origami-dripper-m?variant=32326999670849"
+                    target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img" src="{{ url_for('static', filename='img/Shop-img/shop_po/5.webp') }}"
+                            alt="">
+                        <p>Origami</p>
+                    </div>
+                </a>
+                <a href="https://aeropress.com/products/aeropress-coffee-maker" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img" src="{{ url_for('static', filename='img/Shop-img/shop_po/6.jpg') }}"
+                            alt="">
+                        <p>Aeropress</p>
+                    </div>
+                </a>
+                <a href="https://bluebottlecoffee.com/us/eng/product/hario-nel-drip-set?gclsrc=aw.ds&gad_source=1&gclid=CjwKCAiA0PuuBhBsEiwAS7fsNZGeTZTyqLx9ZLInWgw163RV6FHL3EpdoT7X5JLrJsjheEQxfIKIHRoCRokQAvD_BwE&gclsrc=aw.ds"
+                    target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img" src="{{ url_for('static', filename='img/Shop-img/shop_po/7.jpg') }}"
+                            alt="">
+                        <p>Hario Nel Drip</p>
+                    </div>
+                </a>
+                <a href="https://www.bialetti.com/ee_en/moka-express.html" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img" src="{{ url_for('static', filename='img/Shop-img/shop_po/8.jpg') }}"
+                            alt="">
+                        <p>Moka Pot</p>
+                    </div>
+                </a>
             </div>
         </div>
         <div class="blank">
@@ -267,27 +460,65 @@
 
         <div class="container1 sixth">
             <div class="shop-row-top">
-                <div class="shopping-card">
-
-                </div>
-                <div class="shopping-card">
-                </div>
-                <div class="shopping-card">
-                </div>
-                <div class="shopping-card">
-                </div>
+                <a href="https://fellowproducts.com/products/prismo" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_acc/1.png') }}" alt="">
+                        <p>Fellow Prismo</p>
+                    </div>
+                </a>
+                <a href="https://stanthonyind.com/products/the-new-levy" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_acc/2.webp') }}" alt="">
+                        <p>Saint Anthony Precision Tamper</p>
+                    </div>
+                </a>
+                <a href="https://acaia.co/products/pearl-model-s" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_acc/3.webp') }}" alt="">
+                        <p>Acaia Pearl Model S</p>
+                    </div>
+                </a>
+                <a href="https://fellowproducts.com/products/stagg-ekg-electric-pour-over-kettle" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_acc/4.png') }}" alt="">
+                        <p>Fellow Stagg EKG</p>
+                    </div>
+                </a>
             </div>
 
             <div class="shop-row-bottom">
-                <div class="shopping-card">
-
-                </div>
-                <div class="shopping-card">
-                </div>
-                <div class="shopping-card">
-                </div>
-                <div class="shopping-card">
-                </div>
+                <a href="https://www.slowpoursupply.co/collections/latte-art" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_acc/5.jpg') }}" alt="">
+                        <p>WPM Latte Pitcher</p>
+                    </div>
+                </a>
+                <a href="https://fellowproducts.com/products/carter-move-mug" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_acc/6.jpg') }}" alt="">
+                        <p>Fellow Carter</p>
+                    </div>
+                </a>
+                <a href="https://thirdwavewater.com/" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_acc/7.webp') }}" alt="">
+                        <p>Third Wave Water</p>
+                    </div>
+                </a>
+                <a href="https://www.shopkanso.com/products/hasami-porcelain-mug-in-natural" target="_blank">
+                    <div class="shopping-card">
+                        <img class="shop-img"
+                            src="{{ url_for('static', filename='img/Shop-img/shop_acc/8.webp') }}" alt="">
+                        <p>Hasami Porcelain Mug</p>
+                    </div>
+                </a>
             </div>
         </div>
 

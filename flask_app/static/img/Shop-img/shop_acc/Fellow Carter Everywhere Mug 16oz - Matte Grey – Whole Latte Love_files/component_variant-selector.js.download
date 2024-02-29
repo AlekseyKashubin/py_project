@@ -1,0 +1,83 @@
+/** Shopify CDN: Minification failed
+
+Line 16:0 Transforming class syntax to the configured target environment ("es5") is not supported yet
+Line 17:13 Transforming object literal extensions to the configured target environment ("es5") is not supported yet
+Line 30:21 Transforming object literal extensions to the configured target environment ("es5") is not supported yet
+Line 37:13 Transforming object literal extensions to the configured target environment ("es5") is not supported yet
+Line 38:4 Transforming const to the configured target environment ("es5") is not supported yet
+Line 40:6 Transforming const to the configured target environment ("es5") is not supported yet
+Line 42:6 Transforming const to the configured target environment ("es5") is not supported yet
+Line 43:6 Transforming const to the configured target environment ("es5") is not supported yet
+Line 69:23 Transforming object literal extensions to the configured target environment ("es5") is not supported yet
+Line 71:6 Transforming const to the configured target environment ("es5") is not supported yet
+... and 2 more hidden warnings
+
+**/
+class VariantSelector extends HTMLElement {
+  constructor() {
+    super();
+    this.elements = {
+      selectWrapper: this.querySelector('.select-wrapper'),
+      select: this.querySelector('.select'),
+      customOptions: this.querySelector('.custom-options'),
+    };
+
+    this.optionClick = this.optionClick.bind(this);
+    this.optionActiveFromCache = this.optionActiveFromCache.bind(this);
+    this.setupEventListeners();
+  }
+
+  setupEventListeners() {
+    this.elements.selectWrapper.addEventListener('click', () => this.elements.select.classList.toggle('open-variant-dropdown'));
+    Array.from(this.elements.customOptions.children).forEach((el) => el.addEventListener('click', this.optionClick));
+    window.addEventListener('pageshow', this.optionActiveFromCache);
+    window.addEventListener('click', (e) => (!this.elements.select.contains(e.target) ? this.elements.select.classList.remove('open-variant-dropdown') : ''));
+  }
+
+  optionClick(e) {
+    const option = e.currentTarget;
+    if (option && !option.classList.contains('selected')) {
+      const activeEl = this.querySelector('.select > .select__trigger > .active-variant-option');
+
+      const newOptionEl = activeEl.cloneNode(true);
+      const newActiveEl = option.cloneNode(true);
+
+      newActiveEl.classList = activeEl.classList;
+      newActiveEl.lastElementChild.replaceWith(activeEl.lastElementChild);
+      newActiveEl.removeEventListener('click', this.optionClick);
+      activeEl.replaceWith(newActiveEl);
+
+      newOptionEl.classList = option.classList;
+      newOptionEl.lastElementChild.replaceWith(option.lastElementChild);
+      if (newOptionEl.dataset.stock === 'true') {
+        newOptionEl.lastElementChild.classList = ['variant-in-stock'];
+        newOptionEl.lastElementChild.textContent = 'In Stock';
+      } else {
+        newOptionEl.lastElementChild.classList = ['variant-out-stock'];
+        newOptionEl.lastElementChild.textContent = 'Out of Stock';
+      }
+      newOptionEl.addEventListener('click', this.optionClick);
+      option.remove();
+      if (newOptionEl.dataset.index >= this.elements.customOptions.children.length) {
+        this.elements.customOptions.appendChild(newOptionEl);
+      } else {
+        this.elements.customOptions.insertBefore(newOptionEl, this.elements.customOptions.children[newOptionEl.dataset.index]);
+      }
+    }
+  }
+
+  optionActiveFromCache(e) {
+    if (e.persisted) {
+      const getLast = (path) => path.substring(path.lastIndexOf('/') + 1);
+      const found = Array.from(this.elements.customOptions.children).find((child) => getLast(child.dataset.handle) === getLast(window.location.href));
+      if (found) {
+        const event = {
+          currentTarget: found,
+        };
+        optionClick(event);
+      }
+    }
+  }
+}
+
+customElements.define('variant-selector', VariantSelector);

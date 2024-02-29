@@ -1,0 +1,53 @@
+/** Shopify CDN: Minification failed
+
+Line 18:4 Transforming class syntax to the configured target environment ("es5") is not supported yet
+Line 19:17 Transforming object literal extensions to the configured target environment ("es5") is not supported yet
+Line 23:10 Transforming object literal extensions to the configured target environment ("es5") is not supported yet
+Line 24:8 Transforming const to the configured target environment ("es5") is not supported yet
+Line 29:10 Transforming object literal extensions to the configured target environment ("es5") is not supported yet
+Line 34:21 Transforming object literal extensions to the configured target environment ("es5") is not supported yet
+Line 35:8 Transforming const to the configured target environment ("es5") is not supported yet
+Line 40:8 Transforming const to the configured target environment ("es5") is not supported yet
+Line 41:8 Transforming const to the configured target environment ("es5") is not supported yet
+Line 42:8 Transforming const to the configured target environment ("es5") is not supported yet
+
+**/
+if (!customElements.get('product-modal')) {
+  customElements.define(
+    'product-modal',
+    class ProductModal extends ModalDialog {
+      constructor() {
+        super();
+      }
+
+      hide() {
+        const slider = this.querySelector('slider-component');
+        slider.classList.remove('active');
+        super.hide();
+      }
+
+      show(opener) {
+        super.show(opener);
+        this.showActiveMedia();
+      }
+
+      showActiveMedia() {
+        const slider = this.querySelector('slider-component');
+        slider.classList.add('active');
+        this.querySelectorAll(`[data-media-id]:not([data-media-id="${this.openedBy.getAttribute('data-media-id')}"])`).forEach((element) => {
+          element.classList.remove('active');
+        });
+        const activeMedia = this.querySelector(`[data-media-id="${this.openedBy.getAttribute('data-media-id')}"]`);
+        const activeMediaTemplate = activeMedia.querySelector('template');
+        const activeMediaContent = activeMediaTemplate ? activeMediaTemplate.content : null;
+        activeMedia.classList.add('active');
+        slider.children[0].scrollTo({
+          left: activeMedia.parentElement.offsetLeft,
+          behavior: 'instant',
+        });
+
+        if (activeMedia.nodeName == 'DEFERRED-MEDIA' && activeMediaContent && activeMediaContent.querySelector('.js-youtube')) activeMedia.loadContent();
+      }
+    }
+  );
+}

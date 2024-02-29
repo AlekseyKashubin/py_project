@@ -1,0 +1,225 @@
+/** Shopify CDN: Minification failed
+
+Line 181:427 Unexpected "@media"
+
+**/
+@media only screen and (max-width: 813px) {
+	#wtest-d-prod-img {
+		display: none;
+	}
+	#wtest-m-prod-img {
+		display: initial;
+	}
+}
+@media only screen and (min-width: 814px) {
+	#wtest-m-prod-img {
+		display: none;
+	}
+	#wtest-d-prod-img {
+		display: initial;
+	}
+}
+
+@media only screen and (max-width: 813px) {
+	#fingrid-m {
+		display: initial;
+	}
+	#fingrid-d {
+		display: none;
+	}
+}
+@media only screen and (min-width: 814px) {
+	#fingrid-m {
+		display: none;
+	}
+	#fingrid-d {
+		display: initial;
+	}
+}
+
+@media only screen and (min-width: 814px) {
+	#ps-vid {
+		margin-left:20px;
+	}
+}
+
+div.section__content > div:nth-child(2) > fieldset > div:nth-child(13){
+	display: none;
+} 
+
+.button-fin {
+    background-color: #000;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    margin: 14px 0 15px;
+    outline: none;
+    padding: 11px 11px 12px 12px;
+    position: relative;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-decoration: none !important;
+}
+.button-fin:hover, .button-fin:active, .button-fin:visited {
+  color: #ffffff;
+  text-decoration: none !important;
+}
+
+#ProductPrice {
+    font-size: 26px !important;
+}
+
+#AddToCart {
+    background: #7d0c38;
+    border: none;
+    color: #ffffff;
+}
+
+.addfinbut {
+	display:inline-block;
+	width: fit-content;
+}
+
+.addfinbutsub {
+	display:inline-block;
+	width: fit-content;
+}
+
+.finbut {
+	background-color: #789aca !important;
+	border-radius: 5px;
+	/*box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;*/
+	box-sizing: border-box;
+	color: #ffffff;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 1;
+	margin: 0;
+	outline: none;
+	padding-top: 11px;
+	padding-right: 11px;
+	padding-bottom: 12px;
+	padding-left:12px;
+	position: relative;
+	text-align: center;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	vertical-align: middle;
+	white-space: nowrap;
+	margin-top: 14px;
+	margin-bottom: 15px;
+	text-decoration: none !important;
+}
+
+.btn, div[role="button"], button[type="button"], button {
+    border-radius: 5px !important;
+}
+
+#customer_login > p:nth-child(9) > input {
+	background-color: #7d0c38;
+}
+
+
+@media only screen and (max-width: 575px) {
+	.template-article p, .template-article a, .template-article li, .template-page p, td {
+		font-size:22px;
+        
+	}
+  .template-article .h4 {
+    font-size: 26px;
+  }
+  .template-article .sidebar ul li {
+    padding: 7px 5px 7px 0;
+    font-size: 13px;
+  }
+  body{
+    font-size:16px;
+  }
+  .template-article time{
+    font-size:18px;
+  }
+  #shopify-section-article-template p.clearfix span.left a{
+    margin-left:10px;
+  }
+    #shopify-section-article-template p.clearfix span.right a{
+    margin-right:10px;
+  }
+  .social-sharing a {
+    margin: 5px 21px 5px 0;
+  }
+  #mobile_pages_res{display:none;}
+}
+.template-article table{
+  width:100% !important;
+}
+.template-article .rte table {
+    table-layout: auto !important;
+}
+.template-article td, .template-article th{
+  width:1% !important;
+}
+
+/*div > article > a {
+	text-decoration: underline !important;
+}*/
+
+
+#account > main > div > div > div > div > div.flits-account-section.flits-desktop-view > div.flits-menu-nav > div.flits-navigation-header.flits-with-shadow, #flits_mobile_tab_profile > div.flits-navigation-header > div.flits-user-avatar {
+	background-color: #7d0c38 !important;
+}
+
+#account > main > div > div > div > div > div.flits-account-section.flits-desktop-view > div.flits-menu-nav > div.flits-navigation-header.flits-with-shadow > div.flits-user-box > div:nth-child(1) > p, #account > main > div > div > div > div > div.flits-account-section.flits-desktop-view > div.flits-menu-nav > div.flits-navigation-header.flits-with-shadow > div.flits-user-box > div.flits-d-flex.flits-align-items-center > p, @media only screen and (max-width: 813px) {
+    #wtest-d-prod-img {
+        display: none;
+    }
+    #wtest-m-prod-img {
+        display: initial;
+    }
+}
+
+
+#account > main > div > div > div > div > div.flits-account-section.flits-desktop-view > div.flits-menu-nav > div.flits-navigation-header.flits-with-shadow, #flits_mobile_tab_profile > div.flits-navigation-header > div.flits-user-avatar, #flits_mobile_tab_address > div.flits-navigation-header > div.flits-user-avatar, #flits_mobile_tab_order > div.flits-navigation-header > div.flits-user-avatar, #flits_mobile_tab_wishlist > div.flits-navigation-header.flits-with-boxshadow > div.flits-user-avatar, #flits_mobile_tab_wishlist > div.flits-navigation-header.flits-with-boxshadow > div.flits-user-avatar, #flits_mobile_tab_recentlyView > div.flits-navigation-header.flits-with-boxshadow > div.flits-user-avatar, #flits_mobile_tab_changePassword > div.flits-navigation-header.flits-with-boxshadow > div.flits-user-avatar, #flits_mobile_tab_changePassword > div.flits-navigation-header.flits-with-boxshadow > div.flits-user-avatar {
+	background-color: #7d0c38 !important;
+}
+
+#account > main > div > div > div > div > div.flits-account-section.flits-desktop-view > div.flits-menu-nav > div.flits-navigation-header.flits-with-shadow > div.flits-user-box > div:nth-child(1) > p, #account > main > div > div > div > div > div.flits-account-section.flits-desktop-view > div.flits-menu-nav > div.flits-navigation-header.flits-with-shadow > div.flits-user-box > div.flits-d-flex.flits-align-items-center > p {
+	color: #ffffff !important;
+}
+
+#account > main > div > div > div > div > div.flits-account-section.flits-desktop-view > div.flits-menu-nav > div.flits-navigation-header.flits-with-shadow > div.flits-user-avatar, .flits-menu-badge, .flits-badge, .flits-order-badge {
+	background-color: #ffffff !important;
+}
+#flits_mobile_tab_profile > div.flits-navigation-header > div.flits-user-avatar::after, #flits_mobile_tab_address > div.flits-navigation-header > div.flits-user-avatar::after, #flits_mobile_tab_order > div.flits-navigation-header > div.flits-user-avatar::after, #flits_mobile_tab_wishlist > div.flits-navigation-header.flits-with-boxshadow > div.flits-user-avatar::after, #flits_mobile_tab_wishlist > div.flits-navigation-header.flits-with-boxshadow > div.flits-user-avatar::after, #flits_mobile_tab_recentlyView > div.flits-navigation-header.flits-with-boxshadow > div.flits-user-avatar::after, #flits_mobile_tab_changePassword > div.flits-navigation-header.flits-with-boxshadow > div.flits-user-avatar::after, #flits_mobile_tab_changePassword > div.flits-navigation-header.flits-with-boxshadow > div.flits-user-avatar::after {
+	color: #ffffff !important;
+}
+
+#account > main > div > div > div > div > div.flits-account-section.flits-desktop-view > div.flits-menu-nav > div.flits-navigation-header.flits-with-shadow > div.flits-user-avatar, .flits-menu-badge, .flits-badge, .flits-order-badge {
+	background-color: #ffffff !important;
+}
+#account > main > div > div > div > div > div.flits-account-section.flits-desktop-view > div.flits-menu-nav > div.flits-menus-list-box > div > div.flits-menu-item.flits-menu-active::before, #flits-address-mobile-list > div.flits-address-card.flits-new-address-card > p {
+	background-color: #7d0c38 !important;
+}
+#ProductSection > div.product-single > div > div:nth-child(2) > div:nth-child(8) > div.filts-wishlist-product-style.flits-wishlist-button-style {
+	margin-top: -25px !important;
+	margin-bottom: 20px !important;
+	max-width: 210px;
+	max-height: 35px;
+
+}
+#ProductSection > div.product-single > div > div:nth-child(2) > div:nth-child(8) > div.filts-wishlist-product-style.flits-wishlist-button-style > a.flits-wls-button.flits-wls-two.flits-wls-desktop.flits-wls-button-secondary.flits-wls-button-full-width.flits-wls-animate.flits-wls-active > div, #ProductSection > div.product-single > div > div:nth-child(2) > div:nth-child(8) > div.filts-wishlist-product-style.flits-wishlist-button-style > a.flits-wls-button.flits-wls-two.flits-wls-inactive.flits-wls-desktop.flits-wls-button-secondary.flits-wls-button-full-width > div {
+	position: relative !important;
+	top: -8px !important;
+}
+.flits-contact-us-btn, #flits_mobile_tab_profile > div.flits-mobile-container-box.flits-profile-form-container.flits-mt-25.flits-px-15 > form > div:nth-child(3), #flits_mobile_tab_profile > div.flits-mobile-container-box.flits-profile-form-container.flits-mt-25.flits-px-15 > form > div.flits-row.flits-gender-select-row, #flits_tab_profile > div > form > div:nth-child(3), #flits_tab_profile > div > form > div.flits-row.flits-gender-radio-row {
+	display: none !important;
+}

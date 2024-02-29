@@ -1,0 +1,47 @@
+/** Shopify CDN: Minification failed
+
+Line 10:2 Transforming class syntax to the configured target environment ("es5") is not supported yet
+Line 11:15 Transforming object literal extensions to the configured target environment ("es5") is not supported yet
+Line 29:8 Transforming object literal extensions to the configured target environment ("es5") is not supported yet
+Line 40:9 Transforming object literal extensions to the configured target environment ("es5") is not supported yet
+
+**/
+try {
+  class SearchBar extends HTMLElement {
+    constructor() {
+      super();
+
+      this.container = this;
+
+      this.toggle = this.querySelector('.header__search-toggle');
+      this.input = this.querySelector('.header__search-input');
+      this.form = this.querySelector('.header__search-form');
+
+      this.toggle.addEventListener('click', this.open.bind(this));
+
+      this.toggle.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          this.open.bind(this);
+        }
+      });
+    }
+
+    open(e) {
+      if (this.toggle.getAttribute('aria-expanded') == 'true') {
+        this.form.submit();
+      } else {
+        this.container.classList.add('open');
+        this.toggle.setAttribute('aria-expanded', true);
+
+        this.input.focus();
+      }
+    }
+
+    close() {
+      this.container.classList.remove('open');
+      this.toggle.setAttribute('aria-expanded', false);
+    }
+  }
+
+  customElements.define('search-bar', SearchBar);
+} catch (e) {}

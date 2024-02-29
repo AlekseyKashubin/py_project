@@ -183,7 +183,7 @@ body {
 .profile img:hover+.name {
     opacity: 1;
     transform: translateX(-50%);
-    box-shadow: 0 10px 20px rgba(86, 86, 198, 0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* hover pic effect end */
@@ -221,6 +221,7 @@ body {
 
 
 h1 {
+    
     color: white;
     font-weight: 700;
     text-align: center;
@@ -230,10 +231,14 @@ h1 {
 }
 
 p {
+    font-family: 'Courier New', Courier, monospace;
     text-align: center;
     color: white;
     background: rgba(0, 0, 0, 0.5);
-
+    border: solid rgb(250, 207, 207) 2px;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: underline rgb(250, 207, 207);
 }
 
 
@@ -278,6 +283,7 @@ p {
 
 
 h4 {
+    font-family: 'Courier New', Courier, monospace;
     text-transform: uppercase;
     color: white;
     font-weight: 700;
@@ -332,12 +338,15 @@ h4 {
 }
 
 .shopping-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 10px;
     width: 290px;
     height: 354px;
     border-radius: 30px;
     background: lightgrey;
-    box-shadow: rgba(44, 44, 227, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.15) 0px 18px 26px -18px inset;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.15) 0px 18px 26px -18px inset;
 }
 
 .shop-row-top,

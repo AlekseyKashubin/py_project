@@ -1,0 +1,838 @@
+.gfgFreeGiftMsgContainer {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-rows: 1fr;
+    font-size: 14px;
+    box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19);
+    grid-gap: 10px;
+    padding: 10px 8px;
+    border-radius: 4px;
+    line-height: normal !important;
+}
+
+.gfgFreeGiftMsgIcon {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 10px;
+    width: 50px;
+    height: 50px;
+
+}
+
+
+.gfgProductPageWrapperV2 {
+    margin-bottom: 5px;
+    line-height: normal;
+}
+
+.cart__ctas {
+    display: grid !important;
+}
+
+.gfgVolDiscountContainer{
+    display: grid;
+    grid-gap: 10px;
+}
+
+
+.gfgTitleDiv {
+    font-weight: bolder;
+    text-align: center;
+}
+
+.gfgGridBox {
+    padding: 20px 10px;
+    margin: 5px 0px;
+}
+
+.radioButton {
+    /* position: absolute!important; */
+    width: 20px;
+    height: 20px;
+    border: 1px solid #7069bc;
+    border-radius: 50px!important;
+    left: 20px!important;
+    top: 25px!important;
+    z-index: 1!important;
+}
+
+.gfgRadioSelection {
+    display: inline-flex;
+    /* background-color: rgb(255, 255, 255); */
+    position: relative;
+    height: 20px;
+    place-self: center;
+}
+
+.gfgRadioButton {
+    margin: 0px 10px;
+    /* background-color: rgb(0, 173, 181); */
+    transform: scale(1.5);
+}
+
+.gfgCostLabel {
+    font-weight: bolder;
+    margin: 0px 5px;
+}
+
+.gfgPricesDiv {
+    display: inline-flex;
+}
+
+.gfgFreeGiftMsgRow {
+    /* border: 0.5px solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gfgClaimButton {
+    width: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.gfgFreeGiftMsgContainerForAccordion {
+    color: black;
+    z-index: 5;
+    display: grid;
+    position: relative;
+}
+
+.gfgFreeGiftSelectDiv {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 8fr 1fr;
+    border: 1px solid black;
+    border-radius: 5px;
+    align-items: center;
+    padding: 10px;
+    line-height: 20px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+
+.gfgFreeGiftClaimButton {
+    color: white;
+    background-color: black;
+    border: none;
+    height: fit-content;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 15.2px;
+    line-height: 22.00px;
+    padding: 3px 12px;
+    align-self: end;
+    text-align: center;
+}
+
+.gfgFreeGiftOptionsContainerDiv {
+    display: none;
+}
+
+.gfgFreeGiftOptionsContainerDivExpanded {
+    display: grid;
+    grid-row: auto;
+    position: absolute;
+    z-index: 5;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: white;
+    border-radius: 5px;
+    /* border: black solid 1px !important; */
+    border: black solid 1px;
+    border-bottom: none !important;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    overflow: auto;
+    max-height: 500px;
+
+}
+
+.gfgFreeGiftMsgIconImageElement {
+    /* .css("width", "40px").css("height", "40px") */
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.gfgFreeGiftMsgIconImageElementOfItem {
+    /* .css("width", "40px").css("height", "40px") */
+    border-radius: 5px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+}
+
+.gfgFreeGiftDropDownButton {
+    /* background-color: rgba(0, 0, 0, 0); */
+    border: none;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.gfgFreeGiftDropDownButtonImageEle {
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.gfgFreeGiftDropDownButtonRotationClass {
+    transform: rotate(180deg);
+}
+
+.gfgFreeGiftMsgOptionRow {
+    display: grid;
+    padding: 10px;
+    grid-template-columns: auto 8fr 1fr;
+    border-top: 1px solid rgba(169, 169, 169, 0.2);
+    text-align: left;
+    align-items: center;
+    grid-gap: 10PX;
+}
+
+.gfgFreeGiftMsgTitle {
+    font-weight: 700;
+    font-size: 16px;
+    text-align: left;
+    line-height: 16px;
+}
+
+.gfgFreeGiftMsgSubTitle {
+    font-weight: 600;
+    font-size: 12px;
+    text-align: left;
+}
+
+.gfgFreeGiftMsgParentContainerForDropDown {
+    cursor: pointer;
+}
+
+.gfgFreeGiftVariantSelect {
+    max-width: fit-content;
+}
+
+.gfgFreeGiftMsgTextContainer {
+    display: grid;
+    grid-gap: 5px
+}
+
+.gfgFreeGiftSelectDivExpanded {
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.gfgFreeGiftPill-container {
+    display: grid;
+    text-align: center;
+    width: fit-content;
+    justify-content: center;
+}
+
+.gfgFreeGiftPill-segment {
+    border-radius: 5px;
+    padding: 1px 5px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.gfgFreeGiftSingleOfferSelectDiv {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 8fr 1fr;
+    border-radius: 5px;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+
+.gfgSingleOffergiftContainerDiv {
+    border: black solid 1px;
+    border-radius: 5px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+
+.gfgFreeGiftToast {
+    grid-column: 1 / span 3;
+    font-size: 12px;
+    color: red;
+}
+
+.gfgFreeGiftMsgSubTitleNoteTextColor {
+    color: #ec8816;
+}
+
+.gfgFreeGiftInvalidProductClaimButton {
+    background-color: #e5e5e5;
+    color: white;
+    pointer-events: none;
+}
+
+.gfgFreeGiftValidProductInactiveClaimButton {
+    background-color: #e5e5e5;
+    color: white;
+}
+
+.gfgFreeGiftReadyToClaimButton {
+    background-color: black;
+    cursor: pointer;
+}
+
+.gfgFreeGiftActiveFreeGiftClaimButton {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    cursor: pointer;
+}
+
+.gfgCartPageWrapperV2 {
+    margin-bottom: 10px;
+}
+
+.gfgFreeGiftScrollbar-visible {
+    grid-column: 2 / 2;
+    text-align: center;
+    max-width: fit-content;
+}
+
+.gfgCartPageWrapperV2 .gfgSingleOffergiftContainerDiv {
+    width: auto;
+    max-width: 400px;
+}
+
+
+
+.gftFreeGiftWrapper {
+    display: grid;
+}
+
+.gfgCartPageWrapperV2 .gftFreeGiftWrapper {
+    display: grid;
+    justify-items: end;
+}
+
+.gfgBulkDiscountWidgetHTML {
+    display: grid;
+    grid-gap: 10px;
+}
+
+.gfgBulkDiscountSingleWidgetHTML {
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+    margin: 5px 0px;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+}
+
+.gfgBulkDiscountSingleWidgetWrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5px;
+}
+
+
+
+.gfgFreeGiftOutOfStock{
+    /* color: red;
+    font-size: 12px;
+    font-weight: 600; */
+    /* display:none; */
+    /* background-color: tan; */
+    opacity: 0.5;
+}
+
+.gfgFreeGiftMsgSubTitleOutOfStock{
+    font-style: italic;
+}
+
+.gfgFreeGiftOutOfStock .gfgFreeGiftVariantSelect {
+    display:none;
+}
+
+/* Style for the dropdown */
+.gfgFreeGiftVariantSelect {
+    font-size: 12px;
+    /* Adjust as per your preference */
+    padding: 5px;
+    width: 100%;
+    border: 1px solid #ccc;
+    /* Adjust the color as needed */
+    border-radius: 5px;
+    /* Rounded corners */
+    appearance: none;
+    
+    /* Removes the default appearance of select on some browsers */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fff;
+    /* Adjust the color as needed */
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 10 6" fill="%23ccc" xmlns="http://www.w3.org/2000/svg"><path d="M0 1l5 5 5-5z"/></svg>');
+    /* SVG of a basic dropdown arrow */
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    /* Position the arrow to the right */
+    background-size: 10px;
+    min-width: -webkit-fill-available;
+    /* Size of the arrow */
+}
+
+/* Style for the options */
+.gfgFreeGiftVariantOption {
+    font-size: 12px;
+    /* Adjust as per your preference */
+    padding: 10px;
+}
+
+/* On some browsers, you might need to style the option hover and selected states separately */
+.gfgFreeGiftVariantOption:hover {
+    background-color: #f5f5f5;
+    /* Adjust the color as needed */
+}
+
+.gfgFreeGiftVariantOption:checked,
+.gfgFreeGiftVariantOption:selected {
+    background-color: #eee;
+    /* Adjust the color as needed */
+}
+
+.gfgFreeGiftOutOfStock .gfgFreeGiftClaimButton{
+    display: none;
+}
+
+.gfgBogoWrapper:not(:empty){
+    margin-top: 20px;
+}
+
+.gfgBogoTitleContainer{
+    display: grid;
+    place-items: center;
+    background-color: #2C2A41;
+    color: white;
+    padding: 20px 0px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.gfgBuyProductHeader{
+    display: grid;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.gfgProductImage{
+    height: 50px;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: contain;
+}
+
+.gfgBogoFeatureCreateCapsuleContent{
+    object-fit: contain;
+    height: 80%;
+}
+
+.gfgBogoFeatureCreateCapsuleContentContainer{
+    display: grid;
+    place-items: center;
+    padding: 5px;
+}
+
+.gfgBogoDivider hr{
+    margin: 0px;
+}
+
+.gfgCustomerGetsProductTitleContainer{
+    display: grid;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.gfgBuyProductDetailSectionContainer{
+    font-size: 12px;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 5px;
+}
+
+.gfgBuyProductCardContainer{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 20px 10px;
+    place-items: center;
+    grid-gap: 15px;
+}
+.gfgProductImageContainer{
+    display: grid;
+    /* justify-content: center; */
+    /* align-items: center; */
+    place-items: center;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.gfgBuyProductPriceContainer{
+    display: flex;
+    gap: 10px;
+}
+
+.gfgCustomerGetsProductContent{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-gap: 5px;
+    font-size: 12px;
+}
+
+.gfgBuyProductPriceContainerForCustomerGets{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 5px;
+}
+
+.gfgRenderCustomerGetsProductCardPrepareUI{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 20px 10px;
+    font-size: 15px;
+    grid-gap: 15px;
+}
+
+.gfgBuyProductAddToCartButton{    
+    display: grid;
+    place-items: center;
+    width: 60px;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+.gfgBuyProductTextPillContainer{
+    padding: 0px 18px;
+    border-radius: 500px;
+    background-color: #A3DAFF;
+    color: #134791;
+    font-size: 12px;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    height: 18px;
+    display: grid;
+    align-self: center;
+}
+
+.gfgBogoFeatureCreateLine{
+    position: relative;
+    width: 100%;
+    height: 0.5px;
+    background-color: #CDCDCD; /* Line color */
+    margin: 15px 0;
+}
+
+.gfgBogoFeatureCreateCapsule{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0px 25px;
+    border-radius: 20px;
+    background-color: #2C2A41;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    display: grid;
+    place-items: center;
+}
+.gfgBogoContainer{
+    border: 1px solid #CDCDCD;
+    border-radius: 8px;
+}
+
+.gfgNotificationInactive{
+    display: none;
+}
+
+.gfgButtonActionsContainer{
+    padding: 20px 20px;
+    border-top: 1px solid #CDCDCD;
+    display: grid;
+    place-items: center;
+}
+
+.gfgBogoActionButton{
+    display: grid;
+    place-items: center;
+    padding: 14px;
+    width: 100%;
+    background-color: #2C2A41;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.invalidActionButton{
+    background-color: #D4D2E2;
+    pointer-events: none;
+}
+
+.gfgBuyProductPriceContainerBoxDiscountedPrice{
+    display: grid;
+    font-weight: bold;
+    font-size: 16px;
+    align-self: center;
+}
+
+.gfgBuyProductPriceContainerBox{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.gfgBuyProductPriceContainerBoxOriginalPriceStriked{
+    text-decoration: line-through;
+    align-self: baseline; 
+    font-size: 12px;
+}
+
+.gfgBuyProductPriceContainerBoxOriginalPrice.gfgBuyProductPriceContainerBoxOriginalPriceStriked{
+    display: grid;
+    align-self: center;
+}
+
+.gfgBogoRedTextClass{
+    color: red;
+}
+
+.gfgBuyProductVariantSelect, .gfgBuyProductVariantSelectForCustomerGets{
+    margin: 0px 0px 10px 0px;
+    font-size: 12px;
+    /* Adjust as per your preference */
+    padding: 5px;
+    border: 1px solid #ccc;
+    /* Adjust the color as needed */
+    border-radius: 5px;
+    /* Rounded corners */
+    appearance: none;
+    
+    /* Removes the default appearance of select on some browsers */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fff;
+    /* Adjust the color as needed */
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 10 6" fill="%23ccc" xmlns="http://www.w3.org/2000/svg"><path d="M0 1l5 5 5-5z"/></svg>');
+    /* SVG of a basic dropdown arrow */
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    /* Position the arrow to the right */
+    background-size: 10px;
+    width: 75%;
+}
+
+.gfgVariantContainerHidden{
+    display: none;
+}
+
+.gfgBogoNotificationMessageContainer{
+    display: grid;
+    place-items: center;
+    position: relative;
+    z-index: 1000;
+    padding: 15px;
+    background-color: white;
+    width: 100%;
+    border-top: 0px;
+    border-radius: 8px;
+}
+
+.gfgCountDiscount{
+    .gfgRadioSelection .radioButton {
+        display: none;
+      }
+      
+      
+      .gfgRadioSelectionLabel {
+        color: #666;
+        font-weight: normal;
+        position: relative;
+        padding-left: 30px; /* Adjust as needed */
+        cursor: pointer;
+      }
+     
+      .gfgRadioSelectionLabel:before {
+        content: " ";
+        display: inline-block;
+        position: absolute;
+        top: 5px;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 11px;
+        border: 2px solid #004c97;
+        background-color: transparent;
+      }
+      
+      .gfgRadioSelection .radioButton:checked + .gfgRadioSelectionLabel:after {
+        border-radius: 11px;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        top: 5px;
+        left: 5px; /* Adjusted this to center the circle */
+        content: " ";
+        display: block;
+        background: #004c97;
+      }
+      .gfgRadioSelectionLabel:before {
+        content: " ";
+        display: inline-block;
+        position: absolute;
+        top: 1px;
+        left: 1px;
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+        border: 2px solid #004c97;
+        background-color: transparent;
+    }
+    
+    .gfgGridBox {
+        display: grid;
+        position: relative;
+        /* padding: 0 6px; */
+        border: 1px solid black;
+
+        margin: 10px 0 0;
+        width: 100%;
+        grid-template-columns: 30px 1fr;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    
+    .gfgGridBoxSelected {
+        border: 2px solid black !important;
+        /* TODO: make this dynamic */
+        /* background: aqua; */
+    }
+    
+    .gfgHide{
+        display: none;
+    }
+    
+    .gfgCompareAtPrice {
+        text-decoration: line-through;
+        color: #999;
+        align-self: center;
+        font-size: 12px;
+    }
+    
+    .gfgPricesDiv {
+        display: grid;
+        justify-content: end;   
+        grid-template-columns: auto auto;
+    }
+    
+    
+    .gfgCostLabel {
+        font-weight: bolder;
+        margin: 0px 5px;
+        align-self: center  ;
+        font-size: 16px;
+    }
+    
+    .gfgLabelAndPriceDiv {
+        padding-left: 5px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+    
+    
+    @media only screen and (max-width: 600px) {
+        .gfgFreeGiftClaimButton {
+            grid-column: 2 / 2;
+            text-align: center;
+        }
+    
+        .gfgSingleOffergiftContainerDiv {
+            width: 100%;
+        }
+        .gfgGridBox {
+            display: grid;
+            position: relative;
+            /* padding: 0 6px; */
+            margin: 10px 0 0;
+            /* grid-gap:10px; */
+            width: 100%;
+            grid-template-columns: 30px 1fr;
+        }
+        .gfgPricesDiv {
+            grid-template-columns: 1fr;
+            grid-template-columns: min-content min-content;
+            grid-gap: 10px;
+            justify-content: start;
+        }
+        .gfgGridBox{
+            padding: 10px;
+        }
+        .gfgCompareAtPrice { order: 2; }
+        .gfgCostLabel { 
+            order: 1;
+            margin: 0px;
+         }
+         .gfgLabelAndPriceDiv {
+            /* padding-left: 30px; */
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        
+    }
+}
+
+ .gfgDisabled{
+    opacity: 0.5;
+    pointer-events: none;
+ }
+
+ .gfgLoadingSpinner{
+    pointer-events: none;
+    opacity: 0.5;
+ }
+
+ .gfgVolDiscountWrapper:not(:empty) {
+    margin-top: 10px;
+}
+
+/* .gfgPoweredByLabelBlock{
+    display: grid;
+    background: #4d4b4b;
+    width: max-content;
+    justify-self: end;
+}
+.gfgPoweredAnchorTag{
+    color: white;
+    text-decoration: none;
+} */
+
+.gfgCartPageWrapperV2  .gfgFreeGiftSingleOfferSelectDiv {
+    max-width:100% !important;
+ }

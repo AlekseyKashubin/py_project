@@ -1,0 +1,698 @@
+/* Globals */
+#lbtu-template-main-LBTUFrequentlyBoughtTogether,
+#lbtu-template-main-LBTUMixAndMatch,
+#lbtu-template-main-LBTUProductAddons,
+#lbtu-template-main-LBTUCartAddons,
+#lbtu-template-main-LBTUUpsellFunnel {
+  width: 100%;
+}
+.lbtu-hide {
+  display: none !important;
+}
+.lbtu-transparent {
+  color: transparent !important;
+}
+.lbtu-widget-title-container {
+  margin-bottom: 15px;
+}
+.lbtu-widget-title-container h2 {
+  margin-bottom: 0;
+}
+.lbtu-product-list {
+  list-style: none !important;
+  padding: 0 !important;
+}
+.lbtu-product-label-input-title {
+  line-height: 1.6 !important;
+}
+.lbtu-title {
+  font-size: 16px !important;
+}
+.lbtu-price {
+  line-height: 1.6 !important;
+  font-size: 16px !important;
+  margin-left: 20px;
+  font-weight: bold;
+}
+.lbtu-product-popup-title {
+  margin-bottom: 15px;
+}
+.lbtu-select-widget {
+  min-width: 0 !important;
+  max-width: 150px !important;
+  width: 150px !important;
+  margin-bottom: 5px !important;
+  padding: 2px 5px !important;
+}
+.lbtu-product-popup-container .lbtu-price {
+  margin-left: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.lbtu-price .regular-price {
+  font-weight: normal;
+  text-decoration: line-through;
+}
+.lbtu-price .sale-price {
+  color: red;
+}
+
+/* Commons */
+.lbtu-frequently-bought-together input,
+.lbtu-frequently-bought-together select,
+.lbtu-mix-and-match input,
+.lbtu-mix-and-match select,
+.lbtu-product-addons input,
+.lbtu-product-addons select,
+.lbtu-product-addons .lbtu-select-widget,
+.lbtu-product-addons .lbtu-product-label-input-label input,
+.lbtu-product-upsell-funnel-content select,
+.lbtu-product-upsell-funnel-content input {
+  min-height: 0 !important;
+}
+.lbtu-product-addons input[type="checkbox"],
+.lbtu-frequently-bought-together input[type="checkbox"],
+.lbtu-mix-and-match input[type="checkbox"] {
+  appearance: auto !important;
+  -webkit-appearance: auto !important;
+  max-height: 20px !important;
+  flex-shrink: 0;
+}
+.lbtu-product-upsell-funnel-content .lbtu-price,
+.lbtu-product-popup-container .lbtu-select-widget-container,
+.lbtu-product-addons .lbtu-select-widget-container,
+.lbtu-product-upsell-funnel-content .lbtu-select-widget-container {
+  margin-left: 0;
+}
+.lbtu-frequently-bought-together .lbtu-title:hover,
+.lbtu-mix-and-match .lbtu-title:hover,
+.lbtu-product-addons .lbtu-title:hover {
+  text-decoration: underline;
+}
+.lbtu-image-section img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .lbtu-product-popup {
+    margin-bottom: 60px;
+  }
+  .lbtu-product-popup-content {
+    padding: 0;
+    flex-wrap: wrap;
+  }
+  .lbtu-product-popup-left {
+    flex: 100%;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  .lbtu-product-popup-image-thumbs {
+    flex: 1;
+    flex-direction: row;
+    gap: 30px;
+    overflow-x: scroll;
+  }
+  .lbtu-product-popup-title {
+    font-size: 22px;
+  }
+}
+
+/* Frequently bought together */
+.lbtu-frequently-bought-together,
+.lbtu-mix-and-match {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  overflow: hidden;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 20px 0;
+}
+.lbtu-frequently-bought-together .lbtu-widget-title-container,
+.lbtu-mix-and-match .lbtu-widget-title-container {
+  width: 100%;
+}
+.lbtu-frequently-bought-together .lbtu-add-to-cart,
+.lbtu-mix-and-match .lbtu-add-to-cart {
+  position: relative;
+  margin-bottom: 30px !important;
+}
+.lbtu-frequently-bought-together .lbtu-image-section,
+.lbtu-mix-and-match .lbtu-image-section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 20px;
+  margin-bottom: 0 !important;
+}
+.lbtu-frequently-bought-together .lbtu-collapsible-expand,
+.lbtu-mix-and-match .lbtu-collapsible-expand {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid black;
+  margin-top: -1px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.lbtu-frequently-bought-together .lbtu-total-price,
+.lbtu-mix-and-match .lbtu-total-price {
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 0px !important;
+}
+.lbtu-frequently-bought-together .lbtu-total-price-collapsible,
+.lbtu-mix-and-match .lbtu-total-price-collapsible {
+  font-weight: bold;
+}
+.lbtu-frequently-bought-together .lbtu-total-price-collapsible .regular-price,
+.lbtu-mix-and-match .lbtu-total-price-collapsible .regular-price {
+  font-weight: normal;
+  text-decoration: line-through;
+}
+.lbtu-frequently-bought-together .lbtu-total-price-collapsible .sale-price,
+.lbtu-mix-and-match .lbtu-total-price-collapsible .sale-price {
+  color: red;
+}
+.lbtu-frequently-bought-together .lbtu-form-container,
+.lbtu-mix-and-match .lbtu-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.lbtu-frequently-bought-together .lbtu-product-list li,
+.lbtu-mix-and-match .lbtu-product-list li {
+  padding: 5px 20px 5px 5px;
+}
+.lbtu-frequently-bought-together .lbtu-product-label,
+.lbtu-mix-and-match .lbtu-product-label {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 0px;
+  align-items: center;
+}
+.lbtu-frequently-bought-together .lbtu-price,
+.lbtu-mix-and-match .lbtu-price {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  text-align: end;
+}
+
+.lbtu-frequently-bought-together .lbtu-product-label-input-title,
+.lbtu-mix-and-match .lbtu-product-label-input-title {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+
+.lbtu-frequently-bought-together .lbtu-total-price .regular-price,
+.lbtu-mix-and-match .lbtu-total-price .regular-price {
+  font-weight: normal;
+  text-decoration: line-through;
+}
+.lbtu-frequently-bought-together .lbtu-total-price .sale-price,
+.lbtu-mix-and-match .lbtu-total-price .sale-price {
+  color: red;
+}
+.lbtu-frequently-bought-together .lbtu-title,
+.lbtu-mix-and-match .lbtu-title {
+  cursor: pointer;
+}
+
+.lbtu-frequently-bought-together .lbtu-title.lbtu-original-product:hover,
+.lbtu-mix-and-match .lbtu-title.lbtu-original-product:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .lbtu-frequently-bought-together .lbtu-image-section,
+  .lbtu-mix-and-match .lbtu-image-section {
+    justify-content: space-between;
+    border: 1px solid black;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .lbtu-frequently-bought-together .lbtu-image-section img,
+  .lbtu-mix-and-match .lbtu-image-section img {
+    width: 85px;
+    height: 85px;
+  }
+  .lbtu-frequently-bought-together .lbtu-title,
+  .lbtu-mix-and-match .lbtu-title {
+    overflow-wrap: anywhere;
+  }
+  .lbtu-frequently-bought-together .lbtu-product-label,
+  .lbtu-mix-and-match .lbtu-product-label {
+    gap: 20px;
+    align-items: center;
+    padding-left: 10px;
+  }
+  .lbtu-frequently-bought-together .lbtu-total-price,
+  .lbtu-mix-and-match .lbtu-total-price {
+    text-align: center;
+    align-self: center;
+  }
+  .lbtu-frequently-bought-together .lbtu-form-container,
+  .lbtu-mix-and-match .lbtu-form-container {
+    border: 1px solid black;
+    margin-top: -1px;
+  }
+  .lbtu-frequently-bought-together .lbtu-product-list li,
+  .lbtu-mix-and-match .lbtu-product-list li {
+    border-bottom: 1px solid black;
+  }
+}
+@media (max-width: 390px) {
+  .lbtu-frequently-bought-together .lbtu-image-section img,
+  .lbtu-mix-and-match .lbtu-image-section img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* Product addons */
+.lbtu-product-addons .lbtu-product-list li {
+  margin-bottom: 10px;
+}
+.lbtu-product-addons .lbtu-product-label-content {
+  display: flex;
+  gap: 10px;
+}
+.lbtu-product-addons .lbtu-product-label-img {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+.lbtu-product-addons .lbtu-product-label-img img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  cursor: pointer;
+}
+.lbtu-product-addons .lbtu-product-label-input-title {
+  flex: 1;
+  cursor: pointer;
+}
+.lbtu-product-addons .lbtu-product-label-input-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.lbtu-product-addons .lbtu-product-label-input-price .lbtu-price {
+  display: flex;
+  flex-direction: column;
+}
+.lbtu-product-addons .lbtu-product-label-input-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Upsell Funnel */
+.lbtu-product-upsell-funnel-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2147483647 !important;
+}
+.lbtu-product-upsell-funnel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 250px;
+  max-height: 60vh;
+  width: 550px;
+  background: white;
+  border-radius: 5px;
+  z-index: 2147483647 !important;
+}
+
+.lbtu-product-upsell-funnel-loading {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  z-index: 2147483647 !important;
+}
+
+.lbtu-product-upsell-funnel-close {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+}
+.lbtu-product-upsell-funnel-close span {
+  cursor: pointer;
+}
+.lbtu-product-upsell-funnel-content {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  max-height: 100%;
+  margin-bottom: 80px;
+}
+.lbtu-product-upsell-funnel-title {
+  padding: 14px !important;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0;
+}
+.lbtu-product-upsell-funnel-timer {
+  background: #1a1a1a;
+  border-radius: 4px;
+  color: white;
+  padding: 14px !important;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 20px;
+}
+.lbtu-product-upsell-funnel-product {
+  display: flex;
+  gap: 20px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+.lbtu-product-upsell-funnel-product-left {
+  max-width: 200px;
+}
+.lbtu-product-upsell-funnel-product-left img {
+  width: 200px;
+  object-fit: cover;
+}
+.lbtu-product-upsell-funnel-product-title {
+  font-weight: bold;
+}
+.lbtu-product-upsell-funnel-description {
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+.lbtu-product-upsell-funnel-actions {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+.lbtu-product-upsell-funnel-add-to-cart {
+  height: 40px !important;
+  text-align: center !important;
+  background: black !important;
+  color: white !important;
+  font-weight: bold !important;
+  border: 0 !important;
+  outline: 0 !important;
+  cursor: pointer !important;
+}
+.lbtu-product-upsell-funnel-skip {
+  height: 40px !important;
+  text-align: center !important;
+  background: white !important;
+  color: black !important;
+  text-decoration: underline !important;
+  border: 0 !important;
+  outline: 0 !important;
+  cursor: pointer !important;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+/* Cart Addons */
+.lbtu-product-upsell-funnel.lbtu-product-upsell-funnel-addon {
+  max-height: 80vh;
+}
+.lbtu-product-upsell-funnel.lbtu-product-upsell-funnel-addon
+  .lbtu-product-upsell-funnel-content {
+  margin-bottom: 60px;
+}
+.lbtu-product-upsell-funnel.lbtu-product-upsell-funnel-addon
+  .lbtu-product-upsell-funnel-product {
+  margin-bottom: 0;
+}
+.lbtu-product-upsell-funnel.lbtu-product-upsell-funnel-addon
+  .lbtu-product-upsell-funnel-product-inner {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  border: 1px solid #1a1a1a;
+  border-radius: 5px;
+  padding: 15px;
+}
+.lbtu-product-upsell-funnel.lbtu-product-upsell-funnel-addon
+  .lbtu-product-upsell-funnel-product-inner
+  .lbtu-product-upsell-funnel-product-left {
+  max-width: 100px;
+  min-width: 100px;
+  min-height: 100px;
+  max-height: 100px;
+  overflow: hidden;
+}
+.lbtu-product-upsell-funnel.lbtu-product-upsell-funnel-addon
+  .lbtu-product-upsell-funnel-product-inner
+  .lbtu-product-upsell-funnel-product-left
+  img {
+  width: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.lbtu-product-upsell-funnel.lbtu-product-upsell-funnel-addon
+  .lbtu-product-upsell-funnel-product-inner
+  .lbtu-product-upsell-funnel-product-right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.lbtu-product-upsell-funnel.lbtu-product-upsell-funnel-addon
+  .lbtu-product-upsell-funnel-product-title {
+  font-weight: normal;
+}
+.lbtu-product-upsell-funnel.lbtu-product-upsell-funnel-addon .lbtu-price {
+  font-weight: normal;
+}
+.lbtu-product-upsell-funnel.lbtu-product-upsell-funnel-addon .lbtu-add-to-cart {
+  align-self: flex-end !important;
+  margin-top: auto !important;
+  justify-self: flex-end !important;
+}
+.lbtu-product-upsell-funnel.lbtu-product-upsell-funnel-addon
+  .lbtu-product-upsell-funnel-actions {
+  background: #f1f1f1;
+  justify-content: center;
+  align-items: flex-end;
+  height: 60px;
+  padding: 10px;
+}
+
+/* Modal */
+.lbtu-product-popup-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2147483647 !important;
+}
+.lbtu-product-popup {
+  display: flex;
+  flex-direction: column;
+  max-height: 85vh;
+  width: 85vw;
+  background: white;
+  border-radius: 5px;
+  padding: 20px;
+  padding-top: 0;
+  z-index: 2147483647 !important;
+}
+@media (min-width: 1281px) {
+  .lbtu-product-popup {
+    max-width: 65vw;
+    min-height: 60vh;
+  }
+}
+.lbtu-product-popup-close {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+}
+.lbtu-product-popup-close span {
+  cursor: pointer;
+}
+.lbtu-product-popup-content {
+  display: flex;
+  overflow-y: scroll;
+  max-height: 100%;
+  padding: 0 20px;
+  padding-top: 20px;
+}
+.lbtu-product-popup-left {
+  display: flex;
+  flex: 10%;
+}
+.lbtu-product-popup-image-thumbs {
+  flex: 0 0 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+.lbtu-product-popup-image-thumbs img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  cursor: pointer;
+}
+.lbtu-product-popup-image-large {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+}
+.lbtu-product-popup-right {
+  display: flex;
+  flex: 90%;
+}
+.lbtu-product-popup-image {
+  flex: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0 20px;
+}
+.lbtu-product-popup-details {
+  flex: 50%;
+}
+.lbtu-product-popup-container .lbtu-popup-add-to-cart {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* 2.6 + 1.1 */
+
+/* Spinner */
+.lbtu-button-loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.lbtu-spinner::after {
+  content: "";
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  border-radius: 50%;
+}
+.lbtu-spinner::after {
+  border-top: 4px solid;
+  border-left: 4px solid;
+  border-bottom: 4px solid;
+  border-right: 4px solid rgba(255, 255, 255, 0);
+  animation: spinner 0.6s linear infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* SWAL config */
+.swal2-confirm {
+  width: 100%;
+}
+.swal2-success-line-tip,
+.swal2-success-line-long {
+  font-size: 16px !important;
+}
+.swal2-popup.swal2-toast.swal2-icon-success.swal2-show {
+  display: flex !important;
+  align-items: center !important;
+}
+.swal2-icon.swal2-success.swal2-icon-show {
+  font-size: 16px !important;
+}
+
+/* New delivery stuff */
+.lbtu-delivery-accordion {
+  border: 1px solid #ccc;
+  max-width: 100%;
+}
+.lbtu-delivery-header {
+  padding: 10px 15px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.lbtu-delivery-caret {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease-in-out; /* animation effect */
+}
+.lbtu-delivery-caret svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+.lbtu-delivery-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+.lbtu-delivery-item {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-top: 1px solid #ccc;
+}
+.lbtu-delivery-selected .lbtu-delivery-item {
+  padding: 0;
+  border-top: none;
+}
+.lbtu-delivery-item .lbtu-price {
+  margin-left: 0 !important;
+}
+.lbtu-delivery-header.active .lbtu-delivery-caret {
+  transform: rotate(180deg); /* rotate the caret when expanded */
+}
+.lbtu-delivery-content.active {
+  max-height: 300px;
+}

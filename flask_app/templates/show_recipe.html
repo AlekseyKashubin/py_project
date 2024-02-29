@@ -18,58 +18,58 @@
 <body class="bg-dark text-light">
     <!-- full container -->
     <div class="container">
-        <!-- navbar section -->
-        <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/">PROPER BLOOM</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link" href="/region">Region</a>
-                        <a class="nav-link" href="/grounds">Grind Size Guide </a>
-                        <a class="nav-link" href="/gear">Gear</a>
-                        <a class="nav-link active" href="/user_recipes">Recipes</a>
-                        <a class="nav-link" href="/brew">Brew Method</a>
-                        <a class="nav-link" href="/find">Find a Coffee Shop</a>
-                        <a class="nav-link" href="/shop">Shop</a>
-                        {% if user_id == session['user_id'] %}
-                        <a class="nav-link" href="/register">Login</a>
-                        {% else %}
-                        <a class="nav-link" href="/logout">Logout</a>
-                        {% endif %}
-\\
+        <div class="container1">
+            <!-- navbar section -->
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/">PROPER BLOOM</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link" href="/region">Region</a>
+                            <a class="nav-link" href="/grounds">Grind Size Guide </a>
+                            <a class="nav-link" href="/gear">Gear</a>
+                            <a class="nav-link active" href="/user_recipes">Recipes</a>
+                            <a class="nav-link" href="/brew">Brew Method</a>
+                            <a class="nav-link" href="/find">Find a Coffee Shop</a>
+                            <a class="nav-link" href="/shop">Shop</a>
+                            {% if user_id == session['user_id'] %}
+                            <a class="nav-link" href="/register">Login</a>
+                            {% else %}
+                            <a class="nav-link" href="/logout">Logout</a>
+                            {% endif %}
+                            \\
+                        </div>
                     </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
 
 
-        <div class="container1">
             <div class="container2">
+                <h2 class="section-heading">{{one_recipe.recipe_name}}
+                    <p class="username">Posted By : {{one_recipe.creator.user_name}}</p>
+                </h2>
+                <div class="col">
+                    <p>Pour Over Method : {{one_recipe.method}} <br>
+                        Coffee Amount : {{one_recipe.coffee_amount}}g <br>
+                        Water Amount : {{one_recipe.water_amount}}g <br>
+                        Water Temp : {{one_recipe.water_temp}}&deg;F <br>
+                        Brew Time : {{one_recipe.brew_minutes}}
+                        {% if one_recipe.brew_seconds > 0
+                        %}:{{one_recipe.brew_seconds}}
+                        {% else %}
+                        :00
+                        {% endif %}
+                        <br>
+                        Grinder and Setting : {{one_recipe.grind_size}}
+                    </p>
+                </div>
                 <div class="border-box">
-
-                    <h2 class="top-title">{{one_recipe.recipe_name}}</h2>
-                    <div class="col">
-                        <p class="username">Posted By : {{one_recipe.creator.user_name}}</p>
-                        <p>Pour Over Method : {{one_recipe.method}}</p>
-                        <p>Coffee Amount : {{one_recipe.coffee_amount}}g</p>
-                        <p>Water Amount : {{one_recipe.water_amount}}g</p>
-                        <p>Water Temp : {{one_recipe.water_temp}}&deg;F</p>
-                        <div class="brew-time">
-                            <p>Brew Time : {{one_recipe.brew_minutes}}</p>
-                            {% if one_recipe.brew_seconds > 0 %}
-                            <p> :{{one_recipe.brew_seconds}}</p>
-                            {% else %}
-                            <p>:00</p>
-                            {% endif %}
-                        </div>
-                        <p>Grinder and Setting : {{one_recipe.grind_size}}</p>
-                        <p>Instructions : <br> {{one_recipe.description}}</p>
-                    </div>
+                    <p>Instructions : <br> <br> <br> {{one_recipe.description}}</p>
                     <div class="user-controls">
                         {% if one_recipe.user_id == session['user_id'] %}
                         <a href="/recipe/edit/{{one_recipe.id}}">Edit</a>

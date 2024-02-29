@@ -1,0 +1,8 @@
+.klaviyo-form form.klaviyo-form > div.needsclick > div.needsclick {
+  border-bottom: 2px solid #d34322;
+}
+
+.klaviyo-form-QXTrc9.klaviyo-form form.klaviyo-form > div.needsclick > div.needsclick,
+.klaviyo-form-WZru3v.klaviyo-form form.klaviyo-form > div.needsclick > div.needsclick {
+  border-bottom: none;
+}
