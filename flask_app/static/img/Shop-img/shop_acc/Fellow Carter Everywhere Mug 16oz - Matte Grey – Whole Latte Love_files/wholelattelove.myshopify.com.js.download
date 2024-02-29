@@ -1,2 +1,0 @@
-const trustpilot_trustbox_settings = {"trustboxes":[],"activeTrustbox":0,"pageUrls":{"landing":"https://wholelattelove.myshopify.com","category":"https://wholelattelove.myshopify.com/collections/100-arabica-whole-bean-coffees-hidden","product":"https://wholelattelove.myshopify.com/products/100-latte-rewards"}};
-dispatchEvent(new CustomEvent('trustpilotTrustboxSettingsLoaded'));
