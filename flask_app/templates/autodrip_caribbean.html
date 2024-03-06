@@ -10,7 +10,7 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href=" {{ url_for('static', filename='recipe.css') }} ">
-    <title>Proper Coffee</title>
+    <title>Proper Bloom</title>
 </head>
 
 <body class="bg-dark text-light">
@@ -19,7 +19,7 @@
         <!-- navbar section -->
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">PROPER BLOOM</a>
+                <a class="navbar-brand" href="/">PROPER BLOOM</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -27,52 +27,102 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
-                        <a class="nav-link" href="/brew">Brew Method</a>
                         <a class="nav-link" href="/region">Region</a>
                         <a class="nav-link" href="/grounds">Grind Size Guide </a>
                         <a class="nav-link" href="/gear">Gear</a>
+                        <a class="nav-link" href="/user_recipes">Recipes</a>
+                        <a class="nav-link active" href="/brew">Brew Method</a>
                         <a class="nav-link" href="/find">Find a Coffee Shop</a>
-
+                        <a class="nav-link" href="/shop">Shop</a>
+                        {% if user_id == session['user_id'] %}
+                        <a class="nav-link" href="/register">Login</a>
+                        {% else %}
+                        <a class="nav-link" href="/logout">Logout</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
         </nav>
-        <h1 class="title">Proper Bloom</h1>
-        <h2>Coffee Recipe</h2>
 
-        <div class="lower-box">
-            <div class="btn-box">
-                <div class="top-col-left">
-                    <p>Coffee Ratio : 1:18</p>
-                    <p>Water Amount : 1892g</p>
-                    <p>Coffee Amount : 340g</p>
-                </div>
-                <div class="top-col-right">
-                    <p>Grind Size</p>
-                    <img src=" {{ url_for('static', filename='img/Medium-Fine1.jpg') }} ">
-                </div>
-            </div>
-            <h2>Coffee Recipe</h2>
-            <br>
-            <h3>Recipe for Coffee on a Auto Drip Coffee Maker:</h3>
-            <p>1: Add water to the reservoir. Always start with fresh, cold water and measure the correct amount using
-                the markers on the drip brewer.
+        <div class="container1">
+            <h1 class="section-heading">Recipe for Caribbean Coffee On Auto Drip Coffee Maker</h1>
+            <p class="p-top">
+                Coffee Amount : 83g
                 <br>
-                2: Place the filter into the basket
-                Make sure the coffee filter is the right shape and size for your drip brewer.
+                Water Amount : 1250g
                 <br>
-                3: Add medium ground coffee, Use the 1:18 ratio to calculate how much coffee you need (For a 8-cups .18 x 1892g = 340g).
+                Coffee Ratio : 1:15
                 <br>
-                4: Start the brew your coffee is done once the coffee is no longer dripping; interrupting the brew can affect the flavor of the whole pot.
-                <br>
-                5: Pour a cup & enjoy your coffee at home for the best taste, serve within 20 minutes or keep your coffee warm in an insulated container.
             </p>
         </div>
-        <div class="button">
-            <a class="btn btn-light" href="/brew" role="button">Try Another Recipe</a>
+
+        <div class="blank">
+        </div>
+
+        <div class="second">
+            <img class="img-left" src="/static/img/auto/1.jpg" alt="">
+            <div class="steps">
+                <h1 class="title-right">Step One</h1>
+                <p class="p-right">Add water to the reservoir. Always start with fresh, cold water and measure the
+                    correct amount using the markers on the drip brewer. </p>
+            </div>
+        </div>
+
+        <div class="third">
+            <div class="steps">
+                <h1 class="title-left">Step Two</h1>
+                <p class="p-left"> Weigh out 83g of coffee and grind it Medium-Fine. </p>
+            </div>
+            <img class="img-right" src="/static/img/auto/8.jpg" alt="">
+        </div>
+
+        <div class="fourth">
+            <img src="/static/img/auto/4.png" alt="">
+            <div class="steps">
+                <h1 class="title-right">Step Three</h1>
+                <p class="p-right">Place the filter into the basket Make sure the coffee filter is the right shape and size for your drip brewer.</p>
+            </div>
+        </div>
+
+        <div class="fifth">
+            <div class="steps">
+                <h1 class="title-left">Step Four</h1>
+                <p class="p-left">Add ground coffee, Use the 1:15 ratio to calculate how much coffee you need <br>(For 5-cups(250g/cup) = 1250g <br> 1250g / 15 Ratio = 83g).</p>
+            </div>
+            <img src="/static/img/auto/5.jpg" alt="">
+        </div>
+
+        <div class="sixth">
+            <img src="/static/img/auto/6.jpg" alt="">
+            <div class="steps">
+
+                <h1 class="title-right">Step Five</h1>
+                <p class="p-right">Start the brew, your coffee is done once the coffee is no longer dripping. Interrupting the brew can affect the flavor of the whole pot.</p>
+            </div>
+        </div>
+
+        <div class="seventh">
+            <div class="steps">
+                <h1 class="title-left">Step Six</h1>
+                <p class="p-left">Pour a cup & enjoy your coffee at home for the best taste, serve within 20 minutes or keep your coffee warm in an insulated container.</p>
+            </div>
+            <img src="/static/img/auto/7.jpg" alt="">
+        </div>
+>
+
+
+        <!-- redirect buttons and footer start -->
+        <div class="home-flex">
+            <!-- remeber to change link to current page -->
+            <a class="btn-home" href="/">Home</a>
+            <a class="btn-home" href="/brew">Back to Recipes</a>
         </div>
     </div>
+    <div class="footer">
+        <footer>©2024 ProperBloom</footer>
+    </div>
+    <!-- redirect buttons and footer end -->
+
 
 </body>
 

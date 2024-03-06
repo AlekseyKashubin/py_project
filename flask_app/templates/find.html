@@ -36,7 +36,7 @@
                         <a class="nav-link" href="/brew">Brew Method</a>
                         <a class="nav-link active" href="/find">Find a Coffee Shop</a>
                         <a class="nav-link" href="/shop">Shop</a>
-                        {% if user_id == session['user_id'] %} 
+                        {% if user_id == session['user_id'] %}
                         <a class="nav-link" href="/register">Login</a>
                         {% else %}
                         <a class="nav-link" href="/logout">Logout</a>
@@ -49,10 +49,12 @@
 
         <div class="container1">
             <h1 class="title">FIND A SHOP</h1>
-            <div class="lower-box">
-                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1UvP4DxnbiF2wPU-_QehGr8E86qKbD7U&ehbc=2E312F"
-                    width="900" height="800"></iframe>
-            </div>
+            
+                <!-- <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1UvP4DxnbiF2wPU-_QehGr8E86qKbD7U&ehbc=2E312F"
+                    width="900" height="800"></iframe> -->
+                <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+                <div class="elfsight-app-4768defb-fd96-44c9-87bf-86130891068e" data-elfsight-app-lazy></div>
+            
 
             <!-- redirect buttons and footer start -->
         </div>

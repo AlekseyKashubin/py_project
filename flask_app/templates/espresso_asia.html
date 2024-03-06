@@ -10,7 +10,7 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href=" {{ url_for('static', filename='recipe.css') }} ">
-    <title>Proper Coffee</title>
+    <title>Proper Bloom</title>
 </head>
 
 <body class="bg-dark text-light">
@@ -19,7 +19,7 @@
         <!-- navbar section -->
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">PROPER BLOOM</a>
+                <a class="navbar-brand" href="/">PROPER BLOOM</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -27,58 +27,101 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
-                        <a class="nav-link" href="/brew">Brew Method</a>
                         <a class="nav-link" href="/region">Region</a>
                         <a class="nav-link" href="/grounds">Grind Size Guide </a>
                         <a class="nav-link" href="/gear">Gear</a>
+                        <a class="nav-link" href="/user_recipes">Recipes</a>
+                        <a class="nav-link active" href="/brew">Brew Method</a>
                         <a class="nav-link" href="/find">Find a Coffee Shop</a>
-
+                        <a class="nav-link" href="/shop">Shop</a>
+                        {% if user_id == session['user_id'] %}
+                        <a class="nav-link" href="/register">Login</a>
+                        {% else %}
+                        <a class="nav-link" href="/logout">Logout</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
         </nav>
-        <h1 class="title">Proper Bloom</h1>
-        <h2>Coffee Recipe</h2>
-
-        <div class="lower-box">
-            <div class="btn-box">
-                <div class="top-col-left">
-                    <p>Water Temp : 201f</p>
-                    <p>Dose Amount : 20g</p>
-                    <p>Yield Amount : 42g</p>
-                    <p>Ratio : 1:2.1</p>
-                    <p>Shot Time : 29sec</p>
-                </div>
-                <div class="top-col-right">
-                    <p>Grind Size</p>
-                    <img src=" {{ url_for('static', filename='img/espresso-grind-size-1.jpg') }} ">
-                </div>
-            </div>
-            <h2>Coffee Recipe</h2>
-            <br>
-            <h3>Recipe for African Coffee on Espresso:</h3>
-            <p>1: To ensure your dose is accurate, tare the scale with the portafilter on top, grind it into the basket,
-                and then place the portafilter back on the scale.
+        
+        <div class="container1">
+            <h1 class="section-heading">Recipe for Asian Coffee on Espresso</h1>
+            <p class="p-top">
+                Water Temp : 201f
                 <br>
-                2: Once you have the right weight, evenly tamp your espresso with 30 lbs of pressure.
+                Dose Amount : 20g 
                 <br>
-                3: Grab a clean shot glass or mini metal pitcher, place it on the scale, and zero it out.
+                Yield Amount : 42g 
                 <br>
-                4: Place the scale and the glass under the group head, and begin brewing your espresso. Immediately start
-                your timer.
+                Shot time: 29 Seconds
                 <br>
-                5: At the 29-second mark, stop the shot and read the yield on the scale. If the yield isn’t 42
-                grams, make some changes and start over. If the yield is below 42 grams, make your grind coarser.
-                If it’s above 42 grams, make your grind finer.
+                Ratio : 1:2.1
                 <br>
-                6: -Enjoy!
             </p>
         </div>
-        <div class="button">
-            <a class="btn btn-light" href="/brew" role="button">Try Another Recipe</a>
+        
+        <div class="blank">
+        </div>
+
+        <div class="second">
+            <img class="img-left" src="/static/img/espresso/1.jpeg" alt="">
+            <div class="steps">
+                <h1 class="title-right">Step One</h1>
+                <p class="p-right">To ensure your dose is accurate, tare the scale with the portafilter on top, grind it into the basket,
+                    and then place the portafilter back on the scale. </p>
+            </div>
+        </div>
+        <div class="third">
+            <div class="steps">
+                <h1 class="title-left">Step Two</h1>
+                <p class="p-left"> Once you have the right weight, evenly tamp your espresso with 30 lbs of pressure. </p>
+            </div>
+            <img class="img-right" src="/static/img/espresso/9.jpg" alt="">
+        </div>
+        <div class="fourth">
+            <img src="/static/img/espresso/8.jpg" alt="">
+            <div class="steps">
+                <h1 class="title-right">Step Three</h1>
+                <p class="p-right">Grab a clean shot glass or mini metal pitcher, place it on the scale, and zero it out.</p>
+            </div>
+        </div>
+        <div class="fifth">
+            <div class="steps">
+                <h1 class="title-left">Step Four</h1>
+                <p class="p-left">Place the scale and the glass under the group head, and begin brewing your espresso. Immediately start
+                    your timer.</p>
+            </div>
+            <img src="/static/img/espresso/7.jpg" alt="">
+        </div>
+        <div class="sixth">
+            <img src="/static/img/espresso/6.jpg" alt="">
+            <div class="steps">
+                <h1 class="title-right">Step Five</h1>
+                <p class="p-right">At the 29-second mark, stop the shot and read the yield on the scale. If the yield is below 42 grams, make your grind coarser.
+                    If it’s above 42 grams, make your grind finer.</p>
+            </div>
+        </div>
+
+        <div class="seventh">
+            <div class="steps">
+                <h1 class="title-left">Step Six</h1>
+                <p class="p-left">-Enjoy</p>
+            </div>
+            <img src="/static/img/espresso/10.jpg" alt="">
+        </div>
+
+
+        <!-- redirect buttons and footer start -->
+        <div class="home-flex">
+            <!-- remeber to change link to current page -->
+            <a class="btn-home" href="/">Home</a>
+            <a class="btn-home" href="/brew">Back to Recipes</a>
         </div>
     </div>
+    <div class="footer">
+        <footer>©2024 ProperBloom</footer>
+    </div>
+    <!-- redirect buttons and footer end -->
 
 </body>
 

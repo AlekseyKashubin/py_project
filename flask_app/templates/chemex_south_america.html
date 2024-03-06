@@ -10,7 +10,7 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href=" {{ url_for('static', filename='recipe.css') }} ">
-    <title>Proper Bloom</title>
+    <title>Proper Coffee</title>
 </head>
 
 <body class="bg-dark text-light">
@@ -19,7 +19,7 @@
         <!-- navbar section -->
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">PROPER BLOOM</a>
+                <a class="navbar-brand" href="/">PROPER BLOOM</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -27,82 +27,122 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
-                        <a class="nav-link" href="/brew">Brew Method</a>
                         <a class="nav-link" href="/region">Region</a>
                         <a class="nav-link" href="/grounds">Grind Size Guide </a>
                         <a class="nav-link" href="/gear">Gear</a>
+                        <a class="nav-link" href="/user_recipes">Recipes</a>
+                        <a class="nav-link active" href="/brew">Brew Method</a>
                         <a class="nav-link" href="/find">Find a Coffee Shop</a>
-
+                        <a class="nav-link" href="/shop">Shop</a>
+                        {% if user_id == session['user_id'] %}
+                        <a class="nav-link" href="/register">Login</a>
+                        {% else %}
+                        <a class="nav-link" href="/logout">Logout</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
         </nav>
-        <h1 class="title">Proper Bloom</h1>
-        <h2>Coffee Recipe</h2>
-        
-        <div class="lower-box">
-            <div class="btn-box">
-                <div class="top-col-left">
-                    <p>Water Temp : 205f</p>
-                    <p>Coffee Amount : 50g</p>
-                    <p>Water Amount : 700g</p>
-                    <p>Brew Time : 4 min</p>
-                </div>
-                <div class="top-col-right">
-                    <p>Grind Size</p>
-                    
-                    <img src=" {{ url_for('static', filename='img/Medium1.jpg') }} ">
-                </div>
-            </div>
-            <h2>Coffee Recipe</h2>
-            <br>
-            <h3>Recipe for South American Coffee on a Chemex:</h3>
-            <p>1: Weigh out the coffee and grind to a coarseness resembling sea salt.
-                Note: The amount of coffee and water varies depending on the type of coffee you are brewing and your
-                preferred strength. As a starting point, we recommend using 50 grams of coffee and 700 grams of water
-                (about 25 ounces), and then adjust according to your taste.
-                <br>
-                2: Prepare the filter
-                Unfold your filter and place it in your Chemex, ensuring that the triple-fold portion is facing the pour
-                spout and lays across without obstructing it. Fully saturate the filter and warm the vessel with hot
-                water. Discard this water through the pour spout.
-                <br>
-                3: Pour your ground coffee into the filter and give it a gentle shake.
-                This will flatten the bed, allowing for a more-even pour.
-                <br>
-                4: Bloom Pour
 
-                There will be a total of four pours.
-
-                Starting at the bed’s center, gently pour twice the amount of water that you have coffee into your
-                grounds. Work your way gently outward, and avoid pouring down the sides of the filter. You’ll notice
-                that adding this amount of water causes the coffee to expand, or “bloom.” Allow it to do so for 45–55
-                seconds. A solid bloom ensures even saturation.
+        <div class="container1">
+            <h1 class="section-heading">Recipe for South American Coffee On Chemex</h1>
+            <p class="p-top">
+                Water Temp : 205f
                 <br>
-                5: Second Pour
-                Pour water in a circular pattern starting in the center. Spiral out toward the edge of the slurry before
-                spiraling back toward the middle. Avoid pouring on the filter. Allow the water to drip through the
-                grounds until the slurry drops 1 inch from the bottom of the filter. You should use about 200 grams of
-                water for this pour
+                Coffee Amount : 48g
                 <br>
-                6: Pour Three and Four
-                Repeat the same pour pattern as in Step 5, adding water in 200-gram increments. Repeat once more,
-                allowing the water to percolate through the grounds until the slurry drops 1 inch from the bottom of the
-                filter before beginning the next pour.
+                Water Amount : 700g
                 <br>
-                7: Allow the water to drip through the grounds entirely.
-                The brew should have taken between 3.5–4.5 minutes. If the brew was too fast, consider using a finer
-                grind or a slower pour rate next time. If the brew was too slow, consider using a coarser grind or a
-                faster pour rate.
+                Brew Time : 4 min
                 <br>
-                8: Serve and Enjoy!.
             </p>
         </div>
-        <div class="button">
-            <a class="btn btn-light" href="/brew" role="button">Try Another Recipe</a>
+
+        <div class="blank">
+        </div>
+
+        <div class="second">
+            <img class="img-left" src="/static/img/aero/2.jpg" alt="">
+            <div class="steps">
+                <h1 class="title-right">Step One</h1>
+                <p class="p-right">Weigh out the coffee and grind it Coarse. We recommend using 48 grams of coffee and
+                    700 grams of water (about
+                    25 ounces), and then adjust according to your taste. </p>
+            </div>
+        </div>
+
+        <div class="third">
+            <div class="steps">
+                <h1 class="title-left">Step Two</h1>
+                <p class="p-left">Unfold your filter and place it in your Chemex, ensuring that the
+                    triple-fold portion is facing the pour spout. Fully saturate
+                    the filter and warm the vessel with hot water. Discard this water.</p>
+            </div>
+            <img class="img-right" src="/static/img/chem/1.jpg" alt="">
+        </div>
+
+        <div class="fourth">
+            <img src="/static/img/chem/2.jpg" alt="">
+            <div class="steps">
+                <h1 class="title-right">Step Three</h1>
+                <p class="p-right">Pour your ground coffee into the filter and give it a gentle shake. This will flatten
+                    the bed, allowing for a more-even pour.</p>
+            </div>
+        </div>
+
+        <div class="fifth">
+            <div class="steps">
+                <h1 class="title-left">Step Four</h1>
+                <p class="p-left">Starting at the bed’s center, gently
+                    pour 100g into your grounds. Work your way gently outward, You’ll notice that adding this amount of water
+                    causes the coffee to expand, or “bloom.” Allow it to do so for 45–55 seconds.</p>
+            </div>
+            <img src="/static/img/chem/3.jpg" alt="">
+        </div>
+
+        <div class="sixth">
+            <img src="/static/img/chem/6.jpg" alt="">
+            <div class="steps">
+
+                <h1 class="title-right">Step Five</h1>
+                <p class="p-right">Pour water starting in the center working
+                    toward the edge before spiraling back toward the middle.
+                    You should use about 200g of water for this pour.</p>
+            </div>
+        </div>
+
+        <div class="seventh">
+            <div class="steps">
+                <h1 class="title-left">Step Six</h1>
+                <p class="p-left">Repeat the same pour as in Step 5, adding water in
+                    200g increments. Repeat once more, allowing the water to percolate through the grounds until the
+                    slurry drops 1 inch from the bottom of the filter before beginning the next pour.</p>
+            </div>
+            <img src="/static/img/chem/4.jpg" alt="">
+        </div>
+
+        <div class="eighth">
+            <img src="/static/img/chem/5.jpg" alt="">
+            <div class="steps">
+
+                <h1 class="title-right">Step Seven</h1>
+                <p class="p-right">Allow the water to drip through the grounds entirely. The brew should have taken
+                    between 3.5–4.5 minutes. Serve and Enjoy!</p>
+            </div>
+        </div>
+
+
+        <!-- redirect buttons and footer start -->
+        <div class="home-flex">
+            <!-- remeber to change link to current page -->
+            <a class="btn-home" href="/">Home</a>
+            <a class="btn-home" href="/brew">Back to Recipes</a>
         </div>
     </div>
+    <div class="footer">
+        <footer>©2024 ProperBloom</footer>
+    </div>
+    <!-- redirect buttons and footer end -->
 
 </body>
 

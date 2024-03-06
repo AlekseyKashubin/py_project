@@ -262,7 +262,8 @@ img {
     .sixth,
     .third,
     .fifth,
-    .seventh {
+    .seventh,
+    .eighth {
         flex-direction: column;
         height: 700px !important;
     }
@@ -272,7 +273,8 @@ img {
 
 .second,
 .fourth,
-.sixth {
+.sixth,
+.eighth {
     display: flex;
     align-items: center;
     justify-content: space-between;
