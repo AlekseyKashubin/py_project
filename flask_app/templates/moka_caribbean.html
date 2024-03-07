@@ -19,7 +19,7 @@
         <!-- navbar section -->
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">PROPER BLOOM</a>
+                <a class="navbar-brand" href="/">PROPER BLOOM</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -27,65 +27,127 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
-                        <a class="nav-link" href="/brew">Brew Method</a>
                         <a class="nav-link" href="/region">Region</a>
                         <a class="nav-link" href="/grounds">Grind Size Guide </a>
                         <a class="nav-link" href="/gear">Gear</a>
+                        <a class="nav-link" href="/user_recipes">Recipes</a>
+                        <a class="nav-link active" href="/brew">Brew Guide</a>
                         <a class="nav-link" href="/find">Find a Coffee Shop</a>
-
+                        <a class="nav-link" href="/shop">Shop</a>
+                        {% if user_id == session['user_id'] %}
+                        <a class="nav-link" href="/register">Login</a>
+                        {% else %}
+                        <a class="nav-link" href="/logout">Logout</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
         </nav>
-        <h1 class="title">Proper Bloom</h1>
-        <h2>Coffee Recipe</h2>
 
-        <div class="lower-box">
-            <div class="btn-box">
-                <div class="top-col-left">
-                    <p>Water Temp : 200f - 212f</p>
-                    <p>Coffee Amount : 22g</p>
-                    <p>Water Amount : 345g</p>
-                    <p>Brew Time : 3 min</p>
-                </div>
-                <div class="top-col-right">
-                    <p>Grind Size</p>
-                    <img src=" {{ url_for('static', filename='img/Fine1.jpg') }} ">
-                </div>
-            </div>
-            <h2>Coffee Recipe</h2>
-            <br>
-            <h3>Recipe for Caribbean Coffee On a 6-cup Moka Pot:</h3>
-            <p>1: Grind about 20-22 grams of coffee finer than you would for a pour over, but not quite as fine as you
-                might for a true espresso machine—slightly larger than granulated sugar.
+        <div class="container1">
+            <h1 class="section-heading">Recipe for Caribbean Coffee On a 6 Cup Moka Pot</h1>
+            <p class="p-top">
+                Water Temp : 208f
                 <br>
-                2: Fill the bottom chamber of the moka pot with water until it is level with the valve, about 345g.
+                Coffee Amount : 22g
                 <br>
-                3: Place the funnel "the coffee grounds receptacle" into the pot. If any water enters the funnel, pour
-                out the excess and replace the funnel.
+                Water Amount : 345g
                 <br>
-                4: Fill the funnel with the ground coffee, leveling the grounds and wiping the funnel’s rim clean.
-                (Do not tamp the grounds).
+                Brew Time : 3 min
                 <br>
-                5: Screw the moka pot’s spouted top on tightly.
-                <br>
-                6: Place the moka pot on a stove over medium heat.
-                If using a gas stove, make sure the flame is not larger than the base of the pot so as not to expose the
-                handle to heat.
-                <br>
-                7: As the water approaches a boil, the pressure will push the coffee into the upper chamber.
-                You know it’s done when you hear a hissing, gurgling sound. Immediately remove the moka pot from the
-                heat. Let the coffee finish flowing into the upper chamber, and then use caution (and a potholder) to
-                pour your coffee.
-                <br>
-                8: Enjoy
             </p>
         </div>
-        <div class="button">
-            <a class="btn btn-light" href="/brew" role="button">Try Another Recipe</a>
+
+        <div class="blank">
+        </div>
+
+        <div class="second">
+            <img class="img-left" src="/static/img/aero/2.jpg" alt="">
+            <div class="steps">
+                <h1 class="title-right">Step One</h1>
+                <p class="p-right">Grind about 20-22 grams of coffee finer than you would for a pour over, but not quite
+                    as fine as you might for a true espresso machine—slightly larger than granulated sugar.</p>
+            </div>
+        </div>
+
+        <div class="third">
+            <div class="steps">
+                <h1 class="title-left">Step Two</h1>
+                <p class="p-left">Fill the bottom chamber of the moka pot with water until it is level with the valve,
+                    about 345g.</p>
+            </div>
+            <img class="img-right" src="/static/img/mp/2.jpg" alt="">
+        </div>
+
+        <div class="fourth">
+            <img src="/static/img/mp/3.jpg" alt="">
+            <div class="steps">
+                <h1 class="title-right">Step Three</h1>
+                <p class="p-right">Place the funnel "the coffee grounds receptacle" into the pot. If any water enters
+                    the funnel, pour out the excess and replace the funnel.</p>
+            </div>
+        </div>
+
+        <div class="fifth">
+            <div class="steps">
+                <h1 class="title-left">Step Four</h1>
+                <p class="p-left">Fill the funnel with the ground coffee, leveling the grounds and wiping the funnel’s
+                    rim clean. (Do not tamp the grounds).
+                </p>
+            </div>
+            <img src="/static/img/mp/4.jpg" alt="">
+        </div>
+
+        <div class="sixth">
+            <img src="/static/img/mp/5.jpg" alt="">
+            <div class="steps">
+                <h1 class="title-right">Step Five</h1>
+                <p class="p-right">Screw the moka pot’s spouted top on tightly.</p>
+            </div>
+        </div>
+
+        <div class="seventh">
+            <div class="steps">
+                <h1 class="title-left">Step Six</h1>
+                <p class="p-left">Place the moka pot on a stove over medium heat. If using a gas stove, make sure the
+                    flame is not larger than the base of the pot so as not to expose the handle to heat.</p>
+            </div>
+            <img src="/static/img/mp/6.jpg" alt="">
+        </div>
+
+        <div class="eighth">
+            <img src="/static/img/mp/7.jpg" alt="">
+            <div class="steps">
+                <h1 class="title-right">Step Seven</h1>
+                <p class="p-right">As the water boils, the pressure will push the coffee into the upper
+                    chamber. You know it’s done when you hear a gurgling sound. Immediately remove the moka pot
+                    from the heat. Let the coffee finish flowing into the upper chamber.</p>
+            </div>
+        </div>
+
+        <div class="ninth">
+            <div class="steps">
+                <h1 class="title-left">Step Eight</h1>
+                <p class="p-left">-Serve and Enjoy.</p>
+            </div>
+            <img src="/static/img/mp/9.jpg" alt="">
+        </div>
+
+
+
+
+
+        <!-- redirect buttons and footer start -->
+        <div class="home-flex">
+            <!-- remeber to change link to current page -->
+            <a class="btn-home" href="/">Home</a>
+            <a class="btn-home" href="/brew">Back to Recipes</a>
         </div>
     </div>
+    <div class="footer">
+        <footer>©2024 ProperBloom</footer>
+    </div>
+    <!-- redirect buttons and footer end -->
 
 </body>
 

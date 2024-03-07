@@ -19,7 +19,7 @@
         <!-- navbar section -->
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">PROPER BLOOM</a>
+                <a class="navbar-brand" href="/">PROPER BLOOM</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -27,63 +27,112 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
-                        <a class="nav-link" href="/brew">Brew Method</a>
                         <a class="nav-link" href="/region">Region</a>
                         <a class="nav-link" href="/grounds">Grind Size Guide </a>
                         <a class="nav-link" href="/gear">Gear</a>
+                        <a class="nav-link" href="/user_recipes">Recipes</a>
+                        <a class="nav-link active" href="/brew">Brew Guide</a>
                         <a class="nav-link" href="/find">Find a Coffee Shop</a>
-
+                        <a class="nav-link" href="/shop">Shop</a>
+                        {% if user_id == session['user_id'] %}
+                        <a class="nav-link" href="/register">Login</a>
+                        {% else %}
+                        <a class="nav-link" href="/logout">Logout</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
         </nav>
-        <h1 class="title">Proper Bloom</h1>
-        <h2>Coffee Recipe</h2>
 
-        <div class="lower-box">
-            <div class="btn-box">
-                <div class="top-col-left">
-                    <p>Water Temp : 206f</p>
-                    <p>Coffee Amount : 30g</p>
-                    <p>Water Amount : 350g</p>
-                    <p>Brew Time : 4 min 30 sec</p>
-                </div>
-                <div class="top-col-right">
-                    <p>Grind Size</p>
-                    <img src=" {{ url_for('static', filename='img/French-press2.jpg') }} ">
-                </div>
-            </div>
-            <h2>Coffee Recipe</h2>
-            <br>
-            <h3>Recipe for Asian Coffee on a French Press:</h3>
-            <p>1: While the water is heating, grind your coffee. French press coffee calls for a coarse, even grind. We
-                recommend starting with a 1:12 coffee-to-water ratio. If you're using 350 grams of water, you’ll want 30
-                grams of coffee.
+        <div class="container1">
+            <h1 class="section-heading">Recipe for Asian Coffee On a French Press</h1>
+            <p class="p-top">
+                Water Temp : 206f
                 <br>
-                2: Bloom the coffee
-                Gently pour twice the amount of water than you have coffee onto your grounds. For example, if you have
-                30 grams of coffee, you’ll want to start with 60 grams of water. Give the grounds a gentle stir with a
-                bamboo paddle or chopstick. Allow the coffee to bloom for 30 seconds.
+                Coffee Amount : 30g
                 <br>
-                3: Pour the remaining water and place the lid gently on top of the grounds.
-                Don’t plunge just yet. Let the coffee steep for four minutes. Four. Don’t guess.
+                Water Amount : 350g
                 <br>
-                4: Gently remove your French press from the scale and place it on your counter. Press the filter down.
-                If it’s hard to press, that means your grind is too fine; if the plunger “thunks” immediately down to
-                the floor, it means your grind is too coarse. The sweet spot, pressure-wise, is 15–20 lbs. Not sure what
-                this feels like? Try it out on your bathroom scale.
+                Brew Time : 4:30 min
                 <br>
-                5:When you’ve finished pressing, serve the coffee immediately. Don’t let it sit, as this will cause it to
-                continue brewing and over-extract. 
-                <br>
-                6: -Enjoy!
             </p>
         </div>
-        <div class="button">
-            <a class="btn btn-light" href="/brew" role="button">Try Another Recipe</a>
+
+        <div class="blank">
+        </div>
+
+        <div class="second">
+            <img class="img-left" src="/static/img/fp/1.jpg" alt="">
+            <div class="steps">
+                <h1 class="title-right">Step One</h1>
+                <p class="p-right">Bring enough water to fill the French press to a boil. For a 17-oz press, you'll need
+                    about 350 grams (12 ounces). </p>
+            </div>
+        </div>
+
+        <div class="third">
+            <div class="steps">
+                <h1 class="title-left">Step Two</h1>
+                <p class="p-left">Grind and weigh your coffee French press coffee calls for a coarse, even grind.
+                    We recommend starting with a 1:12 coffee-to-water ratio. If you're using 350 grams of water, you’ll
+                    want 30 grams of coffee.</p>
+            </div>
+            <img class="img-right" src="/static/img/aero/2.jpg" alt="">
+        </div>
+
+        <div class="fourth">
+            <img src="/static/img/fp/4.jpg" alt="">
+            <div class="steps">
+                <h1 class="title-right">Step Three</h1>
+                <p class="p-right">Gently pour 60g onto your grounds. Give the grounds a gentle stir
+                    with a bamboo paddle or chopstick. Allow the coffee to bloom for 30 seconds.</p>
+            </div>
+        </div>
+
+        <div class="fifth">
+            <div class="steps">
+                <h1 class="title-left">Step Four</h1>
+                <p class="p-left">Pour the remaining water and place the lid gently on top of the grounds.
+                    Don’t plunge just yet. Let the coffee steep for four minutes. Four. Don’t guess.</p>
+            </div>
+            <img src="/static/img/fp/2.jpeg" alt="">
+        </div>
+
+        <div class="sixth">
+            <img src="/static/img/fp/3.jpg" alt="">
+            <div class="steps">
+                <h1 class="title-right">Step Five</h1>
+                <p class="p-right">Remove from the scale and place it on your counter. Press the filter down.
+                    If it’s hard to press, that means your grind is too fine; if its too easy, it means your grind is
+                    too coarse. The sweet spot is 15–20 lbs.
+                </p>
+            </div>
+        </div>
+
+        <div class="seventh">
+            <div class="steps">
+                <h1 class="title-left">Step Six</h1>
+                <p class="p-left">When you’ve finished pressing, serve the coffee immediately. Don’t let it sit, as this
+                    will cause it
+                    to continue brewing and over-extract. -Enjoy!</p>
+            </div>
+            <img src="/static/img/fp/5.jpg" alt="">
+        </div>
+
+
+
+
+        <!-- redirect buttons and footer start -->
+        <div class="home-flex">
+            <!-- remeber to change link to current page -->
+            <a class="btn-home" href="/">Home</a>
+            <a class="btn-home" href="/brew">Back to Recipes</a>
         </div>
     </div>
+    <div class="footer">
+        <footer>©2024 ProperBloom</footer>
+    </div>
+    <!-- redirect buttons and footer end -->
 
 </body>
 

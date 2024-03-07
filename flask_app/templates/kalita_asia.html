@@ -19,7 +19,7 @@
         <!-- navbar section -->
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">PROPER BLOOM</a>
+                <a class="navbar-brand" href="/">PROPER BLOOM</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -27,63 +27,116 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
-                        <a class="nav-link" href="/brew">Brew Method</a>
                         <a class="nav-link" href="/region">Region</a>
                         <a class="nav-link" href="/grounds">Grind Size Guide </a>
                         <a class="nav-link" href="/gear">Gear</a>
+                        <a class="nav-link" href="/user_recipes">Recipes</a>
+                        <a class="nav-link active" href="/brew">Brew Guide</a>
                         <a class="nav-link" href="/find">Find a Coffee Shop</a>
-
+                        <a class="nav-link" href="/shop">Shop</a>
+                        {% if user_id == session['user_id'] %}
+                        <a class="nav-link" href="/register">Login</a>
+                        {% else %}
+                        <a class="nav-link" href="/logout">Logout</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
         </nav>
-        <h1 class="title">Proper Bloom</h1>
-        <div class="lower-box">
-            <div class="btn-box">
-                <div class="top-col-left">
-                    <p>Water Temp : 205f</p>
-                    <p>Coffee Amount : 20g</p>
-                    <p>Water Amount : 300g</p>
-                    <p>Brew Time : 3 min</p>
-                </div>
-                <div class="top-col-right">
-                    <p>Grind Size</p>
-                    <img src=" {{ url_for('static', filename='img/pour-over22.jpg') }} ">
-                    <img src=" {{ url_for('static', filename='img/Medium1.jpg') }} ">
-                </div>
-            </div>
-            <h2>Coffee Recipe</h2>
-            <br>
-            <h3>Recipe for Asian Coffee On Kalita:</h3>
-            <p>1: Put a filter in the Kalita Wave, and place on 
-                top of a server or mug.
+
+        <div class="container1">
+            <h1 class="section-heading">Recipe for Asian Coffee On a Kalita</h1>
+            <p class="p-top">
+                Water Temp : 205f
                 <br>
-                2: Fill pouring kettle with hot water and rinse filter 
-                until you feel heat on the outside of the cone and 
-                discard water. 
+                Coffee Amount : 20g
                 <br>
-                3: Weigh coffee to (20 grams) and grind.
+                Water Amount : 300g
                 <br>
-                4: Place the Kalita Wave with server on a scale. 
-                Add coffee, shake to level the coffee bed, zero the 
-                scale, and fill the pouring kettle with hot water. 
+                Brew Time : 3 min
                 <br>
-                5: Start timer and your pour at the same time. 
-                <br>
-                6: Pouring is split into six separate pours of 65g of 
-                water in 15 seconds*, and allowing to drain for 15 seconds 
-                in between each pour. 
-                <br>
-                7: Start each pour in the center. Work your way out. 
-                <br>
-                8: Coffee should finish draining around the 3 minute mark. 
-                Remove the Kalita Wave. Serve.</p>
+            </p>
         </div>
-        <div class="button">
-            <a class="btn btn-light" href="/brew" role="button">Try Another Recipe</a>
+
+        <div class="blank">
+        </div>
+
+        <div class="second">
+            <img class="img-left" src="/static/img/kalita/1.jpg" alt="">
+            <div class="steps">
+                <h1 class="title-right">Step One</h1>
+                <p class="p-right">Put a filter in the Kalita Wave, and place on top of a server or mug. Rinse filter
+                    and discard
+                    water.</p>
+            </div>
+        </div>
+
+        <div class="third">
+            <div class="steps">
+                <h1 class="title-left">Step Two</h1>
+                <p class="p-left">Weigh coffee to (20 grams) and grind.</p>
+            </div>
+            <img class="img-right" src="/static/img/aero/2.jpg" alt="">
+        </div>
+
+        <div class="fourth">
+            <img src="/static/img/kalita/3.jpg" alt="">
+            <div class="steps">
+                <h1 class="title-right">Step Three</h1>
+                <p class="p-right">Place the Kalita Wave with server on a scale. Add coffee, shake to level the coffee
+                    bed, zero the scale, and fill the pouring kettle with hot water.</p>
+            </div>
+        </div>
+
+        <div class="fifth">
+            <div class="steps">
+                <h1 class="title-left">Step Four</h1>
+                <p class="p-left">Start timer and your pour at the same time.Pouring is split into six separate pours of
+                    65g of water in 15 seconds*, and allowing
+                    to drain for 15 seconds in between each pour.</p>
+            </div>
+            <img src="/static/img/kalita/4.jpg" alt="">
+        </div>
+
+        <div class="sixth">
+            <img src="/static/img/kalita/5.jpeg" alt="">
+            <div class="steps">
+                <h1 class="title-right">Step Five</h1>
+                <p class="p-right">Start each pour in the center. Work your way out.</p>
+            </div>
+        </div>
+
+        <div class="seventh">
+            <div class="steps">
+                <h1 class="title-left">Step Six</h1>
+                <p class="p-left">Coffee should finish draining around 3 min mark. Remove the Kalita Wave.</p>
+            </div>
+            <img src="/static/img/kalita/6.jpg" alt="">
+        </div>
+
+        <div class="eighth">
+            <img src="/static/img/kalita/7.jpg" alt="">
+            <div class="steps">
+                <h1 class="title-right">Step Seven</h1>
+                <p class="p-right"> Serve and Enjoy</p>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- redirect buttons and footer start -->
+        <div class="home-flex">
+            <!-- remeber to change link to current page -->
+            <a class="btn-home" href="/">Home</a>
+            <a class="btn-home" href="/brew">Back to Recipes</a>
         </div>
     </div>
+    <div class="footer">
+        <footer>©2024 ProperBloom</footer>
+    </div>
+    <!-- redirect buttons and footer end -->
 
 </body>
 
