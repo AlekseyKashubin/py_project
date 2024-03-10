@@ -258,13 +258,17 @@ img {
 @media (max-width:600px) {
 
     .second,
-    .fourth,
-    .sixth,
     .third,
+    .fourth,
     .fifth,
+    .sixth,
     .seventh,
     .eighth,
-    .ninth {
+    .ninth,
+    .tenth,
+    .eleventh,
+    .twelfth,
+    .thirteenth {
         flex-direction: column;
         height: 700px !important;
     }
@@ -275,7 +279,9 @@ img {
 .second,
 .fourth,
 .sixth,
-.eighth {
+.eighth,
+.tenth,
+.twelfth {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -289,7 +295,9 @@ img {
 .third,
 .fifth,
 .seventh,
-.ninth {
+.ninth,
+.eleventh,
+.thirteenth {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -299,14 +307,6 @@ img {
     margin-bottom: 100px;
     overflow: hidden;
 }
-
-
-
-
-
-
-
-
 
 
 /* home button hover effect start */

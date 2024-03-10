@@ -17,14 +17,23 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url('/static/img/nathan-dumlao-Y3AqmbmtLQI-unsplash.jpg');
+    /* background-image: url('/static/img/nathan-dumlao-Y3AqmbmtLQI-unsplash.jpg'); */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     border-radius: 20px;
 }
 
-
+.top-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    /* opacity: 0.8; */
+}
 
 .btn-box {
 
@@ -42,6 +51,7 @@ h1 {
     color: white;
     font-weight: 700;
     font-size: 10rem;
+    z-index: 1000;
 }
 
 @media (max-width:600px) {
@@ -71,6 +81,7 @@ h1 {
     color: rgb(250, 207, 207);
     margin-bottom: 100px;
     width: auto;
+    z-index: 1000;
 }
 
 
@@ -215,6 +226,12 @@ a {
     font-size: .875rem;
 }
 /* navbar style start */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.8)!important;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
 .nav-link {
     display: inline-block;
     color: rgb(240, 184, 184);
@@ -222,6 +239,7 @@ a {
     font-weight: 700;
     letter-spacing: .5px;
     font-size: .875rem;
+    z-index: 1000;
 }
 
 .navbar-brand {
@@ -234,19 +252,11 @@ a {
     font-weight: 700;
     letter-spacing: .5px;
     font-size: 1.25rem;
+    z-index: 1000;
+    
 }
-
-#cart-btn {
-    font-size: 25px;
-    color: var(--color);
-    position: absolute;
-    right: 20px;
-    margin-bottom: 25px;
-    background-color: transparent;
-    border: solid 2px transparent;
-    border-radius: 3px;
-    width: 44px;
-    height: 38px;
+.navbar-toggler {
+    z-index: 1000;
 }
 
 /* navbar style end */

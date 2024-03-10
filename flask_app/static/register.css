@@ -65,7 +65,7 @@ body {
     margin: 0;
     color: #ffffff;
     background: #c8c8c8;
-    font: 600 16px/18px 'Open Sans', sans-serif;
+
 }
 
 *,
@@ -257,7 +257,14 @@ a {
 /* Login/registration form styleing end  */
 
 
+
 /* navbar style start */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.5)!important;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
 .nav-link {
     display: inline-block;
     color: rgb(240, 184, 184);
@@ -265,6 +272,7 @@ a {
     font-weight: 700;
     letter-spacing: .5px;
     font-size: .875rem;
+    z-index: 1000;
 }
 
 .navbar-brand {
@@ -277,6 +285,11 @@ a {
     font-weight: 700;
     letter-spacing: .5px;
     font-size: 1.25rem;
+    z-index: 1000;
+    
+}
+.navbar-toggler {
+    z-index: 1000;
 }
 
 /* navbar style end */

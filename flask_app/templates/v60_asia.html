@@ -10,7 +10,7 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href=" {{ url_for('static', filename='recipe.css') }} ">
-    <title>Proper Coffee</title>
+    <title>Proper Bloom</title>
 </head>
 
 <body class="bg-dark text-light">
@@ -19,7 +19,7 @@
         <!-- navbar section -->
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">PROPER BLOOM</a>
+                <a class="navbar-brand" href="/">PROPER BLOOM</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -27,66 +27,129 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
-                        <a class="nav-link" href="/brew">Brew Guide</a>
                         <a class="nav-link" href="/region">Region</a>
                         <a class="nav-link" href="/grounds">Grind Size Guide </a>
                         <a class="nav-link" href="/gear">Gear</a>
+                        <a class="nav-link" href="/user_recipes">Recipes</a>
+                        <a class="nav-link active" href="/brew">Brew Guide</a>
                         <a class="nav-link" href="/find">Find a Coffee Shop</a>
-
+                        <a class="nav-link" href="/shop">Shop</a>
+                        {% if user_id == session['user_id'] %}
+                        <a class="nav-link" href="/register">Login</a>
+                        {% else %}
+                        <a class="nav-link" href="/logout">Logout</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
         </nav>
-        <h1 class="title">Proper Bloom</h1>
-        
-        <div class="lower-box">
-            <div class="btn-box">
-                <div class="top-col-left">
-                    <p>Water Temp : 203f</p>
-                    <p>Coffee Amount : 22g</p>
-                    <p>Water Amount : 360g</p>
-                    <p>Brew Time : 2:30 min</p>
-                </div>
-                <div class="top-col-right">
-                    <p>Grind Size</p>
-                    <img src=" {{ url_for('static', filename='img/pour-over22.jpg') }} ">
-                    <img src=" {{ url_for('static', filename='img/Medium1.jpg') }} ">
-                </div>
-            </div>
-            <h2>Coffee Recipe</h2>
-            <br>
-            <h3>Recipe for Asian Coffee On V60:</h3>
-            <p>1: Start by filling up your kettle and setting it to boil.
+
+        <div class="container1">
+            <h1 class="section-heading">Recipe for Asian Coffee On V60</h1>
+            <p class="p-top">
+                Water Temp : 203f
                 <br>
-                2: Rinse the paper filter with the now boiled water, ensuring that it is fully saturated.
+                Coffee Amount : 22g
                 <br>
-                3: Grind your 22g of coffee to a medium consistency.
+                Water Amount : 360g
                 <br>
-                4: Position your V60 coffee dripper on top of your coffee server. Ensure that the server will hold more
-                than 400g of coffee to avoid a spill.
+                Brew Time : 2:30 min
                 <br>
-                5: Add 22g of ground coffee to the V60. With your finger, create a small well in the middle of the
-                grounds.
-                <br>
-                6: Start the timer and add 50g of water to bloom the coffee. Stir vigorously with your spoon or stir
-                stick. This is to ensure all coffee is evenly saturated.
-                <br>
-                7: Allow 20 seconds for a de-gas and then start pouring slowly into the center. To prevent water from
-                escaping without extracting the coffee, your pour should be slow and your water line should not go far
-                above the coffee line.
-                <br>
-                8: When you have reached 360 grams of water, do a last stir to get the grounds off the side & do not leave any coffee high and dry!
-                <br>
-                9: Your pour should take 1 min and 50 second or up to 2 min and you total contact time should be 2:20 to 2:30.
-                <br>
-                10: Enjoy.
             </p>
         </div>
-        <div class="button">
-            <a class="btn btn-light" href="/brew" role="button">Try Another Recipe</a>
+
+        <div class="blank">
         </div>
-    </div>
+
+        <div class="second">
+            <img class="img-left" src="/static/img/v60/1.jpg" alt="">
+            <div class="steps">
+                <h1 class="title-right">Step One</h1>
+                <p class="p-right">Start by filling up your kettle and setting it to 205f. </p>
+            </div>
+        </div>
+
+        <div class="third">
+            <div class="steps">
+                <h1 class="title-left">Step Two</h1>
+                <p class="p-left"> Rinse the paper filter with the now boiled water, ensuring that it is fully
+                    saturated. </p>
+            </div>
+            <img class="img-right" src="/static/img/v60/2.jpg" alt="">
+        </div>
+
+        <div class="fourth">
+            <img src="/static/img/v60/3.jpg" alt="">
+            <div class="steps">
+                <h1 class="title-right">Step Three</h1>
+                <p class="p-right">Grind your 22g of coffee to a medium consistency.</p>
+            </div>
+        </div>
+
+        <div class="fifth">
+            <div class="steps">
+                <h1 class="title-left">Step Four</h1>
+                <p class="p-left">Add 22g of ground coffee to the V60. With your finger, create a small well in the
+                    middle of the grounds.</p>
+            </div>
+            <img src="/static/img/v60/4.jpg" alt="">
+        </div>
+
+        <div class="sixth">
+            <img src="/static/img/v60/5.jpg" alt="">
+            <div class="steps">
+                <h1 class="title-right">Step Five</h1>
+                <p class="p-right">Start the timer and add 50g of water to bloom the coffee. Stir vigorously with your
+                    spoon or stir stick. This is to ensure all coffee is evenly saturated.</p>
+            </div>
+        </div>
+
+        <div class="seventh">
+            <div class="steps">
+                <h1 class="title-left">Step Six</h1>
+                <p class="p-left">Allow 20 seconds for a de-gas and then start pouring slowly into the center. To
+                    prevent water from escaping without extracting the coffee, your pour should be slow and your water
+                    line should not go far above the coffee line.</p>
+            </div>
+            <img src="/static/img/v60/7.jpg" alt="">
+        </div>
+
+        <div class="eighth">
+            <img src="/static/img/v60/13.jpg" alt="">
+            <div class="steps">
+                <h1 class="title-right">Step Seven</h1>
+                <p class="p-right">When you have reached 360 grams of water, do a last stir to get the grounds off the side & do not leave any coffee high and dry!</p>
+            </div>
+        </div>
+
+        <div class="ninth">
+            <div class="steps">
+                <h1 class="title-left">Step Eight</h1>
+                <p class="p-left">Your pour should take 1 min and 50 second or up to 2 min and you total contact time should be 2:20 to 2:30.</p>
+            </div>
+            <img src="/static/img/v60/14.jpg" alt="">
+        </div>
+
+        <div class="tenth">
+            <img src="/static/img/v60/15.jpg" alt="">
+            <div class="steps">
+                <h1 class="title-right">Step Nine</h1>
+                <p class="p-right">Serve and Enjoy!</p>
+            </div>
+        </div>
+
+
+
+        <!-- redirect buttons and footer start -->
+        <div class="home-flex">
+            <!-- remeber to change link to current page -->
+            <a class="btn-home" href="/">Home</a>
+            <a class="btn-home" href="/brew">Back to Recipes</a>
+        </div>
+        <div class="footer">
+            <footer>©2024 ProperBloom</footer>
+        </div>
+        <!-- redirect buttons and footer end -->
 
 </body>
 

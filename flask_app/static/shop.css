@@ -66,11 +66,20 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url(https://images.unsplash.com/photo-1527596428171-7885b82c91c6?q=80&w=2501&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     border-radius: 20px;
+}
+
+.top-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* opacity: 0.8; */
 }
 
 #cart-btn {
@@ -116,6 +125,7 @@ body {
     color: rgb(250, 207, 207);
     margin-bottom: 100px;
     width: auto;
+    z-index: 900;
 
 }
 
@@ -195,6 +205,12 @@ body {
 
 
 /* navbar style start */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.9)!important;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
 .nav-link {
     display: inline-block;
     color: rgb(240, 184, 184);
@@ -202,6 +218,7 @@ body {
     font-weight: 700;
     letter-spacing: .5px;
     font-size: .875rem;
+    z-index: 1000;
 }
 
 .navbar-brand {
@@ -214,6 +231,11 @@ body {
     font-weight: 700;
     letter-spacing: .5px;
     font-size: 1.25rem;
+    z-index: 1000;
+    
+}
+.navbar-toggler {
+    z-index: 1000;
 }
 
 /* navbar style end */
@@ -228,6 +250,7 @@ h1 {
     font-size: 200px;
     margin-top: 100px;
     margin-bottom: 50px;
+    z-index: 1000;
 }
 
 p {

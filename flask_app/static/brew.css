@@ -18,11 +18,19 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url(https://images.unsplash.com/photo-1549166114-bf535a63c671?q=80&w=3744&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     border-radius: 20px;
+}
+.top-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* opacity: 0.8; */
 }
 
 
@@ -50,6 +58,7 @@ h1 {
     font-size: 150px;
     margin: 200px;
     padding: 20px;
+    z-index: 1000;
 }
 
 @media (max-width:600px) {
@@ -74,6 +83,7 @@ h1 {
     color: rgb(250, 207, 207);
     margin-bottom: 100px;
     width: auto;
+    z-index: 1000;
 }
 #cart-btn {
     font-size: 25px;
@@ -145,6 +155,12 @@ a {
 }
 
 /* navbar style start */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.2)!important;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
 .nav-link {
     display: inline-block;
     color: rgb(240, 184, 184);
@@ -152,6 +168,7 @@ a {
     font-weight: 700;
     letter-spacing: .5px;
     font-size: .875rem;
+    z-index: 1000;
 }
 
 .navbar-brand {
@@ -164,6 +181,11 @@ a {
     font-weight: 700;
     letter-spacing: .5px;
     font-size: 1.25rem;
+    z-index: 1000;
+    
+}
+.navbar-toggler {
+    z-index: 1000;
 }
 
 /* navbar style end */

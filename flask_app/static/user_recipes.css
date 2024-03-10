@@ -32,13 +32,10 @@ h4 {
     padding: 10px;
     color: rgb(250, 207, 207);
     width: auto;
+    z-index: 1000;
 }
 
 .heading-add-row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
     margin-bottom: 50px;
     margin-top: 50px;
 }
@@ -66,12 +63,20 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url(https://images.unsplash.com/photo-1507133750040-4a8f57021571?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80);
-
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     border-radius: 20px;
+}
+
+.top-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* opacity: 0.8; */
 }
 
 
@@ -95,6 +100,7 @@ h1 {
     font-size: 150px;
     margin-bottom: 150px;
     padding: 20px;
+    z-index: 1000;
 }
 
 
@@ -113,7 +119,14 @@ h1 {
 }
 
 
+
 /* navbar style start */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.8)!important;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
 .nav-link {
     display: inline-block;
     color: rgb(240, 184, 184);
@@ -121,6 +134,7 @@ h1 {
     font-weight: 700;
     letter-spacing: .5px;
     font-size: .875rem;
+    z-index: 1000;
 }
 
 .navbar-brand {
@@ -133,6 +147,11 @@ h1 {
     font-weight: 700;
     letter-spacing: .5px;
     font-size: 1.25rem;
+    z-index: 1000;
+    
+}
+.navbar-toggler {
+    z-index: 1000;
 }
 
 /* navbar style end */

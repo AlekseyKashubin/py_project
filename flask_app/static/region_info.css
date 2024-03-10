@@ -16,11 +16,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(https://images.unsplash.com/photo-1493925410384-84f842e616fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3412&q=80);
-    background-size: cover;
     background-position: center;
     background-attachment: fixed;
     border-radius: 20px;
+}
+
+.top-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* opacity: 0.8; */
 }
 
 #cart-btn {
@@ -52,6 +60,7 @@ h1 {
     color: white;
     font-weight: 700;
     font-size: 10rem;
+    z-index: 1000;
 }
 
 @media (max-width:600px) {
@@ -73,6 +82,7 @@ h1 {
     color: rgb(250, 207, 207);
     margin-bottom: 100px;
     width: auto;
+    z-index: 1000;
 }
 
 
@@ -122,6 +132,12 @@ p {
 
 
 /* navbar style start */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.5)!important;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
 .nav-link {
     display: inline-block;
     color: rgb(240, 184, 184);
@@ -129,6 +145,7 @@ p {
     font-weight: 700;
     letter-spacing: .5px;
     font-size: .875rem;
+    z-index: 1000;
 }
 
 .navbar-brand {
@@ -141,6 +158,11 @@ p {
     font-weight: 700;
     letter-spacing: .5px;
     font-size: 1.25rem;
+    z-index: 1000;
+    
+}
+.navbar-toggler {
+    z-index: 1000;
 }
 
 /* navbar style end */
@@ -179,11 +201,6 @@ p {
     height: 1700px;
 }
 
-.fifth {
-    background-image: url(https://images.unsplash.com/photo-1541870730196-cd1efcbf5649?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1336&q=80);
-    background-attachment: fixed;
-    height: 1600px;
-}
 
 .second,
 .third,
